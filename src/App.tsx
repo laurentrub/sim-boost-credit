@@ -11,6 +11,10 @@ import AdminDashboard from "./pages/AdminDashboard";
 import ResourcesHub from "./pages/resources/ResourcesHub";
 import Glossary from "./pages/resources/Glossary";
 import FAQ from "./pages/resources/FAQ";
+import CreditGuide from "./pages/resources/CreditGuide";
+import HomeImprovement from "./pages/HomeImprovement";
+import Consolidation from "./pages/Consolidation";
+import BusinessLoan from "./pages/BusinessLoan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

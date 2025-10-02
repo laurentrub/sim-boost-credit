@@ -79,6 +79,26 @@ const Index = () => {
       question: "How is my monthly payment calculated?",
       answer: "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above to get an instant calculation tailored to your needs.",
     },
+    {
+      question: "Will checking rates affect my credit score?",
+      answer: "No! Checking your rate uses a soft credit inquiry which doesn't impact your credit score. Only when you formally accept a loan offer will we perform a hard inquiry.",
+    },
+    {
+      question: "What makes CreditPro different from banks?",
+      answer: "We offer faster decisions, a fully digital process, competitive rates by comparing multiple lenders, and personalized service. Plus, you can complete everything online without visiting a branch.",
+    },
+    {
+      question: "Can I apply with a co-borrower or guarantor?",
+      answer: "Yes! Adding a co-borrower or guarantor with strong credit can improve your approval chances and potentially secure a lower interest rate.",
+    },
+    {
+      question: "Do you offer loans to self-employed individuals?",
+      answer: "Absolutely! Self-employed professionals, freelancers, and business owners are welcome to apply. You'll need to provide tax returns and business bank statements to verify income.",
+    },
+    {
+      question: "What if I have existing debt?",
+      answer: "We evaluate your debt-to-income ratio as part of the application. If your existing debts are manageable (typically below 40% of income), you may still qualify. Consider our debt consolidation option to simplify payments.",
+    },
   ];
 
   return (
