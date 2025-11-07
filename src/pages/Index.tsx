@@ -112,25 +112,27 @@ const Index = () => {
         </div>
         <div className="relative container mx-auto px-4 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Obtenez votre crédit
-                <br />
-                <span className="text-accent-light">En quelques minutes</span>
+            <div className="text-center lg:text-left space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Obtenez votre financement en ligne
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-                Solutions de crédit rapides, transparentes et sécurisées adaptées à vos besoins. 
-                Obtenez votre accord préliminaire sans engagement.
+              <h2 className="text-xl md:text-2xl font-semibold text-primary-foreground/95">
+                Crédits pour particuliers, entreprises et projets innovants. Des solutions rapides, transparentes et adaptées à vos besoins.
+              </h2>
+              <p className="text-lg md:text-xl text-primary-foreground/90">
+                Simulez votre prêt et recevez une réponse préliminaire en quelques minutes. Sans engagement, 100 % sécurisé.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                 <Link to="/apply">
-                  <Button variant="accent" size="xl">
-                    Demander maintenant
+                  <Button variant="accent" size="xl" className="w-full sm:w-auto">
+                    Demander un crédit
                   </Button>
                 </Link>
-                <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  En savoir plus
-                </Button>
+                <Link to="/apply">
+                  <Button variant="outline" size="xl" className="w-full sm:w-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                    Financer mon projet
+                  </Button>
+                </Link>
               </div>
             </div>
 
