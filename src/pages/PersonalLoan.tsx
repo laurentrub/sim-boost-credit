@@ -165,7 +165,7 @@ const PersonalLoan = () => {
               Un prêt personnel est un prêt non garanti qui vous fournit une somme d'argent forfaitaire pour usage personnel. Contrairement aux hypothèques ou crédits auto liés à des achats spécifiques, les prêts personnels offrent une flexibilité maximale. Vous pouvez utiliser les fonds pour pratiquement toute fin légale - du regroupement de dettes au financement d'un mariage, en passant par les frais médicaux ou les rénovations domiciliaires.
             </p>
             <p className="text-foreground leading-relaxed">
-              Chez CreditPro, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.
+              Chez Privat Equity, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.
             </p>
 
             <h3 className="text-2xl font-bold text-foreground mt-8">Utilisations courantes des prêts personnels</h3>
@@ -182,7 +182,7 @@ const PersonalLoan = () => {
 
             <h3 className="text-2xl font-bold text-foreground mt-8">Comment se qualifier</h3>
             <p className="text-foreground leading-relaxed">
-              Bien que les critères d'éligibilité varient selon le prêteur, chez CreditPro nous exigeons généralement que les demandeurs :
+              Bien que les critères d'éligibilité varient selon le prêteur, chez Privat Equity nous exigeons généralement que les demandeurs :
             </p>
             <ul className="space-y-2 text-foreground">
               <li>Aient au moins 18 ans</li>

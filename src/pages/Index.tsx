@@ -84,7 +84,7 @@ const Index = () => {
       answer: "Non ! La vérification de votre taux utilise une enquête de crédit souple qui n'impacte pas votre score. Ce n'est que lorsque vous acceptez formellement une offre de prêt que nous effectuons une enquête approfondie.",
     },
     {
-      question: "Qu'est-ce qui distingue CreditPro des banques ?",
+      question: "Qu'est-ce qui distingue Privat Equity des banques ?",
       answer: "Nous offrons des décisions plus rapides, un processus entièrement numérique, des taux compétitifs en comparant plusieurs prêteurs et un service personnalisé. De plus, vous pouvez tout faire en ligne sans visiter une agence.",
     },
     {
@@ -170,7 +170,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pourquoi choisir CreditPro ?
+              Pourquoi choisir Privat Equity ?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Nous combinons technologie de pointe et service personnalisé pour rendre l'emprunt simple, rapide et transparent.
@@ -224,12 +224,12 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            À propos de CreditPro : Votre partenaire crédit de confiance
+            À propos de Privat Equity : Votre partenaire crédit de confiance
           </h2>
           
           <div className="prose prose-lg max-w-none space-y-6 text-foreground">
             <p className="text-lg leading-relaxed">
-              <strong>CreditPro</strong> est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.
+              <strong>Privat Equity</strong> est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.
             </p>
 
             <h3 className="text-2xl font-bold mt-8 mb-4">Notre mission</h3>
@@ -259,7 +259,7 @@ const Index = () => {
 
             <h3 className="text-2xl font-bold mt-8 mb-4">Types de prêts que nous proposons</h3>
             <p className="leading-relaxed">
-              Chez CreditPro, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :
+              Chez Privat Equity, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :
             </p>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
@@ -351,7 +351,7 @@ const Index = () => {
             Prêt à commencer ?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            Rejoignez des milliers de clients satisfaits qui ont choisi CreditPro pour leurs besoins de financement.
+            Rejoignez des milliers de clients satisfaits qui ont choisi Privat Equity pour leurs besoins de financement.
           </p>
           <Link to="/apply">
             <Button variant="accent" size="xl">

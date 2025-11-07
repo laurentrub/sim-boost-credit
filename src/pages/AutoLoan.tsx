@@ -8,7 +8,7 @@ const AutoLoan = () => {
   const autoLoanFaqs = [
     {
       q: "What's the difference between financing through you vs. a dealership?",
-      a: "Getting pre-approved with CreditPro gives you a guaranteed rate and amount before you shop, putting you in a stronger negotiating position. Dealership financing is determined after you've chosen a car, and rates can be less competitive. You can also compare our offer with dealership financing."
+      a: "Getting pre-approved with Privat Equity gives you a guaranteed rate and amount before you shop, putting you in a stronger negotiating position. Dealership financing is determined after you've chosen a car, and rates can be less competitive. You can also compare our offer with dealership financing."
     },
     {
       q: "Can I finance a used car from a private seller?",
@@ -24,7 +24,7 @@ const AutoLoan = () => {
     },
     {
       q: "What insurance do I need for a financed vehicle?",
-      a: "Comprehensive and collision insurance is required for financed vehicles to protect both you and the lender. You'll need to name CreditPro as lienholder on your insurance policy. We can provide guidance on coverage requirements."
+      a: "Comprehensive and collision insurance is required for financed vehicles to protect both you and the lender. You'll need to name Privat Equity as lienholder on your insurance policy. We can provide guidance on coverage requirements."
     },
     {
       q: "Can I trade in my current vehicle?",
@@ -97,10 +97,10 @@ const AutoLoan = () => {
             
             <h3 className="text-2xl font-bold text-foreground">What is an Auto Loan?</h3>
             <p className="text-foreground leading-relaxed">
-              An auto loan is a secured loan specifically designed to help you purchase a vehicle. The car itself serves as collateral, which typically results in lower interest rates compared to unsecured personal loans. At CreditPro, we offer auto financing for new and used vehicles, with loan amounts from €5,000 to €50,000 and flexible repayment terms from 12 to 72 months.
+              An auto loan is a secured loan specifically designed to help you purchase a vehicle. The car itself serves as collateral, which typically results in lower interest rates compared to unsecured personal loans. At Privat Equity, we offer auto financing for new and used vehicles, with loan amounts from €5,000 to €50,000 and flexible repayment terms from 12 to 72 months.
             </p>
             <p className="text-foreground leading-relaxed">
-              Our competitive rates start from 3.2% APR for qualified borrowers, and the application process is entirely online. Unlike traditional dealership financing, getting pre-approved with CreditPro gives you negotiating power at the dealership, as you'll know exactly how much you can spend before you start shopping.
+              Our competitive rates start from 3.2% APR for qualified borrowers, and the application process is entirely online. Unlike traditional dealership financing, getting pre-approved with Privat Equity gives you negotiating power at the dealership, as you'll know exactly how much you can spend before you start shopping.
             </p>
 
             <h3 className="text-2xl font-bold text-foreground mt-8">Benefits of Auto Loans</h3>
@@ -133,7 +133,7 @@ const AutoLoan = () => {
 
             <h3 className="text-2xl font-bold text-foreground mt-8">How to Qualify for an Auto Loan</h3>
             <p className="text-foreground leading-relaxed">
-              To qualify for an auto loan with CreditPro, you'll need to meet these basic requirements:
+              To qualify for an auto loan with Privat Equity, you'll need to meet these basic requirements:
             </p>
             <ul className="space-y-2 text-foreground">
               <li>Be at least 18 years old</li>
@@ -179,7 +179,7 @@ const AutoLoan = () => {
 
             <h3 className="text-2xl font-bold text-foreground mt-8">What Vehicles Can You Finance?</h3>
             <p className="text-foreground leading-relaxed">
-              CreditPro offers financing for a wide range of vehicles:
+              Privat Equity offers financing for a wide range of vehicles:
             </p>
             <ul className="space-y-2 text-foreground">
               <li><strong>New Cars:</strong> Fresh from the dealership with full manufacturer warranty</li>

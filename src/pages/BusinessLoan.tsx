@@ -157,7 +157,7 @@ const BusinessLoan = () => {
             
             <h3 className="text-2xl font-bold text-foreground">What is a Business Loan?</h3>
             <p className="text-foreground leading-relaxed">
-              A business loan provides capital to help your company grow, manage cash flow, purchase assets, or handle unexpected expenses. At CreditPro, we offer term loans ranging from €5,000 to €75,000 with repayment periods from 12 to 84 months, designed specifically for small and medium-sized enterprises (SMEs), entrepreneurs, and self-employed professionals.
+              A business loan provides capital to help your company grow, manage cash flow, purchase assets, or handle unexpected expenses. At Privat Equity, we offer term loans ranging from €5,000 to €75,000 with repayment periods from 12 to 84 months, designed specifically for small and medium-sized enterprises (SMEs), entrepreneurs, and self-employed professionals.
             </p>
             <p className="text-foreground leading-relaxed">
               Unlike traditional bank business loans that can take weeks or months to process, our streamlined application focuses on your business's actual performance and potential rather than just paperwork. Interest rates typically range from 5-12% APR depending on your business strength, time in operation, and creditworthiness.
@@ -225,7 +225,7 @@ const BusinessLoan = () => {
 
             <h3 className="text-2xl font-bold text-foreground mt-8">Eligibility Requirements</h3>
             <p className="text-foreground leading-relaxed">
-              To qualify for a business loan with CreditPro, you should generally meet these criteria:
+              To qualify for a business loan with Privat Equity, you should generally meet these criteria:
             </p>
             <ul className="space-y-2 text-foreground">
               <li>Business operational for at least 6-12 months (exceptions for strong startups)</li>

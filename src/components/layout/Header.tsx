@@ -64,7 +64,7 @@ const Header = () => {
           <div className="flex items-center justify-center w-10 h-10 bg-gradient-hero rounded-lg">
             <span className="text-2xl font-bold text-primary-foreground">C</span>
           </div>
-          <span className="text-xl font-bold text-foreground">CreditPro</span>
+          <span className="text-xl font-bold text-foreground">Privat Equity</span>
         </Link>
 
         {/* Desktop Navigation */}

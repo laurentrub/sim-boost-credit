@@ -170,7 +170,7 @@ const Consolidation = () => {
               Debt consolidation is a financial strategy that combines multiple debts into a single new loan with one monthly payment. Instead of managing several credit cards, personal loans, and other debts with different interest rates, payment dates, and lenders, you take out one loan to pay them all off, leaving you with just one creditor and one payment to track.
             </p>
             <p className="text-foreground leading-relaxed">
-              At CreditPro, our debt consolidation loans range from €5,000 to €75,000 with repayment terms from 24 to 84 months. Interest rates start from 4.2% APR for qualified borrowers, often significantly lower than credit card rates which typically range from 15-25% APR. The goal is to save money on interest while simplifying your financial life.
+              At Privat Equity, our debt consolidation loans range from €5,000 to €75,000 with repayment terms from 24 to 84 months. Interest rates start from 4.2% APR for qualified borrowers, often significantly lower than credit card rates which typically range from 15-25% APR. The goal is to save money on interest while simplifying your financial life.
             </p>
 
             <h3 className="text-2xl font-bold text-foreground mt-8">How Debt Consolidation Works</h3>

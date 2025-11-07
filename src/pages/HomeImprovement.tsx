@@ -173,7 +173,7 @@ const HomeImprovement = () => {
               A home improvement loan is an unsecured personal loan specifically designed to finance renovations, repairs, and upgrades to your home. Unlike home equity loans or HELOCs (Home Equity Lines of Credit), these loans don't require you to use your home as collateral, making them faster and simpler to obtain.
             </p>
             <p className="text-foreground leading-relaxed">
-              At CreditPro, our home improvement loans range from €3,000 to €75,000 with terms up to 15 years for larger projects. Interest rates start from 3.5% APR for qualified borrowers. Because these are unsecured loans, approval is based primarily on your creditworthiness and income rather than your home's equity.
+              At Privat Equity, our home improvement loans range from €3,000 to €75,000 with terms up to 15 years for larger projects. Interest rates start from 3.5% APR for qualified borrowers. Because these are unsecured loans, approval is based primarily on your creditworthiness and income rather than your home's equity.
             </p>
 
             <h3 className="text-2xl font-bold text-foreground mt-8">Benefits of Home Improvement Loans</h3>
