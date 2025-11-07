@@ -6,61 +6,61 @@ import { CheckCircle, TrendingUp, Shield, Clock } from "lucide-react";
 
 const PersonalLoan = () => {
   const benefits = [
-    "No collateral required",
-    "Flexible repayment terms (12-84 months)",
-    "Early repayment with no penalties",
-    "Funds available within 48 hours",
-    "100% online application process",
-    "Transparent fees - no hidden costs",
+    "Aucune garantie requise",
+    "Durées de remboursement flexibles (12-84 mois)",
+    "Remboursement anticipé sans pénalités",
+    "Fonds disponibles sous 48 heures",
+    "Processus de demande 100% en ligne",
+    "Frais transparents - aucun coût caché",
   ];
 
   const examples = [
-    { amount: "€5,000", duration: "36 months", monthly: "€151", apr: "4.2%", total: "€5,436" },
-    { amount: "€10,000", duration: "48 months", monthly: "€221", apr: "4.9%", total: "€10,608" },
-    { amount: "€20,000", duration: "60 months", monthly: "€395", apr: "5.5%", total: "€23,700" },
-    { amount: "€30,000", duration: "72 months", monthly: "€504", apr: "6.2%", total: "€36,288" },
+    { amount: "5 000€", duration: "36 mois", monthly: "151€", apr: "4,2%", total: "5 436€" },
+    { amount: "10 000€", duration: "48 mois", monthly: "221€", apr: "4,9%", total: "10 608€" },
+    { amount: "20 000€", duration: "60 mois", monthly: "395€", apr: "5,5%", total: "23 700€" },
+    { amount: "30 000€", duration: "72 mois", monthly: "504€", apr: "6,2%", total: "36 288€" },
   ];
 
   const faqs = [
     {
-      q: "What can I use a personal loan for?",
-      a: "Personal loans are versatile and can be used for almost any legal purpose: weddings, vacations, medical expenses, debt consolidation, home improvements, education, or unexpected expenses."
+      q: "À quoi puis-je utiliser un prêt personnel ?",
+      a: "Les prêts personnels sont polyvalents et peuvent être utilisés pour presque toutes les fins légales : mariages, vacances, frais médicaux, regroupement de dettes, rénovations, éducation ou dépenses imprévues."
     },
     {
-      q: "What is the minimum credit score required?",
-      a: "While we prefer applicants with a credit score above 650, we evaluate each application individually. A lower score doesn't automatically disqualify you - we consider your entire financial profile."
+      q: "Quel est le score de crédit minimum requis ?",
+      a: "Bien que nous préférions les demandeurs avec un score de crédit supérieur à 650, nous évaluons chaque demande individuellement. Un score inférieur ne vous disqualifie pas automatiquement - nous considérons votre profil financier complet."
     },
     {
-      q: "How quickly can I get the money?",
-      a: "Once your application is approved and all documents are verified, funds are typically transferred to your bank account within 24-48 hours."
+      q: "En combien de temps puis-je obtenir l'argent ?",
+      a: "Une fois votre demande approuvée et tous les documents vérifiés, les fonds sont généralement transférés sur votre compte bancaire dans les 24 à 48 heures."
     },
     {
-      q: "Are there any fees for early repayment?",
-      a: "No! All our personal loans come with no early repayment penalties. You can pay off your loan ahead of schedule and save on interest."
+      q: "Y a-t-il des frais pour le remboursement anticipé ?",
+      a: "Non ! Tous nos prêts personnels sont sans pénalités de remboursement anticipé. Vous pouvez rembourser votre prêt en avance et économiser sur les intérêts."
     },
     {
-      q: "What documents do I need to provide?",
-      a: "You'll need a valid government ID, proof of income (last 3 pay slips or tax returns if self-employed), recent bank statements (last 3 months), and proof of current address."
+      q: "Quels documents dois-je fournir ?",
+      a: "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenus (3 derniers bulletins de salaire ou déclarations fiscales si travailleur indépendant), de relevés bancaires récents (3 derniers mois) et d'un justificatif de domicile actuel."
     },
     {
-      q: "Can I apply if I'm self-employed?",
-      a: "Yes! Self-employed individuals are welcome to apply. You'll need to provide additional documentation such as tax returns and business bank statements."
+      q: "Puis-je postuler si je suis travailleur indépendant ?",
+      a: "Oui ! Les travailleurs indépendants sont les bienvenus. Vous devrez fournir des documents supplémentaires tels que des déclarations fiscales et des relevés bancaires professionnels."
     },
     {
-      q: "What is APR and how does it affect my loan?",
-      a: "APR (Annual Percentage Rate) represents the total annual cost of your loan, including interest and fees. A lower APR means lower overall costs. Your specific APR depends on your credit profile and loan terms."
+      q: "Qu'est-ce que le TAEG et comment affecte-t-il mon prêt ?",
+      a: "Le TAEG (Taux Annuel Effectif Global) représente le coût annuel total de votre prêt, incluant les intérêts et les frais. Un TAEG plus bas signifie des coûts globaux plus faibles. Votre TAEG spécifique dépend de votre profil de crédit et des conditions du prêt."
     },
     {
-      q: "Can I change my monthly payment date?",
-      a: "Yes, we offer flexibility with payment dates. Contact our customer service team to arrange a payment schedule that aligns with your income cycle."
+      q: "Puis-je modifier ma date de paiement mensuel ?",
+      a: "Oui, nous offrons de la flexibilité avec les dates de paiement. Contactez notre service client pour organiser un calendrier de paiement qui s'aligne avec votre cycle de revenus."
     },
     {
-      q: "What happens if I miss a payment?",
-      a: "We understand life happens. If you're struggling to make a payment, contact us immediately. We may be able to arrange a payment plan or temporary deferral. Late payments may incur fees and affect your credit score."
+      q: "Que se passe-t-il si je manque un paiement ?",
+      a: "Nous comprenons que des imprévus arrivent. Si vous avez du mal à effectuer un paiement, contactez-nous immédiatement. Nous pourrons peut-être organiser un plan de paiement ou un report temporaire. Les paiements en retard peuvent entraîner des frais et affecter votre score de crédit."
     },
     {
-      q: "Is my personal information secure?",
-      a: "Absolutely. We use bank-level 256-bit SSL encryption and are fully compliant with GDPR regulations. Your data is never shared with third parties without your explicit consent."
+      q: "Mes informations personnelles sont-elles sécurisées ?",
+      a: "Absolument. Nous utilisons un chiffrement SSL 256 bits de niveau bancaire et sommes entièrement conformes aux réglementations RGPD. Vos données ne sont jamais partagées avec des tiers sans votre consentement explicite."
     },
   ];
 
@@ -74,25 +74,25 @@ const PersonalLoan = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Personal Loan
+                Prêt personnel
                 <br />
-                <span className="text-accent-light">From €1,000 to €75,000</span>
+                <span className="text-accent-light">De 1 000€ à 75 000€</span>
               </h1>
               <p className="text-xl mb-6 text-primary-foreground/90">
-                Finance your dreams with our flexible personal loans. Whether it's a wedding, vacation, medical expenses, or any personal project - we've got you covered.
+                Financez vos rêves avec nos prêts personnels flexibles. Que ce soit pour un mariage, des vacances, des frais médicaux ou tout projet personnel - nous avons ce qu'il vous faut.
               </p>
               <div className="flex items-center gap-6 mb-8">
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
-                  <span className="text-sm">5-min approval</span>
+                  <span className="text-sm">Approbation en 5 min</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="h-5 w-5" />
-                  <span className="text-sm">100% secure</span>
+                  <span className="text-sm">100% sécurisé</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
-                  <span className="text-sm">From 2.9% APR</span>
+                  <span className="text-sm">À partir de 2,9% TAEG</span>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ const PersonalLoan = () => {
       {/* Benefits */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Why Choose Our Personal Loan?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Pourquoi choisir notre prêt personnel ?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -121,17 +121,17 @@ const PersonalLoan = () => {
       {/* Examples Table */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Loan Examples</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Exemples de prêts</h2>
           <Card className="overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-primary text-primary-foreground">
                   <tr>
-                    <th className="px-6 py-4 text-left">Amount</th>
-                    <th className="px-6 py-4 text-left">Duration</th>
-                    <th className="px-6 py-4 text-left">Monthly Payment</th>
-                    <th className="px-6 py-4 text-left">APR</th>
-                    <th className="px-6 py-4 text-left">Total Cost</th>
+                    <th className="px-6 py-4 text-left">Montant</th>
+                    <th className="px-6 py-4 text-left">Durée</th>
+                    <th className="px-6 py-4 text-left">Mensualité</th>
+                    <th className="px-6 py-4 text-left">TAEG</th>
+                    <th className="px-6 py-4 text-left">Coût total</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -139,7 +139,7 @@ const PersonalLoan = () => {
                     <tr key={index} className="border-t border-border">
                       <td className="px-6 py-4 font-semibold text-foreground">{example.amount}</td>
                       <td className="px-6 py-4 text-muted-foreground">{example.duration}</td>
-                      <td className="px-6 py-4 text-success font-semibold">{example.monthly}/month</td>
+                      <td className="px-6 py-4 text-success font-semibold">{example.monthly}/mois</td>
                       <td className="px-6 py-4 text-muted-foreground">{example.apr}</td>
                       <td className="px-6 py-4 text-foreground">{example.total}</td>
                     </tr>
@@ -149,7 +149,7 @@ const PersonalLoan = () => {
             </div>
           </Card>
           <p className="text-sm text-muted-foreground mt-4 text-center">
-            *Examples are for illustrative purposes. Your actual rate and payments may vary based on your credit profile.
+            *Les exemples sont à titre indicatif. Vos taux et paiements réels peuvent varier en fonction de votre profil de crédit.
           </p>
         </div>
       </section>
@@ -158,71 +158,71 @@ const PersonalLoan = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Complete Guide to Personal Loans</h2>
+            <h2 className="text-3xl font-bold text-foreground">Guide complet des prêts personnels</h2>
             
-            <h3 className="text-2xl font-bold text-foreground mt-8">What is a Personal Loan?</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Qu'est-ce qu'un prêt personnel ?</h3>
             <p className="text-foreground leading-relaxed">
-              A personal loan is an unsecured loan that provides you with a lump sum of money for personal use. Unlike mortgages or auto loans that are tied to specific purchases, personal loans offer maximum flexibility. You can use the funds for virtually any legal purpose - from consolidating debt to financing a wedding, covering medical expenses, or funding home improvements.
+              Un prêt personnel est un prêt non garanti qui vous fournit une somme d'argent forfaitaire pour usage personnel. Contrairement aux hypothèques ou crédits auto liés à des achats spécifiques, les prêts personnels offrent une flexibilité maximale. Vous pouvez utiliser les fonds pour pratiquement toute fin légale - du regroupement de dettes au financement d'un mariage, en passant par les frais médicaux ou les rénovations domiciliaires.
             </p>
             <p className="text-foreground leading-relaxed">
-              At CreditPro, our personal loans range from €1,000 to €75,000 with repayment terms from 12 to 84 months. We offer competitive fixed interest rates starting from 2.9% APR, depending on your creditworthiness and loan terms. Because personal loans are unsecured, you don't need to provide collateral, making them accessible and straightforward.
+              Chez CreditPro, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Common Uses for Personal Loans</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Utilisations courantes des prêts personnels</h3>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Debt Consolidation:</strong> Combine multiple high-interest debts into one manageable monthly payment</li>
-              <li><strong>Home Improvements:</strong> Renovate your kitchen, add a bathroom, or upgrade your property</li>
-              <li><strong>Major Purchases:</strong> Buy furniture, appliances, or electronics without depleting savings</li>
-              <li><strong>Medical Expenses:</strong> Cover unexpected healthcare costs or elective procedures</li>
-              <li><strong>Weddings:</strong> Finance your dream wedding without financial stress</li>
-              <li><strong>Education:</strong> Pay for courses, certifications, or continuing education</li>
-              <li><strong>Vacations:</strong> Create memorable experiences with your loved ones</li>
-              <li><strong>Emergency Expenses:</strong> Handle unexpected costs like car repairs or urgent home fixes</li>
+              <li><strong>Regroupement de dettes :</strong> Combinez plusieurs dettes à taux d'intérêt élevés en un seul paiement mensuel gérable</li>
+              <li><strong>Rénovations domiciliaires :</strong> Rénovez votre cuisine, ajoutez une salle de bain ou améliorez votre propriété</li>
+              <li><strong>Achats importants :</strong> Achetez des meubles, des appareils électroménagers ou de l'électronique sans épuiser vos économies</li>
+              <li><strong>Frais médicaux :</strong> Couvrez les coûts de santé imprévus ou les procédures électives</li>
+              <li><strong>Mariages :</strong> Financez le mariage de vos rêves sans stress financier</li>
+              <li><strong>Éducation :</strong> Payez des cours, des certifications ou une formation continue</li>
+              <li><strong>Vacances :</strong> Créez des expériences mémorables avec vos proches</li>
+              <li><strong>Dépenses d'urgence :</strong> Gérez les coûts imprévus comme les réparations automobiles ou les réparations urgentes de la maison</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">How to Qualify</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Comment se qualifier</h3>
             <p className="text-foreground leading-relaxed">
-              While eligibility criteria vary by lender, at CreditPro we generally require applicants to:
+              Bien que les critères d'éligibilité varient selon le prêteur, chez CreditPro nous exigeons généralement que les demandeurs :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>Be at least 18 years old</li>
-              <li>Be a French resident or have a valid residence permit</li>
-              <li>Have a steady source of income (employed, self-employed, or retired with pension)</li>
-              <li>Have a debt-to-income ratio below 40%</li>
-              <li>Provide necessary documentation (ID, proof of income, bank statements)</li>
+              <li>Aient au moins 18 ans</li>
+              <li>Soient résidents français ou aient un permis de résidence valide</li>
+              <li>Aient une source de revenus stable (employé, travailleur indépendant ou retraité avec pension)</li>
+              <li>Aient un ratio d'endettement inférieur à 40%</li>
+              <li>Fournissent la documentation nécessaire (pièce d'identité, preuve de revenus, relevés bancaires)</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Understanding Interest Rates and APR</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Comprendre les taux d'intérêt et le TAEG</h3>
             <p className="text-foreground leading-relaxed">
-              The Annual Percentage Rate (APR) is the total annual cost of your loan expressed as a percentage. It includes both the interest rate and any fees, giving you a complete picture of what the loan will cost. At CreditPro, your APR depends on several factors:
+              Le Taux Annuel Effectif Global (TAEG) est le coût annuel total de votre prêt exprimé en pourcentage. Il inclut à la fois le taux d'intérêt et tous les frais, vous donnant une image complète de ce que le prêt vous coûtera. Chez CreditPro, votre TAEG dépend de plusieurs facteurs :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Credit Score:</strong> Higher scores typically qualify for lower rates</li>
-              <li><strong>Loan Amount:</strong> Larger loans may have different rate structures</li>
-              <li><strong>Loan Term:</strong> Shorter terms often have lower rates but higher monthly payments</li>
-              <li><strong>Debt-to-Income Ratio:</strong> Lower ratios demonstrate better ability to repay</li>
-              <li><strong>Income Stability:</strong> Consistent employment history improves your rate</li>
+              <li><strong>Score de crédit :</strong> Des scores plus élevés se qualifient généralement pour des taux plus bas</li>
+              <li><strong>Montant du prêt :</strong> Les prêts plus importants peuvent avoir des structures de taux différentes</li>
+              <li><strong>Durée du prêt :</strong> Les durées plus courtes ont souvent des taux plus bas mais des paiements mensuels plus élevés</li>
+              <li><strong>Ratio d'endettement :</strong> Des ratios plus faibles démontrent une meilleure capacité de remboursement</li>
+              <li><strong>Stabilité des revenus :</strong> Un historique d'emploi cohérent améliore votre taux</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">The Application Process</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Le processus de demande</h3>
             <ol className="space-y-3 list-decimal list-inside text-foreground">
-              <li><strong>Check Your Eligibility:</strong> Use our simulator to estimate your monthly payments</li>
-              <li><strong>Gather Documents:</strong> Prepare your ID, income proof, and bank statements</li>
-              <li><strong>Submit Application:</strong> Complete our secure online form (takes about 5 minutes)</li>
-              <li><strong>Get Instant Decision:</strong> Receive preliminary approval or denial within minutes</li>
-              <li><strong>Verify Information:</strong> Our team reviews your application and documents</li>
-              <li><strong>Sign Agreement:</strong> Review and electronically sign your loan contract</li>
-              <li><strong>Receive Funds:</strong> Money is deposited directly into your bank account</li>
+              <li><strong>Vérifiez votre éligibilité :</strong> Utilisez notre simulateur pour estimer vos paiements mensuels</li>
+              <li><strong>Rassemblez les documents :</strong> Préparez votre pièce d'identité, preuve de revenus et relevés bancaires</li>
+              <li><strong>Soumettez la demande :</strong> Complétez notre formulaire en ligne sécurisé (prend environ 5 minutes)</li>
+              <li><strong>Obtenez une décision instantanée :</strong> Recevez une approbation ou un refus préliminaire en quelques minutes</li>
+              <li><strong>Vérifiez les informations :</strong> Notre équipe examine votre demande et vos documents</li>
+              <li><strong>Signez l'accord :</strong> Examinez et signez électroniquement votre contrat de prêt</li>
+              <li><strong>Recevez les fonds :</strong> L'argent est déposé directement sur votre compte bancaire</li>
             </ol>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Tips for Getting the Best Rate</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Conseils pour obtenir le meilleur taux</h3>
             <ul className="space-y-2 text-foreground">
-              <li>Check and improve your credit score before applying</li>
-              <li>Compare offers from multiple lenders</li>
-              <li>Consider a shorter loan term if you can afford higher monthly payments</li>
-              <li>Borrow only what you need - larger loans often have higher rates</li>
-              <li>Set up automatic payments to never miss a due date</li>
-              <li>Consider a co-signer if your credit isn't ideal</li>
+              <li>Vérifiez et améliorez votre score de crédit avant de postuler</li>
+              <li>Comparez les offres de plusieurs prêteurs</li>
+              <li>Envisagez une durée de prêt plus courte si vous pouvez vous permettre des paiements mensuels plus élevés</li>
+              <li>N'empruntez que ce dont vous avez besoin - les prêts plus importants ont souvent des taux plus élevés</li>
+              <li>Configurez des paiements automatiques pour ne jamais manquer une échéance</li>
+              <li>Envisagez un co-emprunteur si votre crédit n'est pas idéal</li>
             </ul>
           </div>
         </div>
@@ -231,7 +231,7 @@ const PersonalLoan = () => {
       {/* FAQ */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Personal Loan FAQ</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">FAQ Prêt personnel</h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <Card key={index} className="p-6">

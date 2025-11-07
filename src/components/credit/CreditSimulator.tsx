@@ -58,13 +58,13 @@ const CreditSimulator = ({
         <div className="p-3 bg-gradient-accent rounded-lg">
           <Calculator className="h-6 w-6 text-accent-foreground" />
         </div>
-        <h2 className="text-2xl font-bold text-foreground">Credit Simulator</h2>
+        <h2 className="text-2xl font-bold text-foreground">Simulateur de crédit</h2>
       </div>
 
       <div className="space-y-6">
         <div>
           <div className="flex justify-between items-center mb-3">
-            <Label className="text-sm font-semibold text-foreground">Loan Amount</Label>
+            <Label className="text-sm font-semibold text-foreground">Montant du prêt</Label>
             <span className="text-2xl font-bold text-accent">{formatCurrency(amount)}</span>
           </div>
           <Slider
@@ -83,8 +83,8 @@ const CreditSimulator = ({
 
         <div>
           <div className="flex justify-between items-center mb-3">
-            <Label className="text-sm font-semibold text-foreground">Duration</Label>
-            <span className="text-2xl font-bold text-accent">{duration} months</span>
+            <Label className="text-sm font-semibold text-foreground">Durée</Label>
+            <span className="text-2xl font-bold text-accent">{duration} mois</span>
           </div>
           <Slider
             value={[duration]}
@@ -95,31 +95,31 @@ const CreditSimulator = ({
             className="w-full"
           />
           <div className="flex justify-between mt-2 text-xs text-muted-foreground">
-            <span>{minDuration} months</span>
-            <span>{maxDuration} months</span>
+            <span>{minDuration} mois</span>
+            <span>{maxDuration} mois</span>
           </div>
         </div>
 
         <div className="bg-muted/50 rounded-lg p-6 space-y-4 mt-6">
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-muted-foreground">Monthly Payment</span>
+            <span className="text-sm font-medium text-muted-foreground">Mensualité</span>
             <span className="text-3xl font-bold text-success">{formatCurrency(monthlyPayment)}</span>
           </div>
           <div className="flex justify-between items-center pt-4 border-t border-border">
-            <span className="text-sm font-medium text-muted-foreground">Total Cost</span>
+            <span className="text-sm font-medium text-muted-foreground">Coût total</span>
             <span className="text-lg font-semibold text-foreground">{formatCurrency(totalCost)}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-muted-foreground">Interest Rate (APR)</span>
+            <span className="text-sm font-medium text-muted-foreground">Taux d'intérêt (TAEG)</span>
             <span className="text-lg font-semibold text-foreground">{interestRate}%</span>
           </div>
         </div>
 
         <Button variant="accent" size="lg" className="w-full mt-6">
-          Get Your Approval
+          Obtenir votre accord
         </Button>
         <p className="text-xs text-center text-muted-foreground mt-2">
-          No commitment • Instant preliminary approval • 100% secure
+          Sans engagement • Accord préliminaire instantané • 100% sécurisé
         </p>
       </div>
     </Card>

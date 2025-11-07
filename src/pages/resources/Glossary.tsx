@@ -6,92 +6,136 @@ import { useState } from "react";
 
 const glossaryTerms = [
   {
-    term: "APR (Annual Percentage Rate)",
-    definition: "The annual cost of a loan expressed as a percentage, including interest and fees. APR provides a complete picture of what a loan will cost you over one year."
+    term: "TAEG (Taux Annuel Effectif Global)",
+    definition: "Le coût annuel d'un prêt exprimé en pourcentage, incluant les intérêts et les frais. Le TAEG fournit une image complète de ce qu'un prêt vous coûtera sur un an."
   },
   {
-    term: "Amortization",
-    definition: "The process of paying off a debt over time through regular payments. Each payment covers both principal and interest, with the proportion shifting over the loan term."
+    term: "Amortissement",
+    definition: "Le processus de remboursement d'une dette au fil du temps par des paiements réguliers. Chaque paiement couvre à la fois le capital et les intérêts, avec une proportion changeant au cours de la durée du prêt."
   },
   {
-    term: "Collateral",
-    definition: "An asset (such as a house or car) pledged by a borrower to secure a loan. If the borrower defaults, the lender can seize the collateral."
+    term: "Garantie",
+    definition: "Un actif (comme une maison ou une voiture) mis en gage par un emprunteur pour garantir un prêt. Si l'emprunteur fait défaut, le prêteur peut saisir la garantie."
   },
   {
-    term: "Credit Score",
-    definition: "A numerical representation of your creditworthiness, typically ranging from 300 to 850. Higher scores indicate lower risk to lenders and can result in better loan terms."
+    term: "Score de crédit",
+    definition: "Une représentation numérique de votre solvabilité, généralement comprise entre 300 et 850. Des scores plus élevés indiquent un risque plus faible pour les prêteurs et peuvent entraîner de meilleures conditions de prêt."
   },
   {
-    term: "Debt Consolidation",
-    definition: "Combining multiple debts into a single loan, often with a lower interest rate or more favorable terms. This simplifies repayment and can reduce monthly payments."
+    term: "Regroupement de crédits",
+    definition: "Combiner plusieurs dettes en un seul prêt, souvent avec un taux d'intérêt plus bas ou des conditions plus favorables. Cela simplifie le remboursement et peut réduire les paiements mensuels."
   },
   {
-    term: "Debt-to-Income Ratio (DTI)",
-    definition: "The percentage of your gross monthly income that goes toward debt payments. Lenders use this to assess your ability to manage monthly payments."
+    term: "Ratio d'endettement",
+    definition: "Le pourcentage de votre revenu mensuel brut qui va vers les paiements de dettes. Les prêteurs utilisent ceci pour évaluer votre capacité à gérer les paiements mensuels."
   },
   {
-    term: "Default",
-    definition: "Failure to repay a loan according to the agreed terms. Defaulting can seriously damage your credit score and may result in legal action."
+    term: "Défaut de paiement",
+    definition: "Le non-remboursement d'un prêt selon les conditions convenues. Faire défaut peut gravement endommager votre score de crédit et peut entraîner des poursuites judiciaires."
   },
   {
-    term: "Deferred Payment",
-    definition: "A loan feature allowing borrowers to postpone payments for a specified period. Interest may continue to accrue during the deferment."
+    term: "Paiement différé",
+    definition: "Une caractéristique de prêt permettant aux emprunteurs de reporter les paiements pendant une période spécifiée. Les intérêts peuvent continuer à s'accumuler pendant le report."
   },
   {
-    term: "Fixed Interest Rate",
-    definition: "An interest rate that remains constant throughout the loan term, providing predictable monthly payments."
+    term: "Taux d'intérêt fixe",
+    definition: "Un taux d'intérêt qui reste constant pendant toute la durée du prêt, fournissant des paiements mensuels prévisibles."
   },
   {
-    term: "Grace Period",
-    definition: "A period after a payment due date during which you can make a payment without incurring late fees or penalties."
+    term: "Période de grâce",
+    definition: "Une période après la date d'échéance d'un paiement pendant laquelle vous pouvez effectuer un paiement sans encourir de frais de retard ou de pénalités."
   },
   {
-    term: "Guarantor",
-    definition: "A person who agrees to repay a loan if the primary borrower fails to do so. Having a guarantor can improve approval chances for those with limited credit."
+    term: "Garant",
+    definition: "Une personne qui accepte de rembourser un prêt si l'emprunteur principal ne le fait pas. Avoir un garant peut améliorer les chances d'approbation pour ceux qui ont un crédit limité."
   },
   {
-    term: "Hard Inquiry",
-    definition: "A credit check performed when you apply for credit. Hard inquiries can temporarily lower your credit score and remain on your report for two years."
+    term: "Enquête approfondie",
+    definition: "Une vérification de crédit effectuée lorsque vous demandez un crédit. Les enquêtes approfondies peuvent temporairement abaisser votre score de crédit et restent sur votre rapport pendant deux ans."
   },
   {
-    term: "Interest Rate",
-    definition: "The percentage charged on the principal amount of a loan. This is the cost of borrowing money, typically expressed as an annual rate."
+    term: "Taux d'intérêt",
+    definition: "Le pourcentage facturé sur le montant principal d'un prêt. C'est le coût d'emprunter de l'argent, généralement exprimé comme un taux annuel."
   },
   {
-    term: "Loan Term",
-    definition: "The length of time you have to repay a loan, typically expressed in months or years. Longer terms mean lower monthly payments but more total interest paid."
+    term: "Durée du prêt",
+    definition: "La durée pendant laquelle vous devez rembourser un prêt, généralement exprimée en mois ou en années. Des durées plus longues signifient des paiements mensuels plus bas mais plus d'intérêts totaux payés."
   },
   {
-    term: "Origination Fee",
-    definition: "A fee charged by lenders to process a new loan application. This is usually a percentage of the loan amount."
+    term: "Frais de dossier",
+    definition: "Des frais facturés par les prêteurs pour traiter une nouvelle demande de prêt. C'est généralement un pourcentage du montant du prêt."
   },
   {
-    term: "Preapproval",
-    definition: "A preliminary assessment by a lender indicating how much you may be eligible to borrow. This is not a guarantee of final approval but helps with planning."
+    term: "Pré-approbation",
+    definition: "Une évaluation préliminaire par un prêteur indiquant combien vous pourriez être éligible à emprunter. Ce n'est pas une garantie d'approbation finale mais aide à la planification."
   },
   {
-    term: "Principal",
-    definition: "The original amount of money borrowed, not including interest or fees. As you make payments, the principal decreases."
+    term: "Capital",
+    definition: "Le montant d'argent emprunté à l'origine, sans inclure les intérêts ou les frais. À mesure que vous effectuez des paiements, le capital diminue."
   },
   {
-    term: "Refinancing",
-    definition: "Replacing an existing loan with a new one, typically to secure better terms such as a lower interest rate or different repayment period."
+    term: "Refinancement",
+    definition: "Remplacer un prêt existant par un nouveau, généralement pour obtenir de meilleures conditions telles qu'un taux d'intérêt plus bas ou une période de remboursement différente."
   },
   {
-    term: "Secured Loan",
-    definition: "A loan backed by collateral. If you default, the lender can take possession of the collateral. Examples include mortgages and auto loans."
+    term: "Prêt garanti",
+    definition: "Un prêt adossé à une garantie. Si vous faites défaut, le prêteur peut prendre possession de la garantie. Les exemples incluent les hypothèques et les crédits auto."
   },
   {
-    term: "Soft Inquiry",
-    definition: "A credit check that doesn't affect your credit score. These occur when you check your own credit or when lenders preapprove you for offers."
+    term: "Enquête souple",
+    definition: "Une vérification de crédit qui n'affecte pas votre score de crédit. Celles-ci se produisent lorsque vous vérifiez votre propre crédit ou lorsque les prêteurs vous pré-approuvent pour des offres."
   },
   {
-    term: "Unsecured Loan",
-    definition: "A loan not backed by collateral. Personal loans are typically unsecured and may have higher interest rates due to increased lender risk."
+    term: "Prêt non garanti",
+    definition: "Un prêt non adossé à une garantie. Les prêts personnels sont généralement non garantis et peuvent avoir des taux d'intérêt plus élevés en raison du risque accru pour le prêteur."
   },
   {
-    term: "Variable Interest Rate",
-    definition: "An interest rate that can change over time based on market conditions. Monthly payments may fluctuate with rate changes."
+    term: "Taux d'intérêt variable",
+    definition: "Un taux d'intérêt qui peut changer au fil du temps en fonction des conditions du marché. Les paiements mensuels peuvent fluctuer avec les changements de taux."
+  },
+  {
+    term: "Capacité d'emprunt",
+    definition: "Le montant maximum qu'un emprunteur peut raisonnablement se permettre d'emprunter en fonction de ses revenus, dépenses et obligations financières existantes."
+  },
+  {
+    term: "Co-emprunteur",
+    definition: "Une personne qui demande un prêt avec vous et partage la responsabilité égale du remboursement. Les deux scores de crédit et revenus sont considérés."
+  },
+  {
+    term: "Assurance emprunteur",
+    definition: "Une assurance qui couvre les paiements du prêt en cas de décès, d'invalidité ou de perte d'emploi. Souvent optionnelle mais peut fournir une tranquillité d'esprit."
+  },
+  {
+    term: "Pénalité de remboursement anticipé",
+    definition: "Des frais facturés par certains prêteurs si vous remboursez votre prêt avant la fin de la durée prévue. Chez CreditPro, nous n'avons pas de pénalités de remboursement anticipé."
+  },
+  {
+    term: "Prêt renouvelable",
+    definition: "Un type de crédit où vous pouvez emprunter, rembourser et emprunter à nouveau jusqu'à une limite approuvée. Les cartes de crédit sont des exemples de crédit renouvelable."
+  },
+  {
+    term: "Tableau d'amortissement",
+    definition: "Un calendrier détaillé montrant chaque paiement de prêt, décomposé entre capital et intérêts, sur toute la durée du prêt."
+  },
+  {
+    term: "Taux annuel nominal",
+    definition: "Le taux d'intérêt de base sans inclure les frais supplémentaires, contrairement au TAEG qui inclut tous les coûts."
+  },
+  {
+    term: "Franchise",
+    definition: "La période initiale d'un prêt pendant laquelle vous ne payez que les intérêts, sans rembourser le capital."
+  },
+  {
+    term: "Restructuration de dette",
+    definition: "Modification des conditions d'un prêt existant pour rendre les paiements plus gérables, comme prolonger la durée ou réduire le taux d'intérêt."
+  },
+  {
+    term: "Crédit affecté",
+    definition: "Un prêt lié à l'achat d'un bien ou service spécifique, comme un crédit auto ou un crédit mobilier."
+  },
+  {
+    term: "Crédit non affecté",
+    definition: "Un prêt qui n'est pas lié à un achat spécifique et peut être utilisé à votre discrétion, comme un prêt personnel."
   },
 ];
 
@@ -109,9 +153,9 @@ const Glossary = () => {
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Credit Glossary</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Glossaire du crédit</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Understand key credit and lending terms to make informed financial decisions
+            Comprenez les termes clés du crédit et du prêt pour prendre des décisions financières éclairées
           </p>
         </div>
       </section>
@@ -121,7 +165,7 @@ const Glossary = () => {
           <div className="mb-8">
             <Input
               type="text"
-              placeholder="Search terms..."
+              placeholder="Rechercher des termes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="max-w-md"
@@ -139,7 +183,7 @@ const Glossary = () => {
 
           {filteredTerms.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">No terms found matching your search.</p>
+              <p className="text-muted-foreground">Aucun terme trouvé correspondant à votre recherche.</p>
             </div>
           )}
         </div>

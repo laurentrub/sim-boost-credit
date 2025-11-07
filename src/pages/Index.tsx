@@ -11,93 +11,93 @@ const Index = () => {
   const features = [
     {
       icon: Clock,
-      title: "Fast Approval",
-      description: "Get your preliminary approval in less than 5 minutes with our instant decision system.",
+      title: "Approbation rapide",
+      description: "Obtenez votre accord préliminaire en moins de 5 minutes avec notre système de décision instantanée.",
     },
     {
       icon: Shield,
-      title: "100% Secure",
-      description: "Bank-level encryption and data protection. Your information is always safe with us.",
+      title: "100% sécurisé",
+      description: "Chiffrement bancaire et protection des données. Vos informations sont toujours en sécurité.",
     },
     {
       icon: TrendingUp,
-      title: "Best Rates",
-      description: "Competitive interest rates starting from 2.9% APR. Compare and choose the best option.",
+      title: "Meilleurs taux",
+      description: "Taux d'intérêt compétitifs à partir de 2,9% TAEG. Comparez et choisissez la meilleure option.",
     },
     {
       icon: Users,
-      title: "Expert Support",
-      description: "Dedicated loan advisors available to guide you through every step of the process.",
+      title: "Support expert",
+      description: "Conseillers dédiés disponibles pour vous guider à chaque étape du processus.",
     },
   ];
 
   const loanProducts = [
     {
-      title: "Personal Loan",
-      description: "From €1,000 to €75,000 for all your personal projects",
-      rate: "From 2.9% APR",
+      title: "Prêt personnel",
+      description: "De 1 000€ à 75 000€ pour tous vos projets personnels",
+      rate: "À partir de 2,9% TAEG",
       href: "/personal-loan",
     },
     {
-      title: "Auto Loan",
-      description: "Finance your dream car with flexible payment options",
-      rate: "From 3.2% APR",
+      title: "Crédit auto",
+      description: "Financez la voiture de vos rêves avec des options de paiement flexibles",
+      rate: "À partir de 3,2% TAEG",
       href: "/auto-loan",
     },
     {
-      title: "Home Improvement",
-      description: "Transform your home with our renovation loans",
-      rate: "From 3.5% APR",
+      title: "Crédit travaux",
+      description: "Transformez votre maison avec nos prêts rénovation",
+      rate: "À partir de 3,5% TAEG",
       href: "/home-improvement",
     },
     {
-      title: "Loan Consolidation",
-      description: "Simplify your finances by consolidating multiple debts",
-      rate: "From 4.2% APR",
+      title: "Rachat de crédit",
+      description: "Simplifiez vos finances en regroupant plusieurs dettes",
+      rate: "À partir de 4,2% TAEG",
       href: "/consolidation",
     },
   ];
 
   const faqs = [
     {
-      question: "How quickly can I get my loan approved?",
-      answer: "Our instant decision system provides preliminary approval in under 5 minutes. Final approval typically takes 24-48 hours after document verification.",
+      question: "En combien de temps puis-je obtenir l'approbation de mon prêt ?",
+      answer: "Notre système de décision instantanée fournit une approbation préliminaire en moins de 5 minutes. L'approbation finale prend généralement 24 à 48 heures après vérification des documents.",
     },
     {
-      question: "What is the minimum credit score required?",
-      answer: "We accept applications from customers with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
+      question: "Quel est le score de crédit minimum requis ?",
+      answer: "Nous acceptons les demandes de clients avec différents profils de crédit. Bien qu'un score supérieur à 650 améliore vos chances, nous évaluons chaque demande individuellement.",
     },
     {
-      question: "Can I repay my loan early without penalties?",
-      answer: "Yes, all our loans allow early repayment with no penalties. You'll save on interest by paying off your loan ahead of schedule.",
+      question: "Puis-je rembourser mon prêt par anticipation sans pénalités ?",
+      answer: "Oui, tous nos prêts permettent le remboursement anticipé sans pénalités. Vous économiserez sur les intérêts en remboursant votre prêt plus tôt.",
     },
     {
-      question: "What documents do I need to apply?",
-      answer: "You'll need a valid ID, proof of income (last 3 pay slips), bank statements, and proof of address. Additional documents may be requested based on your situation.",
+      question: "Quels documents dois-je fournir pour postuler ?",
+      answer: "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenus (3 derniers bulletins de salaire), de relevés bancaires et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre situation.",
     },
     {
-      question: "How is my monthly payment calculated?",
-      answer: "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above to get an instant calculation tailored to your needs.",
+      question: "Comment est calculée ma mensualité ?",
+      answer: "Votre mensualité dépend du montant du prêt, de la durée et de votre TAEG. Utilisez notre simulateur ci-dessus pour obtenir un calcul instantané adapté à vos besoins.",
     },
     {
-      question: "Will checking rates affect my credit score?",
-      answer: "No! Checking your rate uses a soft credit inquiry which doesn't impact your credit score. Only when you formally accept a loan offer will we perform a hard inquiry.",
+      question: "La vérification des taux affecte-t-elle mon score de crédit ?",
+      answer: "Non ! La vérification de votre taux utilise une enquête de crédit souple qui n'impacte pas votre score. Ce n'est que lorsque vous acceptez formellement une offre de prêt que nous effectuons une enquête approfondie.",
     },
     {
-      question: "What makes CreditPro different from banks?",
-      answer: "We offer faster decisions, a fully digital process, competitive rates by comparing multiple lenders, and personalized service. Plus, you can complete everything online without visiting a branch.",
+      question: "Qu'est-ce qui distingue CreditPro des banques ?",
+      answer: "Nous offrons des décisions plus rapides, un processus entièrement numérique, des taux compétitifs en comparant plusieurs prêteurs et un service personnalisé. De plus, vous pouvez tout faire en ligne sans visiter une agence.",
     },
     {
-      question: "Can I apply with a co-borrower or guarantor?",
-      answer: "Yes! Adding a co-borrower or guarantor with strong credit can improve your approval chances and potentially secure a lower interest rate.",
+      question: "Puis-je postuler avec un co-emprunteur ou un garant ?",
+      answer: "Oui ! Ajouter un co-emprunteur ou un garant avec un bon crédit peut améliorer vos chances d'approbation et potentiellement obtenir un taux d'intérêt plus bas.",
     },
     {
-      question: "Do you offer loans to self-employed individuals?",
-      answer: "Absolutely! Self-employed professionals, freelancers, and business owners are welcome to apply. You'll need to provide tax returns and business bank statements to verify income.",
+      question: "Proposez-vous des prêts aux travailleurs indépendants ?",
+      answer: "Absolument ! Les professionnels indépendants, les freelances et les propriétaires d'entreprise peuvent postuler. Vous devrez fournir des déclarations fiscales et des relevés bancaires professionnels pour vérifier les revenus.",
     },
     {
-      question: "What if I have existing debt?",
-      answer: "We evaluate your debt-to-income ratio as part of the application. If your existing debts are manageable (typically below 40% of income), you may still qualify. Consider our debt consolidation option to simplify payments.",
+      question: "Que se passe-t-il si j'ai des dettes existantes ?",
+      answer: "Nous évaluons votre ratio d'endettement dans le cadre de la demande. Si vos dettes existantes sont gérables (généralement en dessous de 40% des revenus), vous pouvez toujours être éligible. Envisagez notre option de rachat de crédit pour simplifier les paiements.",
     },
   ];
 
@@ -114,22 +114,22 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Get Your Credit
+                Obtenez votre crédit
                 <br />
-                <span className="text-accent-light">In Minutes</span>
+                <span className="text-accent-light">En quelques minutes</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-                Fast, transparent, and secure credit solutions tailored to your needs. 
-                Get your preliminary approval with no commitment.
+                Solutions de crédit rapides, transparentes et sécurisées adaptées à vos besoins. 
+                Obtenez votre accord préliminaire sans engagement.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link to="/apply">
                   <Button variant="accent" size="xl">
-                    Apply Now
+                    Demander maintenant
                   </Button>
                 </Link>
                 <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Learn More
+                  En savoir plus
                 </Button>
               </div>
             </div>
@@ -147,19 +147,19 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">50K+</div>
-              <div className="text-sm text-muted-foreground">Happy Customers</div>
+              <div className="text-sm text-muted-foreground">Clients satisfaits</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">€500M+</div>
-              <div className="text-sm text-muted-foreground">Loans Granted</div>
+              <div className="text-sm text-muted-foreground">Prêts accordés</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">95%</div>
-              <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+              <div className="text-sm text-muted-foreground">Taux de satisfaction</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">5 min</div>
-              <div className="text-sm text-muted-foreground">Avg. Approval Time</div>
+              <div className="text-sm text-muted-foreground">Temps d'approbation moyen</div>
             </div>
           </div>
         </div>
@@ -170,10 +170,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose CreditPro?
+              Pourquoi choisir CreditPro ?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We combine cutting-edge technology with personalized service to make borrowing simple, fast, and transparent.
+              Nous combinons technologie de pointe et service personnalisé pour rendre l'emprunt simple, rapide et transparent.
             </p>
           </div>
 
@@ -196,10 +196,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Loan Products
+              Nos produits de crédit
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Whatever your project, we have a financing solution tailored to your needs.
+              Quel que soit votre projet, nous avons une solution de financement adaptée à vos besoins.
             </p>
           </div>
 
@@ -211,7 +211,7 @@ const Index = () => {
                 <div className="text-accent font-semibold mb-6">{product.rate}</div>
                 <Link to={product.href}>
                   <Button variant="outline" className="w-full">
-                    Learn More & Simulate
+                    En savoir plus & Simuler
                   </Button>
                 </Link>
               </Card>
@@ -224,80 +224,80 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            About CreditPro: Your Trusted Credit Partner
+            À propos de CreditPro : Votre partenaire crédit de confiance
           </h2>
           
           <div className="prose prose-lg max-w-none space-y-6 text-foreground">
             <p className="text-lg leading-relaxed">
-              <strong>CreditPro</strong> is a leading online lending platform that has revolutionized the way individuals and businesses access credit in France. Founded in 2015, we've helped over 50,000 customers achieve their financial goals through transparent, fast, and secure lending solutions.
+              <strong>CreditPro</strong> est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.
             </p>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Notre mission</h3>
             <p className="leading-relaxed">
-              We believe that accessing credit should be simple, transparent, and stress-free. Our mission is to democratize lending by leveraging technology to offer competitive rates, instant decisions, and a seamless digital experience. We're committed to financial inclusion and helping our customers make informed borrowing decisions.
+              Nous croyons que l'accès au crédit devrait être simple, transparent et sans stress. Notre mission est de démocratiser le prêt en tirant parti de la technologie pour offrir des taux compétitifs, des décisions instantanées et une expérience numérique fluide. Nous nous engageons pour l'inclusion financière et aidons nos clients à prendre des décisions d'emprunt éclairées.
             </p>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Why We're Different</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Pourquoi nous sommes différents</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Speed:</strong> Our advanced algorithms provide preliminary approval in under 5 minutes, with funds typically disbursed within 48 hours of final approval.</span>
+                <span><strong>Rapidité :</strong> Nos algorithmes avancés fournissent une approbation préliminaire en moins de 5 minutes, avec des fonds généralement déboursés dans les 48 heures suivant l'approbation finale.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Transparency:</strong> No hidden fees, no surprises. All costs, rates, and terms are clearly displayed before you commit.</span>
+                <span><strong>Transparence :</strong> Pas de frais cachés, pas de surprises. Tous les coûts, taux et conditions sont clairement affichés avant que vous ne vous engagiez.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Security:</strong> We use bank-level encryption and are fully compliant with GDPR and French banking regulations.</span>
+                <span><strong>Sécurité :</strong> Nous utilisons un chiffrement de niveau bancaire et sommes entièrement conformes au RGPD et aux réglementations bancaires françaises.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Flexibility:</strong> Early repayment options with no penalties, flexible terms from 12 to 84 months, and amounts from €1,000 to €75,000.</span>
+                <span><strong>Flexibilité :</strong> Options de remboursement anticipé sans pénalités, durées flexibles de 12 à 84 mois et montants de 1 000€ à 75 000€.</span>
               </li>
             </ul>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Types of Loans We Offer</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Types de prêts que nous proposons</h3>
             <p className="leading-relaxed">
-              At CreditPro, we understand that every financial need is unique. That's why we offer a comprehensive range of loan products designed to match your specific circumstances:
+              Chez CreditPro, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :
             </p>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Personal Loans</h4>
-              <p className="mb-2">Perfect for weddings, vacations, medical expenses, or any personal project. Borrow from €1,000 to €75,000 with rates starting at 2.9% APR.</p>
-              <p className="text-sm text-muted-foreground">Example: €10,000 over 48 months = €221/month (4.9% APR, total cost: €10,608)</p>
+              <h4 className="text-xl font-semibold mb-3">Prêts personnels</h4>
+              <p className="mb-2">Parfait pour les mariages, les vacances, les frais médicaux ou tout projet personnel. Empruntez de 1 000€ à 75 000€ avec des taux à partir de 2,9% TAEG.</p>
+              <p className="text-sm text-muted-foreground">Exemple : 10 000€ sur 48 mois = 221€/mois (TAEG 4,9%, coût total : 10 608€)</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Auto Loans</h4>
-              <p className="mb-2">Finance new or used vehicles with competitive rates and flexible terms. Rates from 3.2% APR.</p>
-              <p className="text-sm text-muted-foreground">Example: €20,000 over 60 months = €362/month (3.9% APR, total cost: €21,720)</p>
+              <h4 className="text-xl font-semibold mb-3">Crédits auto</h4>
+              <p className="mb-2">Financez des véhicules neufs ou d'occasion avec des taux compétitifs et des conditions flexibles. Taux à partir de 3,2% TAEG.</p>
+              <p className="text-sm text-muted-foreground">Exemple : 20 000€ sur 60 mois = 362€/mois (TAEG 3,9%, coût total : 21 720€)</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Home Improvement Loans</h4>
-              <p className="mb-2">Transform your living space with loans designed for renovations, extensions, or energy efficiency upgrades.</p>
-              <p className="text-sm text-muted-foreground">Example: €15,000 over 72 months = €238/month (4.5% APR, total cost: €17,136)</p>
+              <h4 className="text-xl font-semibold mb-3">Crédits travaux</h4>
+              <p className="mb-2">Transformez votre espace de vie avec des prêts conçus pour les rénovations, extensions ou améliorations énergétiques.</p>
+              <p className="text-sm text-muted-foreground">Exemple : 15 000€ sur 72 mois = 238€/mois (TAEG 4,5%, coût total : 17 136€)</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Debt Consolidation</h4>
-              <p className="mb-2">Simplify multiple debts into one easy monthly payment, often at a lower overall rate.</p>
-              <p className="text-sm text-muted-foreground">Example: Consolidate €25,000 in debts over 84 months = €351/month (5.2% APR)</p>
+              <h4 className="text-xl font-semibold mb-3">Rachat de crédit</h4>
+              <p className="mb-2">Simplifiez plusieurs dettes en un seul paiement mensuel facile, souvent à un taux global inférieur.</p>
+              <p className="text-sm text-muted-foreground">Exemple : Regrouper 25 000€ de dettes sur 84 mois = 351€/mois (TAEG 5,2%)</p>
             </div>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">How Our Process Works</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Comment fonctionne notre processus</h3>
             <ol className="space-y-4 list-decimal list-inside">
-              <li className="leading-relaxed"><strong>Simulate Your Loan:</strong> Use our interactive calculator to see estimated monthly payments and total costs.</li>
-              <li className="leading-relaxed"><strong>Submit Your Application:</strong> Complete our simple online form in just a few minutes.</li>
-              <li className="leading-relaxed"><strong>Get Instant Decision:</strong> Our system analyzes your application and provides preliminary approval immediately.</li>
-              <li className="leading-relaxed"><strong>Upload Documents:</strong> Submit required documents securely through our platform.</li>
-              <li className="leading-relaxed"><strong>Receive Your Funds:</strong> Once approved, funds are transferred directly to your bank account within 48 hours.</li>
+              <li className="leading-relaxed"><strong>Simulez votre prêt :</strong> Utilisez notre calculatrice interactive pour voir les paiements mensuels estimés et les coûts totaux.</li>
+              <li className="leading-relaxed"><strong>Soumettez votre demande :</strong> Complétez notre simple formulaire en ligne en quelques minutes.</li>
+              <li className="leading-relaxed"><strong>Obtenez une décision instantanée :</strong> Notre système analyse votre demande et fournit une approbation préliminaire immédiatement.</li>
+              <li className="leading-relaxed"><strong>Téléchargez les documents :</strong> Soumettez les documents requis en toute sécurité via notre plateforme.</li>
+              <li className="leading-relaxed"><strong>Recevez vos fonds :</strong> Une fois approuvé, les fonds sont transférés directement sur votre compte bancaire dans les 48 heures.</li>
             </ol>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Our Commitment to Responsible Lending</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Notre engagement envers un prêt responsable</h3>
             <p className="leading-relaxed">
-              We take responsible lending seriously. Before approving any loan, we carefully assess your ability to repay based on your income, expenses, and existing debts. We'll never approve a loan that could put you in financial difficulty. Our advisors are always available to discuss alternatives if a loan isn't the right solution for your situation.
+              Nous prenons le prêt responsable au sérieux. Avant d'approuver un prêt, nous évaluons soigneusement votre capacité de remboursement en fonction de vos revenus, dépenses et dettes existantes. Nous n'approuverons jamais un prêt qui pourrait vous mettre en difficulté financière. Nos conseillers sont toujours disponibles pour discuter d'alternatives si un prêt n'est pas la bonne solution pour votre situation.
             </p>
           </div>
         </div>
@@ -307,7 +307,7 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            Frequently Asked Questions
+            Questions fréquemment posées
           </h2>
 
           <div className="space-y-6">
@@ -322,7 +322,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link to="/resources/faq">
               <Button variant="outline" size="lg">
-                View Complete FAQ
+                Voir la FAQ complète
               </Button>
             </Link>
           </div>
@@ -333,7 +333,7 @@ const Index = () => {
       <section className="py-12 border-y border-border">
         <div className="container mx-auto px-4">
           <h3 className="text-center text-sm font-semibold text-muted-foreground mb-8 uppercase tracking-wider">
-            Trusted by Leading Financial Institutions
+            Approuvé par les principales institutions financières
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-50">
             <Award className="h-12 w-12" />
@@ -348,14 +348,14 @@ const Index = () => {
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
+            Prêt à commencer ?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            Join thousands of satisfied customers who chose CreditPro for their financing needs.
+            Rejoignez des milliers de clients satisfaits qui ont choisi CreditPro pour leurs besoins de financement.
           </p>
           <Link to="/apply">
             <Button variant="accent" size="xl">
-              Apply Now - Get Instant Approval
+              Demander maintenant - Approbation instantanée
             </Button>
           </Link>
         </div>

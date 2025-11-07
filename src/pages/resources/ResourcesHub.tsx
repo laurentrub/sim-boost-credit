@@ -9,22 +9,22 @@ const ResourcesHub = () => {
   const resources = [
     {
       icon: FileText,
-      title: "Credit Glossary",
-      description: "Learn the meaning of common credit and lending terms",
+      title: "Glossaire du crédit",
+      description: "Découvrez la signification des termes courants du crédit et du prêt",
       href: "/resources/glossary",
       color: "text-accent",
     },
     {
       icon: BookOpen,
-      title: "Credit Guide",
-      description: "Educational articles about borrowing, credit scores, and financial planning",
+      title: "Guide du crédit",
+      description: "Articles pédagogiques sur l'emprunt, les scores de crédit et la planification financière",
       href: "/resources/guide",
       color: "text-primary",
     },
     {
       icon: HelpCircle,
-      title: "Complete FAQ",
-      description: "Answers to 50+ common questions about loans and our services",
+      title: "FAQ complète",
+      description: "Réponses à plus de 50 questions courantes sur les prêts et nos services",
       href: "/resources/faq",
       color: "text-success",
     },
@@ -36,9 +36,9 @@ const ResourcesHub = () => {
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Resources & Guides</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Ressources & Guides</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Everything you need to make informed borrowing decisions
+            Tout ce dont vous avez besoin pour prendre des décisions d'emprunt éclairées
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ const ResourcesHub = () => {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{resource.description}</p>
                   <Link to={resource.href}>
                     <Button variant="outline" className="w-full">
-                      Explore
+                      Explorer
                     </Button>
                   </Link>
                 </Card>
