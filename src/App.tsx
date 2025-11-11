@@ -29,9 +29,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/personal-loan" element={<PersonalLoan />} />
           <Route path="/auto-loan" element={<AutoLoan />} />
-          <Route path="/home-improvement" element={<PersonalLoan />} />
-          <Route path="/consolidation" element={<PersonalLoan />} />
-          <Route path="/business-loan" element={<PersonalLoan />} />
+          <Route path="/home-improvement" element={<HomeImprovement />} />
+          <Route path="/consolidation" element={<Consolidation />} />
+          <Route path="/business-loan" element={<BusinessLoan />} />
           <Route path="/apply" element={<ApplyPage />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/resources" element={<ResourcesHub />} />
