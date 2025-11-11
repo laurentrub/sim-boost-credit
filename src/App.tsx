@@ -15,6 +15,7 @@ import CreditGuide from "./pages/resources/CreditGuide";
 import HomeImprovement from "./pages/HomeImprovement";
 import Consolidation from "./pages/Consolidation";
 import BusinessLoan from "./pages/BusinessLoan";
+import ApplyConfirmation from "./pages/ApplyConfirmation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/consolidation" element={<Consolidation />} />
           <Route path="/business-loan" element={<BusinessLoan />} />
           <Route path="/apply" element={<ApplyPage />} />
+          <Route path="/apply/confirmation" element={<ApplyConfirmation />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/resources" element={<ResourcesHub />} />
           <Route path="/resources/glossary" element={<Glossary />} />
