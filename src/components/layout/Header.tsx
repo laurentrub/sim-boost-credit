@@ -47,12 +47,6 @@ const Header = () => {
       { name: "Crédit trésorerie", href: "/business-loan" },
       { name: "Crédit équipement", href: "/business-loan" },
     ],
-    financement: [
-      { name: "Soumettre un projet", href: "/apply" },
-      { name: "Critères d'éligibilité", href: "/resources" },
-      { name: "Parcours & délais", href: "/resources" },
-      { name: "Projets financés", href: "/resources" },
-    ],
   };
 
   const isActive = (path: string) => location.pathname === path;
@@ -111,32 +105,19 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Financement de projets</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {navigation.financement.map((item) => (
-                      <li key={item.name}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={item.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
         <div className="hidden md:flex md:items-center md:space-x-3">
-          <Link to="/apply">
+          <Link to="/project-financing">
             <Button variant="accent" size="default">
+              Financer mon projet
+            </Button>
+          </Link>
+          
+          <Link to="/apply">
+            <Button variant="outline" size="default">
               Demande de crédit
             </Button>
           </Link>
@@ -207,24 +188,17 @@ const Header = () => {
                 ))}
               </div>
 
-              <div>
-                <div className="px-3 py-2 text-sm font-semibold text-foreground">Financement de projets</div>
-                {navigation.financement.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
             </div>
 
             <div className="pt-4 space-y-2">
-              <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/project-financing" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="accent" size="default" className="w-full">
+                  Financer mon projet
+                </Button>
+              </Link>
+              
+              <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" size="default" className="w-full">
                   Demande de crédit
                 </Button>
               </Link>

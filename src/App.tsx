@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import PersonalLoan from "./pages/PersonalLoan";
 import AutoLoan from "./pages/AutoLoan";
 import ApplyPage from "./pages/ApplyPage";
+import ProjectFinancing from "./pages/ProjectFinancing";
 import AdminDashboard from "./pages/AdminDashboard";
 import ResourcesHub from "./pages/resources/ResourcesHub";
 import Glossary from "./pages/resources/Glossary";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/consolidation" element={<Consolidation />} />
           <Route path="/business-loan" element={<BusinessLoan />} />
           <Route path="/apply" element={<ApplyPage />} />
+          <Route path="/project-financing" element={<ProjectFinancing />} />
           <Route path="/apply/confirmation" element={<ApplyConfirmation />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/resources" element={<ResourcesHub />} />
