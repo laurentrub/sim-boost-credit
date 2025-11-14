@@ -8,6 +8,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Clock, TrendingUp, Users, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-finance.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
 import happyClients from "@/assets/happy-clients.jpg";

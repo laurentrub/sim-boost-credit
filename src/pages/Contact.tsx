@@ -24,8 +24,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
+      title: t('contact.form.success'),
+      description: t('contact.form.successDesc'),
     });
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
@@ -36,9 +36,9 @@ const Contact = () => {
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contactez-nous</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('contact.title')}</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Notre équipe est à votre disposition pour répondre à toutes vos questions
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -50,36 +50,36 @@ const Contact = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Phone className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Téléphone</h3>
-              <p className="text-muted-foreground">01 23 45 67 89</p>
-              <p className="text-sm text-muted-foreground mt-1">Lun-Sam: 9h-18h</p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{t('contact.phone')}</h3>
+              <p className="text-muted-foreground">{t('contact.phoneNumber')}</p>
+              <p className="text-sm text-muted-foreground mt-1">{t('contact.phoneHours')}</p>
             </Card>
 
             <Card className="p-6 text-center">
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Mail className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground">contact@privatequity.fr</p>
-              <p className="text-sm text-muted-foreground mt-1">Réponse sous 24h</p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{t('contact.email')}</h3>
+              <p className="text-muted-foreground">{t('contact.emailAddress')}</p>
+              <p className="text-sm text-muted-foreground mt-1">{t('contact.emailResponse')}</p>
             </Card>
 
             <Card className="p-6 text-center">
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Adresse</h3>
-              <p className="text-muted-foreground">123 Avenue des Champs-Élysées</p>
-              <p className="text-muted-foreground">75008 Paris, France</p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{t('contact.address')}</h3>
+              <p className="text-muted-foreground">{t('contact.addressLine1')}</p>
+              <p className="text-muted-foreground">{t('contact.addressLine2')}</p>
             </Card>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <Card className="p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Envoyez-nous un message</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">{t('contact.form.title')}</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Nom complet *</Label>
+                  <Label htmlFor="name">{t('contact.form.name')} *</Label>
                   <Input
                     id="name"
                     value={formData.name}
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('contact.form.email')} *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -102,7 +102,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="phone">Téléphone</Label>
+                  <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                   <Input
                     id="phone"
                     type="tel"
@@ -113,7 +113,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="subject">Sujet *</Label>
+                  <Label htmlFor="subject">{t('contact.form.subject')} *</Label>
                   <Input
                     id="subject"
                     value={formData.subject}
@@ -124,7 +124,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t('contact.form.message')} *</Label>
                   <Textarea
                     id="message"
                     value={formData.message}
@@ -135,7 +135,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full">Envoyer le message</Button>
+                <Button type="submit" className="w-full">{t('contact.form.send')}</Button>
               </form>
             </Card>
 
@@ -146,35 +146,33 @@ const Contact = () => {
                     <Clock className="h-6 w-6 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">Horaires d'ouverture</h3>
+                    <h3 className="text-lg font-bold text-foreground mb-2">{t('contact.sidebar.hours')}</h3>
                     <div className="space-y-1 text-muted-foreground">
-                      <p>Lundi - Vendredi: 9h00 - 18h00</p>
-                      <p>Samedi: 10h00 - 16h00</p>
-                      <p>Dimanche: Fermé</p>
+                      <p>{t('contact.sidebar.weekdays')}</p>
+                      <p>{t('contact.sidebar.saturday')}</p>
+                      <p>{t('contact.sidebar.sunday')}</p>
                     </div>
                   </div>
                 </div>
               </Card>
 
               <Card className="p-6 bg-gradient-subtle border-none">
-                <h3 className="text-lg font-bold text-foreground mb-3">Questions fréquentes</h3>
+                <h3 className="text-lg font-bold text-foreground mb-3">{t('contact.sidebar.faqLink')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Avant de nous contacter, consultez notre page FAQ qui contient les réponses aux questions 
-                  les plus courantes sur nos services, les demandes de crédit et les conditions.
+                  {t('contact.sidebar.faqDesc')}
                 </p>
                 <Button variant="outline" asChild className="w-full">
-                  <a href="/resources/faq">Consulter la FAQ</a>
+                  <a href="/resources/faq">{t('footer.faq')}</a>
                 </Button>
               </Card>
 
               <Card className="p-6">
-                <h3 className="text-lg font-bold text-foreground mb-3">Besoin d'aide immédiate ?</h3>
+                <h3 className="text-lg font-bold text-foreground mb-3">{t('contact.sidebar.callNow')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Pour toute urgence ou question sur une demande en cours, n'hésitez pas à nous appeler 
-                  directement. Notre équipe est disponible pour vous assister.
+                  {t('contact.sidebar.faqDesc')}
                 </p>
                 <Button className="w-full" asChild>
-                  <a href="tel:0123456789">Appeler maintenant</a>
+                  <a href="tel:0123456789">{t('contact.sidebar.callNow')}</a>
                 </Button>
               </Card>
             </div>
