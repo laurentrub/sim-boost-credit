@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Newsletter = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
@@ -14,8 +16,8 @@ const Newsletter = () => {
     
     if (!email || !email.includes("@")) {
       toast({
-        title: "Email invalide",
-        description: "Veuillez entrer une adresse email valide.",
+        title: t('newsletter.invalidEmail'),
+        description: t('newsletter.invalidEmailDesc'),
         variant: "destructive",
       });
       return;
@@ -26,8 +28,8 @@ const Newsletter = () => {
     // Simulate API call
     setTimeout(() => {
       toast({
-        title: "Inscription réussie !",
-        description: "Vous recevrez bientôt nos meilleures offres de crédit.",
+        title: t('newsletter.successTitle'),
+        description: t('newsletter.successDesc'),
       });
       setEmail("");
       setLoading(false);
@@ -44,16 +46,16 @@ const Newsletter = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
-            Restez informé des meilleures offres
+            {t('newsletter.title')}
           </h2>
           <p className="text-lg text-accent-foreground/90 mb-8">
-            Inscrivez-vous à notre newsletter et recevez en exclusivité nos meilleurs taux, conseils financiers et offres spéciales.
+            {t('newsletter.description')}
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
             <Input
               type="email"
-              placeholder="Votre adresse email"
+              placeholder={t('newsletter.placeholder')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 bg-background/90 border-0 h-12 text-base"
@@ -65,12 +67,12 @@ const Newsletter = () => {
               className="bg-background text-accent hover:bg-background/90 h-12 px-8"
               disabled={loading}
             >
-              {loading ? "Inscription..." : "S'inscrire"}
+              {loading ? t('newsletter.subscribing') : t('newsletter.subscribe')}
             </Button>
           </form>
           
           <p className="text-sm text-accent-foreground/80 mt-4">
-            Pas de spam. Désinscription possible à tout moment.
+            {t('newsletter.noSpam')}
           </p>
         </div>
       </div>

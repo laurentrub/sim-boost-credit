@@ -1,8 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+  
   const testimonials = [
     {
       name: "Marie Dubois",
@@ -47,10 +50,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ce que disent nos clients
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plus de 50 000 clients nous font confiance pour leurs projets de financement
+            {t('testimonials.subtitle')}
           </p>
         </div>
 

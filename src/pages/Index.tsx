@@ -18,6 +18,8 @@ import teamGroup from "@/assets/team-group.jpg";
 import carLoanSuccess from "@/assets/car-loan-success.jpg";
 
 const Index = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Clock,
