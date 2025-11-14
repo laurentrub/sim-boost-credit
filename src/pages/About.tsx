@@ -24,14 +24,10 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Privat Equity est une plateforme de prêt en ligne innovante qui révolutionne l'accès au crédit en France. 
-              Fondée avec la mission de rendre le financement personnel plus transparent, accessible et équitable, nous 
-              connectons des milliers d'emprunteurs avec les meilleures offres de crédit du marché.
+              {t('about.intro1')}
             </p>
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Notre plateforme utilise une technologie de pointe pour analyser votre profil financier et vous proposer 
-              des offres personnalisées en quelques minutes. Nous travaillons avec un réseau de partenaires financiers 
-              soigneusement sélectionnés pour garantir que vous obtenez toujours les meilleures conditions possibles.
+              {t('about.intro2')}
             </p>
           </div>
 
@@ -40,11 +36,9 @@ const About = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
                 <Target className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Notre Mission</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t('about.mission.title')}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Démocratiser l'accès au crédit en offrant des solutions de financement transparentes, rapides et 
-                adaptées aux besoins de chacun. Nous croyons que tout le monde mérite d'avoir accès à des options 
-                de financement équitables, quel que soit son profil.
+                {t('about.mission.description')}
               </p>
             </Card>
 
@@ -52,11 +46,9 @@ const About = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Nos Valeurs</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t('about.values.title')}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Transparence, intégrité et respect du client sont au cœur de tout ce que nous faisons. Nous nous 
-                engageons à fournir des informations claires, sans frais cachés, et à traiter chaque client avec 
-                le respect qu'il mérite.
+                {t('about.values.description')}
               </p>
             </Card>
 
@@ -64,11 +56,9 @@ const About = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Sécurité & Conformité</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t('about.security.title')}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Nous utilisons les technologies de sécurité les plus avancées pour protéger vos données personnelles. 
-                Notre plateforme est entièrement conforme au RGPD et nous sommes régulés par les autorités financières 
-                françaises.
+                {t('about.security.description')}
               </p>
             </Card>
 
@@ -76,11 +66,9 @@ const About = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
                 <Award className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Excellence du Service</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">{t('about.expertise.title')}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Notre équipe d'experts en crédit est disponible pour vous accompagner à chaque étape de votre 
-                demande. Nous nous engageons à fournir un service client exceptionnel et des réponses rapides 
-                à toutes vos questions.
+                {t('about.expertise.description')}
               </p>
             </Card>
           </div>
