@@ -198,5 +198,33 @@
     "creditGuide": "Guide du crédit",
     "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. Tous droits réservés."
+  },
+  "newsletter": {
+    "title": "Restez informé des meilleures offres",
+    "description": "Inscrivez-vous à notre newsletter et recevez en exclusivité nos meilleurs taux, conseils financiers et offres spéciales.",
+    "placeholder": "Votre adresse email",
+    "subscribe": "S'inscrire",
+    "subscribing": "Inscription...",
+    "invalidEmail": "Email invalide",
+    "invalidEmailDesc": "Veuillez entrer une adresse email valide.",
+    "successTitle": "Inscription réussie !",
+    "successDesc": "Vous recevrez bientôt nos meilleures offres de crédit.",
+    "noSpam": "Pas de spam. Désinscription possible à tout moment."
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Plus de 50 000 clients nous font confiance pour leurs projets de financement"
+  },
+  "simulator": {
+    "title": "Calculateur de prêt",
+    "amount": "Montant du prêt",
+    "duration": "Durée du prêt",
+    "months": "mois",
+    "monthly": "Mensualité",
+    "month": "mois",
+    "totalCost": "Coût total",
+    "rate": "Taux d'intérêt",
+    "getApproval": "Obtenir une approbation",
+    "disclaimer": "Exemple de calcul pour un taux de 4,5% TAEG. Le taux final dépend de votre profil."
   }
 }

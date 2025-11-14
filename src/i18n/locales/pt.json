@@ -198,5 +198,33 @@
     "creditGuide": "Guia de Crédito",
     "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. Todos os direitos reservados."
+  },
+  "newsletter": {
+    "title": "Mantenha-se informado sobre as melhores ofertas",
+    "description": "Inscreva-se em nossa newsletter e receba em exclusivo nossas melhores taxas, conselhos financeiros e ofertas especiais.",
+    "placeholder": "Seu endereço de e-mail",
+    "subscribe": "Inscrever-se",
+    "subscribing": "Inscrevendo...",
+    "invalidEmail": "E-mail inválido",
+    "invalidEmailDesc": "Por favor, insira um endereço de e-mail válido.",
+    "successTitle": "Inscrição bem-sucedida!",
+    "successDesc": "Em breve você receberá nossas melhores ofertas de crédito.",
+    "noSpam": "Sem spam. Cancele a inscrição a qualquer momento."
+  },
+  "testimonials": {
+    "title": "O que dizem nossos clientes",
+    "subtitle": "Mais de 50.000 clientes confiam em nós para seus projetos de financiamento"
+  },
+  "simulator": {
+    "title": "Calculadora de empréstimo",
+    "amount": "Valor do empréstimo",
+    "duration": "Duração do empréstimo",
+    "months": "meses",
+    "monthly": "Pagamento mensal",
+    "month": "mês",
+    "totalCost": "Custo total",
+    "rate": "Taxa de juros",
+    "getApproval": "Obter aprovação",
+    "disclaimer": "Exemplo de cálculo para uma taxa TAEG de 4,5%. A taxa final depende do seu perfil."
   }
 }

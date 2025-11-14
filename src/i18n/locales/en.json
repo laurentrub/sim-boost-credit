@@ -198,5 +198,33 @@
     "creditGuide": "Credit Guide",
     "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. All rights reserved."
+  },
+  "newsletter": {
+    "title": "Stay informed about the best offers",
+    "description": "Subscribe to our newsletter and receive exclusive best rates, financial advice and special offers.",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing...",
+    "invalidEmail": "Invalid email",
+    "invalidEmailDesc": "Please enter a valid email address.",
+    "successTitle": "Successfully subscribed!",
+    "successDesc": "You will soon receive our best loan offers.",
+    "noSpam": "No spam. Unsubscribe anytime."
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Over 50,000 clients trust us for their financing projects"
+  },
+  "simulator": {
+    "title": "Loan Calculator",
+    "amount": "Loan amount",
+    "duration": "Loan duration",
+    "months": "months",
+    "monthly": "Monthly payment",
+    "month": "month",
+    "totalCost": "Total cost",
+    "rate": "Interest rate",
+    "getApproval": "Get approval",
+    "disclaimer": "Example calculation for a 4.5% APR rate. The final rate depends on your profile."
   }
 }

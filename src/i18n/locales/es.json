@@ -198,5 +198,33 @@
     "creditGuide": "Guía de Crédito",
     "newsletter": "Boletín",
     "copyright": "© 2024 Privat Equity. Todos los derechos reservados."
+  },
+  "newsletter": {
+    "title": "Manténgase informado sobre las mejores ofertas",
+    "description": "Suscríbase a nuestro boletín y reciba en exclusiva nuestras mejores tasas, asesoramiento financiero y ofertas especiales.",
+    "placeholder": "Su dirección de correo electrónico",
+    "subscribe": "Suscribirse",
+    "subscribing": "Suscribiendo...",
+    "invalidEmail": "Correo electrónico inválido",
+    "invalidEmailDesc": "Por favor, introduzca una dirección de correo electrónico válida.",
+    "successTitle": "¡Suscripción exitosa!",
+    "successDesc": "Pronto recibirá nuestras mejores ofertas de crédito.",
+    "noSpam": "Sin spam. Darse de baja en cualquier momento."
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "Más de 50,000 clientes confían en nosotros para sus proyectos de financiación"
+  },
+  "simulator": {
+    "title": "Calculadora de préstamos",
+    "amount": "Cantidad del préstamo",
+    "duration": "Duración del préstamo",
+    "months": "meses",
+    "monthly": "Pago mensual",
+    "month": "mes",
+    "totalCost": "Costo total",
+    "rate": "Tasa de interés",
+    "getApproval": "Obtener aprobación",
+    "disclaimer": "Cálculo de ejemplo para una tasa TAE del 4,5%. La tasa final depende de su perfil."
   }
 }
