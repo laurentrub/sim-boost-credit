@@ -198,5 +198,33 @@
     "creditGuide": "Kredietgids",
     "newsletter": "Nieuwsbrief",
     "copyright": "© 2024 Privat Equity. Alle rechten voorbehouden."
+  },
+  "newsletter": {
+    "title": "Blijf op de hoogte van de beste aanbiedingen",
+    "description": "Abonneer u op onze nieuwsbrief en ontvang exclusief onze beste tarieven, financieel advies en speciale aanbiedingen.",
+    "placeholder": "Uw e-mailadres",
+    "subscribe": "Abonneren",
+    "subscribing": "Abonneren...",
+    "invalidEmail": "Ongeldig e-mailadres",
+    "invalidEmailDesc": "Voer een geldig e-mailadres in.",
+    "successTitle": "Succesvol geabonneerd!",
+    "successDesc": "U ontvangt binnenkort onze beste leningaanbiedingen.",
+    "noSpam": "Geen spam. Altijd opzegbaar."
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "subtitle": "Meer dan 50.000 klanten vertrouwen ons voor hun financieringsprojecten"
+  },
+  "simulator": {
+    "title": "Leningcalculator",
+    "amount": "Leningbedrag",
+    "duration": "Looptijd lening",
+    "months": "maanden",
+    "monthly": "Maandelijkse betaling",
+    "month": "maand",
+    "totalCost": "Totale kosten",
+    "rate": "Rentetarief",
+    "getApproval": "Goedkeuring verkrijgen",
+    "disclaimer": "Voorbeeldberekening voor een JKP van 4,5%. Het uiteindelijke tarief is afhankelijk van uw profiel."
   }
 }

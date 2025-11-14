@@ -198,5 +198,33 @@
     "creditGuide": "Kreditleitfaden",
     "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. Alle Rechte vorbehalten."
+  },
+  "newsletter": {
+    "title": "Bleiben Sie über die besten Angebote informiert",
+    "description": "Abonnieren Sie unseren Newsletter und erhalten Sie exklusive Bestpreise, Finanzberatung und Sonderangebote.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "subscribe": "Abonnieren",
+    "subscribing": "Abonnieren...",
+    "invalidEmail": "Ungültige E-Mail",
+    "invalidEmailDesc": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "successTitle": "Erfolgreich abonniert!",
+    "successDesc": "Sie erhalten bald unsere besten Kreditangebote.",
+    "noSpam": "Kein Spam. Jederzeit abbestellbar."
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Über 50.000 Kunden vertrauen uns bei ihren Finanzierungsprojekten"
+  },
+  "simulator": {
+    "title": "Kreditrechner",
+    "amount": "Kreditbetrag",
+    "duration": "Kreditlaufzeit",
+    "months": "Monate",
+    "monthly": "Monatliche Rate",
+    "month": "Monat",
+    "totalCost": "Gesamtkosten",
+    "rate": "Zinssatz",
+    "getApproval": "Genehmigung erhalten",
+    "disclaimer": "Beispielrechnung für einen effektiven Jahreszins von 4,5%. Der endgültige Zinssatz hängt von Ihrem Profil ab."
   }
 }

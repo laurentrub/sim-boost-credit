@@ -198,5 +198,33 @@
     "creditGuide": "Vodič za Kredit",
     "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. Sva prava pridržana."
+  },
+  "newsletter": {
+    "title": "Budite informirani o najboljim ponudama",
+    "description": "Pretplatite se na naš bilten i primajte ekskluzivno naše najbolje stope, financijske savjete i posebne ponude.",
+    "placeholder": "Vaša adresa e-pošte",
+    "subscribe": "Pretplati se",
+    "subscribing": "Pretplaćivanje...",
+    "invalidEmail": "Nevažeća e-pošta",
+    "invalidEmailDesc": "Molimo unesite važeću adresu e-pošte.",
+    "successTitle": "Uspješno pretplaćeni!",
+    "successDesc": "Uskoro ćete primiti naše najbolje ponude kredita.",
+    "noSpam": "Bez neželjene pošte. Otkažite pretplatu bilo kada."
+  },
+  "testimonials": {
+    "title": "Što kažu naši klijenti",
+    "subtitle": "Više od 50.000 klijenata nam vjeruje za svoje projekte financiranja"
+  },
+  "simulator": {
+    "title": "Kalkulator kredita",
+    "amount": "Iznos kredita",
+    "duration": "Trajanje kredita",
+    "months": "mjeseci",
+    "monthly": "Mjesečna rata",
+    "month": "mjesec",
+    "totalCost": "Ukupni trošak",
+    "rate": "Kamatna stopa",
+    "getApproval": "Dobiti odobrenje",
+    "disclaimer": "Primjer izračuna za stopu od 4,5% EKS. Konačna stopa ovisi o vašem profilu."
   }
 }
