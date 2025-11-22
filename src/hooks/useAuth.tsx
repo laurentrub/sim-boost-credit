@@ -108,34 +108,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const resetPassword = async (email: string) => {
     const redirectUrl = `${window.location.origin}/reset-password`;
     
-    // Generate a password reset token using Supabase Auth
-    const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: redirectUrl,
     });
     
-    if (error) {
-      return { error };
-    }
-    
-    // Call our custom edge function to send the styled email
-    try {
-      await supabase.functions.invoke('send-reset-password-email', {
-        body: {
-          email,
-          email_data: {
-            token: '', // Token is managed by Supabase
-            token_hash: '',
-            redirect_to: redirectUrl,
-            email_action_type: 'recovery',
-          }
-        }
-      });
-    } catch (emailError) {
-      console.error('Error sending custom email:', emailError);
-      // Don't return error here - the reset link is still valid via Supabase's default email
-    }
-    
-    return { error: null };
+    return { error };
   };
 
   const updatePassword = async (newPassword: string) => {
