@@ -35,8 +35,11 @@ const Header = () => {
     hr: { name: "Hrvatski", flag: "🇭🇷" },
   };
 
+  const currentLang = i18n.language?.split('-')[0] || 'fr';
+
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem('i18nextLng', lng);
   };
 
   const navigation = {
@@ -144,7 +147,7 @@ const Header = () => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-2">
-                <span className="text-xl">{languages[i18n.language as keyof typeof languages]?.flag || "🇫🇷"}</span>
+                <span className="text-xl">{languages[currentLang as keyof typeof languages]?.flag || "🇫🇷"}</span>
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -249,8 +252,8 @@ const Header = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="default" className="w-full gap-2">
-                    <span className="text-xl">{languages[i18n.language as keyof typeof languages]?.flag || "🇫🇷"}</span>
-                    {languages[i18n.language as keyof typeof languages]?.name || "Français"}
+                    <span className="text-xl">{languages[currentLang as keyof typeof languages]?.flag || "🇫🇷"}</span>
+                    {languages[currentLang as keyof typeof languages]?.name || "Français"}
                     <ChevronDown className="h-4 w-4 ml-auto" />
                   </Button>
                 </DropdownMenuTrigger>
