@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/layout/Header';
@@ -31,6 +32,7 @@ interface LoanRequest {
 }
 
 export default function Dashboard() {
+  const { t } = useTranslation();
   const { user, isAdmin, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [requests, setRequests] = useState<LoanRequest[]>([]);
@@ -64,7 +66,7 @@ export default function Dashboard() {
       if (error) throw error;
       setRequests(data || []);
     } catch (error: any) {
-      toast.error('Erreur lors du chargement des demandes');
+      toast.error(t('dashboard.loadError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -80,7 +82,7 @@ export default function Dashboard() {
 
       if (error) throw error;
 
-      toast.success('Statut mis à jour');
+      toast.success(t('dashboard.statusUpdated'));
       
       // Envoyer la notification par email
       try {
@@ -91,7 +93,7 @@ export default function Dashboard() {
         if (emailError) {
           console.error('Erreur lors de l\'envoi de l\'email:', emailError);
         } else {
-          toast.success('Notification envoyée par email');
+          toast.success(t('dashboard.emailSent'));
         }
       } catch (emailError) {
         console.error('Erreur lors de l\'envoi de l\'email:', emailError);
@@ -99,16 +101,16 @@ export default function Dashboard() {
       
       fetchRequests();
     } catch (error: any) {
-      toast.error('Erreur lors de la mise à jour');
+      toast.error(t('dashboard.updateError'));
       console.error(error);
     }
   };
 
   const getStatusBadge = (status: string) => {
     const config = {
-      pending: { label: 'En attente', variant: 'secondary' as const, icon: Clock },
-      approved: { label: 'Approuvé', variant: 'default' as const, icon: CheckCircle },
-      rejected: { label: 'Rejeté', variant: 'destructive' as const, icon: XCircle },
+      pending: { label: t('dashboard.status.pending'), variant: 'secondary' as const, icon: Clock },
+      approved: { label: t('dashboard.status.approved'), variant: 'default' as const, icon: CheckCircle },
+      rejected: { label: t('dashboard.status.rejected'), variant: 'destructive' as const, icon: XCircle },
     };
 
     const { label, variant, icon: Icon } = config[status as keyof typeof config] || config.pending;
@@ -123,12 +125,12 @@ export default function Dashboard() {
 
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
-      personal: 'Prêt personnel',
-      auto: 'Prêt auto',
-      home_improvement: 'Travaux',
-      business: 'Professionnel',
-      consolidation: 'Rachat de crédits',
-      project: 'Financement de projet',
+      personal: t('dashboard.loanTypes.personal'),
+      auto: t('dashboard.loanTypes.auto'),
+      home_improvement: t('dashboard.loanTypes.homeImprovement'),
+      business: t('dashboard.loanTypes.business'),
+      consolidation: t('dashboard.loanTypes.consolidation'),
+      project: t('dashboard.loanTypes.project'),
     };
     return types[type] || type;
   };
@@ -138,7 +140,7 @@ export default function Dashboard() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 flex items-center justify-center">
-          <p>Chargement...</p>
+          <p>{t('common.loading')}</p>
         </main>
         <Footer />
       </div>
@@ -152,12 +154,12 @@ export default function Dashboard() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-8">
             <h1 className="text-3xl font-bold mb-2">
-              {isAdmin ? 'Gestion des demandes' : 'Mes demandes de crédit'}
+              {isAdmin ? t('dashboard.adminTitle') : t('dashboard.userTitle')}
             </h1>
             <p className="text-muted-foreground">
               {isAdmin 
-                ? 'Visualisez et gérez toutes les demandes de crédit'
-                : 'Suivez l\'état de vos demandes de crédit'}
+                ? t('dashboard.adminSubtitle')
+                : t('dashboard.userSubtitle')}
             </p>
           </div>
 
@@ -166,11 +168,11 @@ export default function Dashboard() {
               <CardContent className="py-12 text-center">
                 <FileText className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
                 <p className="text-muted-foreground mb-4">
-                  Aucune demande de crédit pour le moment
+                  {t('dashboard.noRequests')}
                 </p>
                 {!isAdmin && (
                   <Button onClick={() => navigate('/apply')}>
-                    Faire une demande
+                    {t('dashboard.applyNow')}
                   </Button>
                 )}
               </CardContent>
@@ -196,14 +198,14 @@ export default function Dashboard() {
                             size="sm"
                             onClick={() => updateStatus(request.id, 'approved')}
                           >
-                            Approuver
+                            {t('dashboard.approve')}
                           </Button>
                           <Button
                             size="sm"
                             variant="destructive"
                             onClick={() => updateStatus(request.id, 'rejected')}
                           >
-                            Rejeter
+                            {t('dashboard.reject')}
                           </Button>
                         </div>
                       )}
@@ -214,28 +216,28 @@ export default function Dashboard() {
                       <div className="flex items-center gap-2">
                         <Euro className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">Montant</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.amount')}</p>
                           <p className="font-medium">{request.amount.toLocaleString('fr-FR')} €</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">Durée</p>
-                          <p className="font-medium">{request.duration} mois</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.duration')}</p>
+                          <p className="font-medium">{request.duration} {t('common.months')}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">Date</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.date')}</p>
                           <p className="font-medium">
                             {new Date(request.created_at).toLocaleDateString('fr-FR')}
                           </p>
                         </div>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground">Contact</p>
+                        <p className="text-sm text-muted-foreground">{t('dashboard.contact')}</p>
                         <p className="font-medium text-sm">{request.email}</p>
                         {request.phone && (
                           <p className="text-sm">{request.phone}</p>

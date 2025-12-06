@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,6 +11,7 @@ import Footer from '@/components/layout/Footer';
 import { useNavigate } from 'react-router-dom';
 
 export default function ResetPassword() {
+  const { t } = useTranslation();
   const { updatePassword, user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -21,22 +23,22 @@ export default function ResetPassword() {
   // Redirect to auth page if no user session (invalid or expired token)
   useEffect(() => {
     if (!user) {
-      toast.error('Lien de réinitialisation invalide ou expiré');
+      toast.error(t('auth.resetLinkExpired'));
       navigate('/auth');
     }
-  }, [user, navigate]);
+  }, [user, navigate, t]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validation
     if (passwords.newPassword !== passwords.confirmPassword) {
-      toast.error('Les mots de passe ne correspondent pas');
+      toast.error(t('profile.passwordMismatch'));
       return;
     }
 
     if (passwords.newPassword.length < 6) {
-      toast.error('Le mot de passe doit contenir au moins 6 caractères');
+      toast.error(t('profile.passwordTooShort'));
       return;
     }
 
@@ -47,7 +49,7 @@ export default function ResetPassword() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success('Mot de passe mis à jour avec succès !');
+      toast.success(t('profile.passwordUpdateSuccess'));
       setTimeout(() => {
         navigate('/auth');
       }, 2000);
@@ -62,15 +64,15 @@ export default function ResetPassword() {
       <main className="flex-1 flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Réinitialisation du mot de passe</CardTitle>
+            <CardTitle>{t('auth.resetPassword')}</CardTitle>
             <CardDescription>
-              Veuillez entrer votre nouveau mot de passe
+              {t('auth.enterNewPassword')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="new-password">Nouveau mot de passe</Label>
+                <Label htmlFor="new-password">{t('profile.newPassword')}</Label>
                 <Input
                   id="new-password"
                   type="password"
@@ -80,11 +82,11 @@ export default function ResetPassword() {
                   onChange={(e) =>
                     setPasswords({ ...passwords, newPassword: e.target.value })
                   }
-                  placeholder="Minimum 6 caractères"
+                  placeholder={t('auth.minCharacters', { count: 6 })}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="confirm-password">Confirmer le mot de passe</Label>
+                <Label htmlFor="confirm-password">{t('profile.confirmPassword')}</Label>
                 <Input
                   id="confirm-password"
                   type="password"
@@ -94,11 +96,11 @@ export default function ResetPassword() {
                   onChange={(e) =>
                     setPasswords({ ...passwords, confirmPassword: e.target.value })
                   }
-                  placeholder="Confirmez votre mot de passe"
+                  placeholder={t('auth.confirmPasswordPlaceholder')}
                 />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? 'Mise à jour...' : 'Réinitialiser le mot de passe'}
+                {loading ? t('common.updating') : t('auth.resetPasswordButton')}
               </Button>
             </form>
           </CardContent>

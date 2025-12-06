@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
@@ -13,104 +14,98 @@ import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
 import { z } from "zod";
 
-// Schémas de validation par étape
-const step1Schema = z.object({
-  loanType: z.string().min(1, { message: "Le type de crédit est requis" }),
-  amount: z.string()
-    .min(1, { message: "Le montant est requis" })
-    .refine((val) => {
-      const num = Number(val);
-      return num >= 1000 && num <= 75000;
-    }, { message: "Le montant doit être entre 1 000 € et 75 000 €" }),
-  duration: z.string().min(1, { message: "La durée est requise" }),
-  purpose: z.string().max(500, { message: "Maximum 500 caractères" }),
-});
-
-const step2Schema = z.object({
-  firstName: z.string()
-    .trim()
-    .min(2, { message: "Le prénom doit contenir au moins 2 caractères" })
-    .max(50, { message: "Maximum 50 caractères" }),
-  lastName: z.string()
-    .trim()
-    .min(2, { message: "Le nom doit contenir au moins 2 caractères" })
-    .max(50, { message: "Maximum 50 caractères" }),
-  email: z.string()
-    .trim()
-    .email({ message: "Email invalide" })
-    .max(255, { message: "Maximum 255 caractères" }),
-  phone: z.string()
-    .trim()
-    .min(10, { message: "Numéro de téléphone invalide" })
-    .max(20, { message: "Maximum 20 caractères" }),
-  birthDate: z.string().min(1, { message: "La date de naissance est requise" }),
-});
-
-const step3Schema = z.object({
-  employmentStatus: z.string().min(1, { message: "Le type de contrat est requis" }),
-  contractStartDate: z.string().optional(),
-  contractEndDate: z.string().optional(),
-  monthlyIncome: z.string().optional(),
-  annualRevenue: z.string().optional(),
-  bankName: z.string().min(1, { message: "Le nom de la banque est requis" }),
-  housingStatus: z.string().min(1, { message: "Le statut de logement est requis" }),
-  leaseStartDate: z.string().optional(),
-  hasMortgage: z.string().optional(),
-  monthlyMortgage: z.string().optional(),
-}).refine((data) => {
-  // Validation pour CDD: date de début et fin requises
-  if (data.employmentStatus === "cdd" && (!data.contractStartDate || !data.contractEndDate)) {
-    return false;
-  }
-  // Validation pour CDI: date de début requise
-  if (data.employmentStatus === "cdi" && !data.contractStartDate) {
-    return false;
-  }
-  // Validation pour salariés et retraités: revenu mensuel requis
-  if ((data.employmentStatus === "cdd" || data.employmentStatus === "cdi" || data.employmentStatus === "retired") && !data.monthlyIncome) {
-    return false;
-  }
-  // Validation pour travailleur indépendant: chiffre d'affaires requis
-  if (data.employmentStatus === "self-employed" && !data.annualRevenue) {
-    return false;
-  }
-  // Validation pour locataire: date de bail requise
-  if (data.housingStatus === "renter" && !data.leaseStartDate) {
-    return false;
-  }
-  // Validation pour propriétaire: statut crédit immobilier requis
-  if (data.housingStatus === "owner" && !data.hasMortgage) {
-    return false;
-  }
-  // Validation pour propriétaire avec crédit: mensualité requise
-  if (data.housingStatus === "owner" && data.hasMortgage === "yes" && !data.monthlyMortgage) {
-    return false;
-  }
-  return true;
-}, { message: "Veuillez remplir tous les champs requis selon votre situation" });
-
-const step4Schema = z.object({
-  address: z.string()
-    .trim()
-    .min(5, { message: "L'adresse doit contenir au moins 5 caractères" })
-    .max(200, { message: "Maximum 200 caractères" }),
-  city: z.string()
-    .trim()
-    .min(2, { message: "La ville doit contenir au moins 2 caractères" })
-    .max(100, { message: "Maximum 100 caractères" }),
-  postalCode: z.string()
-    .trim()
-    .min(4, { message: "Code postal invalide" })
-    .max(10, { message: "Maximum 10 caractères" }),
-  country: z.string().min(1, { message: "Le pays est requis" }),
-});
-
 const ApplyPage = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { t } = useTranslation();
   const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Schémas de validation par étape
+  const step1Schema = z.object({
+    loanType: z.string().min(1, { message: t('apply.validation.loanTypeRequired') }),
+    amount: z.string()
+      .min(1, { message: t('apply.validation.amountRequired') })
+      .refine((val) => {
+        const num = Number(val);
+        return num >= 1000 && num <= 75000;
+      }, { message: t('apply.validation.amountRange') }),
+    duration: z.string().min(1, { message: t('apply.validation.durationRequired') }),
+    purpose: z.string().max(500, { message: t('apply.validation.maxCharacters', { count: 500 }) }),
+  });
+
+  const step2Schema = z.object({
+    firstName: z.string()
+      .trim()
+      .min(2, { message: t('apply.validation.firstNameMin') })
+      .max(50, { message: t('apply.validation.maxCharacters', { count: 50 }) }),
+    lastName: z.string()
+      .trim()
+      .min(2, { message: t('apply.validation.lastNameMin') })
+      .max(50, { message: t('apply.validation.maxCharacters', { count: 50 }) }),
+    email: z.string()
+      .trim()
+      .email({ message: t('apply.validation.invalidEmail') })
+      .max(255, { message: t('apply.validation.maxCharacters', { count: 255 }) }),
+    phone: z.string()
+      .trim()
+      .min(10, { message: t('apply.validation.invalidPhone') })
+      .max(20, { message: t('apply.validation.maxCharacters', { count: 20 }) }),
+    birthDate: z.string().min(1, { message: t('apply.validation.birthDateRequired') }),
+  });
+
+  const step3Schema = z.object({
+    employmentStatus: z.string().min(1, { message: t('apply.validation.contractTypeRequired') }),
+    contractStartDate: z.string().optional(),
+    contractEndDate: z.string().optional(),
+    monthlyIncome: z.string().optional(),
+    annualRevenue: z.string().optional(),
+    bankName: z.string().min(1, { message: t('apply.validation.bankRequired') }),
+    housingStatus: z.string().min(1, { message: t('apply.validation.housingRequired') }),
+    leaseStartDate: z.string().optional(),
+    hasMortgage: z.string().optional(),
+    monthlyMortgage: z.string().optional(),
+  }).refine((data) => {
+    if (data.employmentStatus === "cdd" && (!data.contractStartDate || !data.contractEndDate)) {
+      return false;
+    }
+    if (data.employmentStatus === "cdi" && !data.contractStartDate) {
+      return false;
+    }
+    if ((data.employmentStatus === "cdd" || data.employmentStatus === "cdi" || data.employmentStatus === "retired") && !data.monthlyIncome) {
+      return false;
+    }
+    if (data.employmentStatus === "self-employed" && !data.annualRevenue) {
+      return false;
+    }
+    if (data.housingStatus === "renter" && !data.leaseStartDate) {
+      return false;
+    }
+    if (data.housingStatus === "owner" && !data.hasMortgage) {
+      return false;
+    }
+    if (data.housingStatus === "owner" && data.hasMortgage === "yes" && !data.monthlyMortgage) {
+      return false;
+    }
+    return true;
+  }, { message: t('apply.validation.fillRequiredFields') });
+
+  const step4Schema = z.object({
+    address: z.string()
+      .trim()
+      .min(5, { message: t('apply.validation.addressMin') })
+      .max(200, { message: t('apply.validation.maxCharacters', { count: 200 }) }),
+    city: z.string()
+      .trim()
+      .min(2, { message: t('apply.validation.cityMin') })
+      .max(100, { message: t('apply.validation.maxCharacters', { count: 100 }) }),
+    postalCode: z.string()
+      .trim()
+      .min(4, { message: t('apply.validation.invalidPostalCode') })
+      .max(10, { message: t('apply.validation.maxCharacters', { count: 10 }) }),
+    country: z.string().min(1, { message: t('apply.validation.countryRequired') }),
+  });
   
   // Restore form data after login
   useEffect(() => {
@@ -123,8 +118,8 @@ const ApplyPage = () => {
           localStorage.removeItem('pendingLoanApplication');
           
           toast({
-            title: "Données restaurées",
-            description: "Vous pouvez maintenant soumettre votre demande",
+            title: t('apply.messages.dataRestored'),
+            description: t('apply.messages.canSubmitNow'),
           });
         } catch (error) {
           console.error('Error restoring form data:', error);
@@ -132,23 +127,18 @@ const ApplyPage = () => {
         }
       }
     }
-  }, [user, authLoading, toast]);
+  }, [user, authLoading, toast, t]);
   
   const [formData, setFormData] = useState({
-    // Étape 1: Détails du crédit
     loanType: "",
     amount: "",
     duration: "",
     purpose: "",
-    
-    // Étape 2: Informations personnelles
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     birthDate: "",
-    
-    // Étape 3: Informations financières
     employmentStatus: "",
     contractStartDate: "",
     contractEndDate: "",
@@ -159,8 +149,6 @@ const ApplyPage = () => {
     leaseStartDate: "",
     hasMortgage: "",
     monthlyMortgage: "",
-    
-    // Étape 4: Adresse
     address: "",
     city: "",
     postalCode: "",
@@ -214,7 +202,7 @@ const ApplyPage = () => {
       if (error instanceof z.ZodError) {
         toast({
           variant: "destructive",
-          title: "Erreur de validation",
+          title: t('common.validationError'),
           description: error.errors[0].message,
         });
       }
@@ -237,14 +225,12 @@ const ApplyPage = () => {
     
     if (!validateStep(4)) return;
     
-    // Check authentication at submission time
     if (!user) {
-      // Save form data before redirecting to auth
       localStorage.setItem('pendingLoanApplication', JSON.stringify(formData));
       
       toast({
-        title: "Connexion requise",
-        description: "Veuillez vous connecter ou créer un compte pour soumettre votre demande",
+        title: t('apply.messages.loginRequired'),
+        description: t('apply.messages.loginToSubmit'),
         variant: "default"
       });
       
@@ -272,8 +258,8 @@ const ApplyPage = () => {
       if (error) throw error;
       
       toast({
-        title: "Demande envoyée !",
-        description: "Votre demande de crédit a été soumise avec succès",
+        title: t('apply.messages.requestSent'),
+        description: t('apply.messages.requestSuccess'),
       });
       
       navigate('/dashboard');
@@ -281,8 +267,8 @@ const ApplyPage = () => {
       console.error('Erreur lors de la soumission:', error);
       toast({
         variant: "destructive",
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi de votre demande",
+        title: t('common.error'),
+        description: t('apply.messages.submitError'),
       });
     } finally {
       setIsSubmitting(false);
@@ -290,19 +276,19 @@ const ApplyPage = () => {
   };
 
   const steps = [
-    { number: 1, title: "Détails du crédit" },
-    { number: 2, title: "Infos personnelles" },
-    { number: 3, title: "Infos financières" },
-    { number: 4, title: "Adresse & Révision" },
+    { number: 1, title: t('apply.steps.loanDetails') },
+    { number: 2, title: t('apply.steps.personalInfo') },
+    { number: 3, title: t('apply.steps.financialInfo') },
+    { number: 4, title: t('apply.steps.addressReview') },
   ];
 
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
-      personal: "Crédit Personnel",
-      auto: "Crédit Auto",
-      home: "Crédit Travaux",
-      consolidation: "Regroupement de Crédits",
-      business: "Crédit Professionnel",
+      personal: t('apply.loanTypes.personal'),
+      auto: t('apply.loanTypes.auto'),
+      home: t('apply.loanTypes.home'),
+      consolidation: t('apply.loanTypes.consolidation'),
+      business: t('apply.loanTypes.business'),
     };
     return types[type] || type;
   };
@@ -314,9 +300,9 @@ const ApplyPage = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Demande de Crédit</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">{t('apply.title')}</h1>
             <p className="text-lg text-muted-foreground">
-              Complétez le formulaire ci-dessous pour obtenir votre pré-approbation instantanée
+              {t('apply.subtitle')}
             </p>
           </div>
 
@@ -350,26 +336,26 @@ const ApplyPage = () => {
               {/* Étape 1: Détails du crédit */}
               {step === 1 && (
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Détails du Crédit</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t('apply.step1.title')}</h2>
                   
                   <div>
-                    <Label htmlFor="loanType">Type de crédit *</Label>
+                    <Label htmlFor="loanType">{t('apply.step1.loanType')} *</Label>
                     <Select value={formData.loanType} onValueChange={(value) => updateFormData("loanType", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez le type de crédit" />
+                        <SelectValue placeholder={t('apply.step1.selectLoanType')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="personal">Crédit Personnel</SelectItem>
-                        <SelectItem value="auto">Crédit Auto</SelectItem>
-                        <SelectItem value="home">Crédit Travaux</SelectItem>
-                        <SelectItem value="consolidation">Regroupement de Crédits</SelectItem>
-                        <SelectItem value="business">Crédit Professionnel</SelectItem>
+                        <SelectItem value="personal">{t('apply.loanTypes.personal')}</SelectItem>
+                        <SelectItem value="auto">{t('apply.loanTypes.auto')}</SelectItem>
+                        <SelectItem value="home">{t('apply.loanTypes.home')}</SelectItem>
+                        <SelectItem value="consolidation">{t('apply.loanTypes.consolidation')}</SelectItem>
+                        <SelectItem value="business">{t('apply.loanTypes.business')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
-                    <Label htmlFor="amount">Montant du crédit (€) *</Label>
+                    <Label htmlFor="amount">{t('apply.step1.amount')} *</Label>
                     <Input
                       id="amount"
                       type="number"
@@ -380,34 +366,34 @@ const ApplyPage = () => {
                       onChange={(e) => updateFormData("amount", e.target.value)}
                       placeholder="10000"
                     />
-                    <p className="text-xs text-muted-foreground mt-1">Entre 1 000 € et 75 000 €</p>
+                    <p className="text-xs text-muted-foreground mt-1">{t('apply.step1.amountRange')}</p>
                   </div>
 
                   <div>
-                    <Label htmlFor="duration">Durée (mois) *</Label>
+                    <Label htmlFor="duration">{t('apply.step1.duration')} *</Label>
                     <Select value={formData.duration} onValueChange={(value) => updateFormData("duration", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez la durée" />
+                        <SelectValue placeholder={t('apply.step1.selectDuration')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="12">12 mois</SelectItem>
-                        <SelectItem value="24">24 mois</SelectItem>
-                        <SelectItem value="36">36 mois</SelectItem>
-                        <SelectItem value="48">48 mois</SelectItem>
-                        <SelectItem value="60">60 mois</SelectItem>
-                        <SelectItem value="72">72 mois</SelectItem>
-                        <SelectItem value="84">84 mois</SelectItem>
+                        <SelectItem value="12">{t('apply.durations.months', { count: 12 })}</SelectItem>
+                        <SelectItem value="24">{t('apply.durations.months', { count: 24 })}</SelectItem>
+                        <SelectItem value="36">{t('apply.durations.months', { count: 36 })}</SelectItem>
+                        <SelectItem value="48">{t('apply.durations.months', { count: 48 })}</SelectItem>
+                        <SelectItem value="60">{t('apply.durations.months', { count: 60 })}</SelectItem>
+                        <SelectItem value="72">{t('apply.durations.months', { count: 72 })}</SelectItem>
+                        <SelectItem value="84">{t('apply.durations.months', { count: 84 })}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
-                    <Label htmlFor="purpose">Objet du crédit</Label>
+                    <Label htmlFor="purpose">{t('apply.step1.purpose')}</Label>
                     <Input
                       id="purpose"
                       value={formData.purpose}
                       onChange={(e) => updateFormData("purpose", e.target.value)}
-                      placeholder="Ex: Mariage, Achat de voiture, Rénovation"
+                      placeholder={t('apply.step1.purposePlaceholder')}
                       maxLength={500}
                     />
                   </div>
@@ -417,11 +403,11 @@ const ApplyPage = () => {
               {/* Étape 2: Informations personnelles */}
               {step === 2 && (
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Informations Personnelles</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t('apply.step2.title')}</h2>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="firstName">Prénom *</Label>
+                      <Label htmlFor="firstName">{t('apply.step2.firstName')} *</Label>
                       <Input
                         id="firstName"
                         value={formData.firstName}
@@ -432,7 +418,7 @@ const ApplyPage = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="lastName">Nom *</Label>
+                      <Label htmlFor="lastName">{t('apply.step2.lastName')} *</Label>
                       <Input
                         id="lastName"
                         value={formData.lastName}
@@ -444,7 +430,7 @@ const ApplyPage = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="email">Adresse e-mail *</Label>
+                    <Label htmlFor="email">{t('apply.step2.email')} *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -456,7 +442,7 @@ const ApplyPage = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="phone">Numéro de téléphone *</Label>
+                    <Label htmlFor="phone">{t('apply.step2.phone')} *</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -468,7 +454,7 @@ const ApplyPage = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="birthDate">Date de naissance *</Label>
+                    <Label htmlFor="birthDate">{t('apply.step2.birthDate')} *</Label>
                     <Input
                       id="birthDate"
                       type="date"
@@ -483,19 +469,19 @@ const ApplyPage = () => {
               {/* Étape 3: Informations financières */}
               {step === 3 && (
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Informations Financières</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t('apply.step3.title')}</h2>
                   
                   <div>
-                    <Label htmlFor="employmentStatus">Sélectionnez votre contrat *</Label>
+                    <Label htmlFor="employmentStatus">{t('apply.step3.contractType')} *</Label>
                     <Select value={formData.employmentStatus} onValueChange={(value) => updateFormData("employmentStatus", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez votre contrat" />
+                        <SelectValue placeholder={t('apply.step3.selectContract')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="cdi">CDI</SelectItem>
-                        <SelectItem value="cdd">CDD</SelectItem>
-                        <SelectItem value="self-employed">Travailleur Indépendant</SelectItem>
-                        <SelectItem value="retired">Retraité</SelectItem>
+                        <SelectItem value="cdi">{t('apply.employmentTypes.cdi')}</SelectItem>
+                        <SelectItem value="cdd">{t('apply.employmentTypes.cdd')}</SelectItem>
+                        <SelectItem value="self-employed">{t('apply.employmentTypes.selfEmployed')}</SelectItem>
+                        <SelectItem value="retired">{t('apply.employmentTypes.retired')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -504,7 +490,7 @@ const ApplyPage = () => {
                   {formData.employmentStatus === "cdd" && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <Label htmlFor="contractStartDate">Date de début du contrat *</Label>
+                        <Label htmlFor="contractStartDate">{t('apply.step3.contractStartDate')} *</Label>
                         <Input
                           id="contractStartDate"
                           type="date"
@@ -514,7 +500,7 @@ const ApplyPage = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="contractEndDate">Date de fin du contrat *</Label>
+                        <Label htmlFor="contractEndDate">{t('apply.step3.contractEndDate')} *</Label>
                         <Input
                           id="contractEndDate"
                           type="date"
@@ -529,7 +515,7 @@ const ApplyPage = () => {
                   {/* Date de début pour CDI */}
                   {formData.employmentStatus === "cdi" && (
                     <div>
-                      <Label htmlFor="contractStartDate">Date de début du contrat *</Label>
+                      <Label htmlFor="contractStartDate">{t('apply.step3.contractStartDate')} *</Label>
                       <Input
                         id="contractStartDate"
                         type="date"
@@ -543,7 +529,7 @@ const ApplyPage = () => {
                   {/* Revenu mensuel pour salariés et retraités */}
                   {(formData.employmentStatus === "cdi" || formData.employmentStatus === "cdd" || formData.employmentStatus === "retired") && (
                     <div>
-                      <Label htmlFor="monthlyIncome">Revenu mensuel net (€) *</Label>
+                      <Label htmlFor="monthlyIncome">{t('apply.step3.monthlyIncome')} *</Label>
                       <Input
                         id="monthlyIncome"
                         type="number"
@@ -559,7 +545,7 @@ const ApplyPage = () => {
                   {/* Chiffre d'affaires pour travailleur indépendant */}
                   {formData.employmentStatus === "self-employed" && (
                     <div>
-                      <Label htmlFor="annualRevenue">Chiffre d'affaires annuel (€) *</Label>
+                      <Label htmlFor="annualRevenue">{t('apply.step3.annualRevenue')} *</Label>
                       <Input
                         id="annualRevenue"
                         type="number"
@@ -574,27 +560,27 @@ const ApplyPage = () => {
 
                   {/* Banque */}
                   <div>
-                    <Label htmlFor="bankName">Quelle est votre banque ? *</Label>
+                    <Label htmlFor="bankName">{t('apply.step3.bank')} *</Label>
                     <Input
                       id="bankName"
                       value={formData.bankName}
                       onChange={(e) => updateFormData("bankName", e.target.value)}
-                      placeholder="Ex: BNP Paribas, Crédit Agricole..."
+                      placeholder={t('apply.step3.bankPlaceholder')}
                       maxLength={100}
                     />
                   </div>
 
                   {/* Statut de logement */}
                   <div>
-                    <Label htmlFor="housingStatus">Statut de logement *</Label>
+                    <Label htmlFor="housingStatus">{t('apply.step3.housingStatus')} *</Label>
                     <Select value={formData.housingStatus} onValueChange={(value) => updateFormData("housingStatus", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez votre statut" />
+                        <SelectValue placeholder={t('apply.step3.selectHousing')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="owner">Propriétaire</SelectItem>
-                        <SelectItem value="renter">Locataire</SelectItem>
-                        <SelectItem value="other">Autre</SelectItem>
+                        <SelectItem value="owner">{t('apply.housingTypes.owner')}</SelectItem>
+                        <SelectItem value="renter">{t('apply.housingTypes.renter')}</SelectItem>
+                        <SelectItem value="other">{t('apply.housingTypes.other')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -602,7 +588,7 @@ const ApplyPage = () => {
                   {/* Date de bail pour locataire */}
                   {formData.housingStatus === "renter" && (
                     <div>
-                      <Label htmlFor="leaseStartDate">Date de début du bail *</Label>
+                      <Label htmlFor="leaseStartDate">{t('apply.step3.leaseStartDate')} *</Label>
                       <Input
                         id="leaseStartDate"
                         type="date"
@@ -617,21 +603,21 @@ const ApplyPage = () => {
                   {formData.housingStatus === "owner" && (
                     <>
                       <div>
-                        <Label htmlFor="hasMortgage">Crédit immobilier en cours ? *</Label>
+                        <Label htmlFor="hasMortgage">{t('apply.step3.hasMortgage')} *</Label>
                         <Select value={formData.hasMortgage} onValueChange={(value) => updateFormData("hasMortgage", value)}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Sélectionnez" />
+                            <SelectValue placeholder={t('common.select')} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="yes">Oui</SelectItem>
-                            <SelectItem value="no">Non</SelectItem>
+                            <SelectItem value="yes">{t('common.yes')}</SelectItem>
+                            <SelectItem value="no">{t('common.no')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
 
                       {formData.hasMortgage === "yes" && (
                         <div>
-                          <Label htmlFor="monthlyMortgage">Mensualité du crédit immobilier (€) *</Label>
+                          <Label htmlFor="monthlyMortgage">{t('apply.step3.monthlyMortgage')} *</Label>
                           <Input
                             id="monthlyMortgage"
                             type="number"
@@ -651,10 +637,10 @@ const ApplyPage = () => {
               {/* Étape 4: Adresse & Révision */}
               {step === 4 && (
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Adresse</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t('apply.step4.title')}</h2>
                   
                   <div>
-                    <Label htmlFor="address">Adresse *</Label>
+                    <Label htmlFor="address">{t('apply.step4.address')} *</Label>
                     <Input
                       id="address"
                       value={formData.address}
@@ -666,7 +652,7 @@ const ApplyPage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="city">Ville *</Label>
+                      <Label htmlFor="city">{t('apply.step4.city')} *</Label>
                       <Input
                         id="city"
                         value={formData.city}
@@ -677,7 +663,7 @@ const ApplyPage = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="postalCode">Code postal *</Label>
+                      <Label htmlFor="postalCode">{t('apply.step4.postalCode')} *</Label>
                       <Input
                         id="postalCode"
                         value={formData.postalCode}
@@ -689,22 +675,21 @@ const ApplyPage = () => {
                   </div>
 
                   <div className="bg-muted/50 rounded-lg p-6 mt-8">
-                    <h3 className="font-semibold mb-4 text-foreground">Récapitulatif de votre demande</h3>
+                    <h3 className="font-semibold mb-4 text-foreground">{t('apply.step4.summary')}</h3>
                     <div className="space-y-2 text-sm">
-                      <p><span className="text-muted-foreground">Type de crédit :</span> <span className="font-medium">{getLoanTypeLabel(formData.loanType)}</span></p>
-                      <p><span className="text-muted-foreground">Montant :</span> <span className="font-medium">{Number(formData.amount).toLocaleString('fr-FR')} €</span></p>
-                      <p><span className="text-muted-foreground">Durée :</span> <span className="font-medium">{formData.duration} mois</span></p>
-                      <p><span className="text-muted-foreground">Nom :</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></p>
-                      <p><span className="text-muted-foreground">Email :</span> <span className="font-medium">{formData.email}</span></p>
-                      <p><span className="text-muted-foreground">Téléphone :</span> <span className="font-medium">{formData.phone}</span></p>
-                      <p><span className="text-muted-foreground">Revenu mensuel :</span> <span className="font-medium">{Number(formData.monthlyIncome).toLocaleString('fr-FR')} €</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryLoanType')}:</span> <span className="font-medium">{getLoanTypeLabel(formData.loanType)}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryAmount')}:</span> <span className="font-medium">{Number(formData.amount).toLocaleString('fr-FR')} €</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryDuration')}:</span> <span className="font-medium">{formData.duration} {t('common.months')}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryName')}:</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryEmail')}:</span> <span className="font-medium">{formData.email}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryPhone')}:</span> <span className="font-medium">{formData.phone}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.summaryIncome')}:</span> <span className="font-medium">{Number(formData.monthlyIncome).toLocaleString('fr-FR')} €</span></p>
                     </div>
                   </div>
 
                   <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
                     <p className="text-xs text-muted-foreground">
-                      En soumettant ce formulaire, vous acceptez que vos données soient traitées dans le cadre de votre demande de crédit. 
-                      Vos informations sont sécurisées et confidentielles.
+                      {t('apply.step4.disclaimer')}
                     </p>
                   </div>
                 </div>
@@ -715,18 +700,18 @@ const ApplyPage = () => {
                 {step > 1 && (
                   <Button type="button" variant="outline" onClick={handlePrevious} disabled={isSubmitting}>
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Précédent
+                    {t('common.previous')}
                   </Button>
                 )}
                 
                 {step < 4 ? (
                   <Button type="button" onClick={handleNext} className="ml-auto">
-                    Suivant
+                    {t('common.next')}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 ) : (
                   <Button type="submit" className="ml-auto" disabled={isSubmitting}>
-                    {isSubmitting ? "Envoi en cours..." : "Soumettre la demande"}
+                    {isSubmitting ? t('common.sending') : t('apply.submit')}
                   </Button>
                 )}
               </div>
