@@ -23,14 +23,20 @@ i18n
       nl: { translation: nl },
       hr: { translation: hr },
     },
+    lng: 'fr',
     fallbackLng: 'fr',
     supportedLngs: ['fr', 'en', 'de', 'es', 'pt', 'nl', 'hr'],
+    load: 'languageOnly',
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
     },
     interpolation: {
       escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
