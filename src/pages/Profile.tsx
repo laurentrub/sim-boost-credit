@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/layout/Header';
@@ -32,6 +33,7 @@ interface LoanRequest {
 }
 
 export default function Profile() {
+  const { t } = useTranslation();
   const { user, updatePassword, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -78,7 +80,7 @@ export default function Profile() {
         setPhone(data.phone || '');
       }
     } catch (error: any) {
-      toast.error('Erreur lors du chargement du profil');
+      toast.error(t('profile.loadError'));
       console.error(error);
     }
   };
@@ -94,7 +96,7 @@ export default function Profile() {
       if (error) throw error;
       setRequests(data || []);
     } catch (error: any) {
-      toast.error('Erreur lors du chargement des demandes');
+      toast.error(t('profile.loadRequestsError'));
       console.error(error);
     }
   };
@@ -115,9 +117,9 @@ export default function Profile() {
 
       if (error) throw error;
 
-      toast.success('Profil mis à jour avec succès');
+      toast.success(t('profile.updateSuccess'));
     } catch (error: any) {
-      toast.error('Erreur lors de la mise à jour du profil');
+      toast.error(t('profile.updateError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -128,12 +130,12 @@ export default function Profile() {
     e.preventDefault();
 
     if (newPassword !== confirmPassword) {
-      toast.error('Les mots de passe ne correspondent pas');
+      toast.error(t('profile.passwordMismatch'));
       return;
     }
 
     if (newPassword.length < 6) {
-      toast.error('Le mot de passe doit contenir au moins 6 caractères');
+      toast.error(t('profile.passwordTooShort'));
       return;
     }
 
@@ -144,12 +146,12 @@ export default function Profile() {
 
       if (error) throw error;
 
-      toast.success('Mot de passe mis à jour avec succès');
+      toast.success(t('profile.passwordUpdateSuccess'));
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
     } catch (error: any) {
-      toast.error('Erreur lors de la mise à jour du mot de passe');
+      toast.error(t('profile.passwordUpdateError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -158,9 +160,9 @@ export default function Profile() {
 
   const getStatusBadge = (status: string) => {
     const config = {
-      pending: { label: 'En attente', variant: 'secondary' as const, icon: Clock },
-      approved: { label: 'Approuvé', variant: 'default' as const, icon: CheckCircle },
-      rejected: { label: 'Rejeté', variant: 'destructive' as const, icon: XCircle },
+      pending: { label: t('dashboard.status.pending'), variant: 'secondary' as const, icon: Clock },
+      approved: { label: t('dashboard.status.approved'), variant: 'default' as const, icon: CheckCircle },
+      rejected: { label: t('dashboard.status.rejected'), variant: 'destructive' as const, icon: XCircle },
     };
 
     const { label, variant, icon: Icon } = config[status as keyof typeof config] || config.pending;
@@ -175,12 +177,12 @@ export default function Profile() {
 
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
-      personal: 'Prêt personnel',
-      auto: 'Prêt auto',
-      home_improvement: 'Travaux',
-      business: 'Professionnel',
-      consolidation: 'Rachat de crédits',
-      project: 'Financement de projet',
+      personal: t('dashboard.loanTypes.personal'),
+      auto: t('dashboard.loanTypes.auto'),
+      home_improvement: t('dashboard.loanTypes.homeImprovement'),
+      business: t('dashboard.loanTypes.business'),
+      consolidation: t('dashboard.loanTypes.consolidation'),
+      project: t('dashboard.loanTypes.project'),
     };
     return types[type] || type;
   };
@@ -190,7 +192,7 @@ export default function Profile() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 flex items-center justify-center">
-          <p>Chargement...</p>
+          <p>{t('common.loading')}</p>
         </main>
         <Footer />
       </div>
@@ -202,37 +204,37 @@ export default function Profile() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Mon Profil</h1>
+          <h1 className="text-3xl font-bold mb-8">{t('profile.title')}</h1>
           
           <Tabs defaultValue="info" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="info">
                 <User className="h-4 w-4 mr-2" />
-                Informations
+                {t('profile.tabs.info')}
               </TabsTrigger>
               <TabsTrigger value="password">
                 <Lock className="h-4 w-4 mr-2" />
-                Mot de passe
+                {t('profile.tabs.password')}
               </TabsTrigger>
               <TabsTrigger value="requests">
                 <FileText className="h-4 w-4 mr-2" />
-                Mes demandes
+                {t('profile.tabs.requests')}
               </TabsTrigger>
             </TabsList>
 
             <TabsContent value="info" className="mt-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Informations personnelles</CardTitle>
+                  <CardTitle>{t('profile.personalInfo')}</CardTitle>
                   <CardDescription>
-                    Modifiez vos informations personnelles
+                    {t('profile.personalInfoDescription')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleProfileUpdate} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">Prénom</Label>
+                        <Label htmlFor="firstName">{t('profile.firstName')}</Label>
                         <Input
                           id="firstName"
                           type="text"
@@ -242,7 +244,7 @@ export default function Profile() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Nom</Label>
+                        <Label htmlFor="lastName">{t('profile.lastName')}</Label>
                         <Input
                           id="lastName"
                           type="text"
@@ -254,7 +256,7 @@ export default function Profile() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t('profile.email')}</Label>
                       <Input
                         id="email"
                         type="email"
@@ -263,23 +265,23 @@ export default function Profile() {
                         className="bg-muted"
                       />
                       <p className="text-sm text-muted-foreground">
-                        L'email ne peut pas être modifié
+                        {t('profile.emailCannotBeChanged')}
                       </p>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Téléphone</Label>
+                      <Label htmlFor="phone">{t('profile.phone')}</Label>
                       <Input
                         id="phone"
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+41 XX XXX XX XX"
+                        placeholder="+33 6 12 34 56 78"
                       />
                     </div>
 
                     <Button type="submit" disabled={loading}>
-                      {loading ? 'Mise à jour...' : 'Mettre à jour'}
+                      {loading ? t('common.updating') : t('common.update')}
                     </Button>
                   </form>
                 </CardContent>
@@ -289,15 +291,15 @@ export default function Profile() {
             <TabsContent value="password" className="mt-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Changer le mot de passe</CardTitle>
+                  <CardTitle>{t('profile.changePassword')}</CardTitle>
                   <CardDescription>
-                    Assurez-vous d'utiliser un mot de passe sécurisé
+                    {t('profile.changePasswordDescription')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handlePasswordUpdate} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="newPassword">Nouveau mot de passe</Label>
+                      <Label htmlFor="newPassword">{t('profile.newPassword')}</Label>
                       <Input
                         id="newPassword"
                         type="password"
@@ -309,7 +311,7 @@ export default function Profile() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="confirmPassword">Confirmer le mot de passe</Label>
+                      <Label htmlFor="confirmPassword">{t('profile.confirmPassword')}</Label>
                       <Input
                         id="confirmPassword"
                         type="password"
@@ -321,7 +323,7 @@ export default function Profile() {
                     </div>
 
                     <Button type="submit" disabled={loading}>
-                      {loading ? 'Mise à jour...' : 'Changer le mot de passe'}
+                      {loading ? t('common.updating') : t('profile.changePasswordButton')}
                     </Button>
                   </form>
                 </CardContent>
@@ -334,7 +336,7 @@ export default function Profile() {
                   <Card>
                     <CardContent className="pt-6">
                       <p className="text-center text-muted-foreground">
-                        Vous n'avez aucune demande de crédit
+                        {t('profile.noRequests')}
                       </p>
                     </CardContent>
                   </Card>
@@ -359,23 +361,23 @@ export default function Profile() {
                           <div className="flex items-center gap-2">
                             <Euro className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">Montant</p>
-                              <p className="font-medium">{request.amount.toLocaleString()} CHF</p>
+                              <p className="text-muted-foreground">{t('dashboard.amount')}</p>
+                              <p className="font-medium">{request.amount.toLocaleString()} €</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
                             <Calendar className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">Durée</p>
-                              <p className="font-medium">{request.duration} mois</p>
+                              <p className="text-muted-foreground">{t('dashboard.duration')}</p>
+                              <p className="font-medium">{request.duration} {t('common.months')}</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
                             <Clock className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">Date</p>
+                              <p className="text-muted-foreground">{t('dashboard.date')}</p>
                               <p className="font-medium">
-                                {new Date(request.created_at).toLocaleDateString('fr-CH')}
+                                {new Date(request.created_at).toLocaleDateString('fr-FR')}
                               </p>
                             </div>
                           </div>

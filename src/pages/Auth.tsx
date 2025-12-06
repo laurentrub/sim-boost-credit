@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,9 +10,9 @@ import { toast } from 'sonner';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 export default function Auth() {
+  const { t } = useTranslation();
   const { signIn, signUp, resetPassword, user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -48,7 +49,7 @@ export default function Auth() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success('Connexion réussie !');
+      toast.success(t('auth.loginSuccess'));
     }
 
     setLoading(false);
@@ -68,7 +69,7 @@ export default function Auth() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success('Compte créé avec succès !');
+      toast.success(t('auth.signupSuccess'));
     }
 
     setLoading(false);
@@ -84,7 +85,7 @@ export default function Auth() {
       toast.error(error.message);
     } else {
       setResetEmailSent(true);
-      toast.success('Email de réinitialisation envoyé !');
+      toast.success(t('auth.resetEmailSent'));
     }
 
     setLoading(false);
@@ -96,23 +97,23 @@ export default function Auth() {
       <main className="flex-1 flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Bienvenue</CardTitle>
+            <CardTitle>{t('auth.welcome')}</CardTitle>
             <CardDescription>
-              Connectez-vous ou créez un compte pour gérer vos demandes de crédit
+              {t('auth.subtitle')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             {!showResetPassword ? (
               <Tabs defaultValue="login" className="w-full">
                 <TabsList className="grid w-full grid-cols-2">
-                  <TabsTrigger value="login">Connexion</TabsTrigger>
-                  <TabsTrigger value="signup">Inscription</TabsTrigger>
+                  <TabsTrigger value="login">{t('auth.login')}</TabsTrigger>
+                  <TabsTrigger value="signup">{t('auth.signup')}</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="login">
                   <form onSubmit={handleLogin} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="login-email">Email</Label>
+                      <Label htmlFor="login-email">{t('auth.email')}</Label>
                       <Input
                         id="login-email"
                         type="email"
@@ -124,7 +125,7 @@ export default function Auth() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="login-password">Mot de passe</Label>
+                      <Label htmlFor="login-password">{t('auth.password')}</Label>
                       <Input
                         id="login-password"
                         type="password"
@@ -139,11 +140,11 @@ export default function Auth() {
                         onClick={() => setShowResetPassword(true)}
                         className="text-sm text-primary hover:underline"
                       >
-                        Mot de passe oublié ?
+                        {t('auth.forgotPassword')}
                       </button>
                     </div>
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Connexion...' : 'Se connecter'}
+                      {loading ? t('auth.loggingIn') : t('auth.loginButton')}
                     </Button>
                   </form>
                 </TabsContent>
@@ -152,7 +153,7 @@ export default function Auth() {
                   <form onSubmit={handleSignup} className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="signup-firstname">Prénom</Label>
+                        <Label htmlFor="signup-firstname">{t('auth.firstName')}</Label>
                         <Input
                           id="signup-firstname"
                           type="text"
@@ -164,7 +165,7 @@ export default function Auth() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="signup-lastname">Nom</Label>
+                        <Label htmlFor="signup-lastname">{t('auth.lastName')}</Label>
                         <Input
                           id="signup-lastname"
                           type="text"
@@ -177,7 +178,7 @@ export default function Auth() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="signup-email">Email</Label>
+                      <Label htmlFor="signup-email">{t('auth.email')}</Label>
                       <Input
                         id="signup-email"
                         type="email"
@@ -189,7 +190,7 @@ export default function Auth() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="signup-password">Mot de passe</Label>
+                      <Label htmlFor="signup-password">{t('auth.password')}</Label>
                       <Input
                         id="signup-password"
                         type="password"
@@ -202,7 +203,7 @@ export default function Auth() {
                       />
                     </div>
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Création...' : "S'inscrire"}
+                      {loading ? t('auth.creatingAccount') : t('auth.signupButton')}
                     </Button>
                   </form>
                 </TabsContent>
@@ -210,7 +211,7 @@ export default function Auth() {
             ) : (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">Réinitialiser le mot de passe</h3>
+                  <h3 className="text-lg font-semibold">{t('auth.resetPassword')}</h3>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -220,31 +221,30 @@ export default function Auth() {
                       setResetEmail('');
                     }}
                   >
-                    Retour
+                    {t('common.back')}
                   </Button>
                 </div>
                 {!resetEmailSent ? (
                   <form onSubmit={handleResetPassword} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="reset-email">Email</Label>
+                      <Label htmlFor="reset-email">{t('auth.email')}</Label>
                       <Input
                         id="reset-email"
                         type="email"
                         required
                         value={resetEmail}
                         onChange={(e) => setResetEmail(e.target.value)}
-                        placeholder="Entrez votre adresse email"
+                        placeholder={t('auth.emailPlaceholder')}
                       />
                     </div>
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Envoi...' : 'Envoyer le lien de réinitialisation'}
+                      {loading ? t('common.sending') : t('auth.sendResetLink')}
                     </Button>
                   </form>
                 ) : (
                   <div className="space-y-4 text-center">
                     <p className="text-sm text-muted-foreground">
-                      Un email de réinitialisation a été envoyé à <strong>{resetEmail}</strong>.
-                      Veuillez vérifier votre boîte de réception et cliquer sur le lien pour réinitialiser votre mot de passe.
+                      {t('auth.resetEmailSentTo', { email: resetEmail })}
                     </p>
                     <Button 
                       variant="outline" 
@@ -254,7 +254,7 @@ export default function Auth() {
                         setResetEmail('');
                       }}
                     >
-                      Renvoyer un email
+                      {t('auth.resendEmail')}
                     </Button>
                   </div>
                 )}
