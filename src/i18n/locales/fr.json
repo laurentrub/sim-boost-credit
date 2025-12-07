@@ -1340,5 +1340,148 @@
         "successDesc": "Votre demande de financement a été transmise avec succès."
       }
     }
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "requests": "Demandes",
+      "documents": "Documents",
+      "team": "Équipe",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    },
+    "stats": {
+      "total": "Total",
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "approved": "Approuvées",
+      "refused": "Refusées"
+    },
+    "status": {
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "approved": "Approuvée",
+      "refused": "Refusée"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "subtitle": "Vue d'ensemble de toutes les demandes",
+      "recentRequests": "Demandes récentes",
+      "viewAll": "Voir tout",
+      "noRequests": "Aucune demande pour le moment"
+    },
+    "requests": {
+      "title": "Demandes",
+      "subtitle": "Gérez toutes les demandes de crédit",
+      "searchPlaceholder": "Rechercher par nom ou email...",
+      "filterStatus": "Filtrer par statut",
+      "allStatuses": "Tous les statuts",
+      "noResults": "Aucune demande trouvée",
+      "view": "Voir",
+      "columns": {
+        "client": "Client",
+        "type": "Type",
+        "amount": "Montant",
+        "duration": "Durée",
+        "status": "Statut",
+        "date": "Date",
+        "actions": "Actions"
+      }
+    },
+    "request": {
+      "id": "Réf.",
+      "clientInfo": "Informations client",
+      "requestDetails": "Détails de la demande",
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "type": "Type de prêt",
+      "amount": "Montant",
+      "duration": "Durée",
+      "date": "Date de demande",
+      "historyTab": "Historique",
+      "notesTab": "Notes internes"
+    },
+    "history": {
+      "empty": "Aucun historique disponible"
+    },
+    "notes": {
+      "placeholder": "Ajouter une note interne...",
+      "add": "Ajouter",
+      "empty": "Aucune note pour cette demande",
+      "anonymous": "Anonyme"
+    },
+    "quickActions": {
+      "title": "Actions rapides",
+      "changeStatus": "Changer le statut",
+      "sendEmail": "Envoyer un email",
+      "downloadPdf": "Télécharger PDF"
+    },
+    "statusModal": {
+      "title": "Changer le statut",
+      "description": "Sélectionnez le nouveau statut et ajoutez un commentaire optionnel.",
+      "newStatus": "Nouveau statut",
+      "comment": "Commentaire (optionnel)",
+      "commentPlaceholder": "Ajouter un commentaire sur ce changement...",
+      "sendEmail": "Envoyer un email de notification au client",
+      "confirm": "Confirmer"
+    },
+    "documents": {
+      "title": "Documents",
+      "subtitle": "Gérez les documents des demandes",
+      "comingSoon": "Fonctionnalité à venir",
+      "comingSoonDesc": "La gestion des documents sera bientôt disponible."
+    },
+    "settings": {
+      "title": "Paramètres",
+      "subtitle": "Configuration de l'espace admin",
+      "comingSoon": "Fonctionnalité à venir",
+      "comingSoonDesc": "Les paramètres seront bientôt disponibles."
+    },
+    "team": {
+      "title": "Gestion de l'équipe",
+      "subtitle": "Gérez les administrateurs et gestionnaires",
+      "addMember": "Ajouter un membre",
+      "addMemberTitle": "Ajouter un collaborateur",
+      "addMemberDesc": "Entrez l'email d'un utilisateur existant pour lui attribuer un rôle.",
+      "email": "Email",
+      "emailPlaceholder": "email@exemple.com",
+      "role": "Rôle",
+      "roleManager": "Gestionnaire",
+      "roleAdmin": "Administrateur",
+      "addButton": "Ajouter",
+      "members": "Membres de l'équipe",
+      "membersCount": "{{count}} membre(s)",
+      "noMembers": "Aucun membre dans l'équipe",
+      "noName": "Sans nom",
+      "columns": {
+        "member": "Membre",
+        "role": "Rôle",
+        "since": "Depuis",
+        "actions": "Actions"
+      },
+      "loadError": "Erreur lors du chargement de l'équipe",
+      "userNotFound": "Utilisateur non trouvé",
+      "alreadyMember": "Cet utilisateur est déjà membre de l'équipe",
+      "memberAdded": "Membre ajouté avec succès",
+      "addError": "Erreur lors de l'ajout du membre",
+      "memberRemoved": "Membre retiré avec succès",
+      "removeError": "Erreur lors de la suppression du membre",
+      "roleUpdated": "Rôle mis à jour",
+      "updateError": "Erreur lors de la mise à jour",
+      "cantRemoveSelf": "Vous ne pouvez pas vous retirer vous-même",
+      "cantChangeSelf": "Vous ne pouvez pas modifier votre propre rôle",
+      "accessDenied": "Accès refusé",
+      "accessDeniedDesc": "Seuls les administrateurs peuvent gérer l'équipe."
+    },
+    "messages": {
+      "loadError": "Erreur lors du chargement des données",
+      "statusUpdated": "Statut mis à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour",
+      "noteAdded": "Note ajoutée",
+      "noteDeleted": "Note supprimée",
+      "noteError": "Erreur lors de l'opération",
+      "emailFeature": "Fonctionnalité email à venir"
+    }
   }
 }

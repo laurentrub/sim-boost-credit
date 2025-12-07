@@ -71,7 +71,7 @@ export default function TeamManagement() {
         .select('*')
         .order('created_at', { ascending: false });
 
-      const filteredRoles = (roles || []).filter((r) => r.role === 'admin' || r.role === 'manager');
+      const filteredRoles = (roles || []).filter((r) => (r.role as string) === 'admin' || (r.role as string) === 'manager');
 
       if (error) throw error;
 
@@ -125,7 +125,7 @@ export default function TeamManagement() {
         .select('role')
         .eq('user_id', profile.id);
 
-      const existingRole = existingRoles?.find((r) => r.role === 'admin' || r.role === 'manager');
+      const existingRole = existingRoles?.find((r) => (r.role as string) === 'admin' || (r.role as string) === 'manager');
 
       if (existingRole) {
         toast.error(t('admin.team.alreadyMember'));

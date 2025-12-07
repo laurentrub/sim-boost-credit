@@ -10,7 +10,6 @@ import PersonalLoan from "./pages/PersonalLoan";
 import AutoLoan from "./pages/AutoLoan";
 import ApplyPage from "./pages/ApplyPage";
 import ProjectFinancing from "./pages/ProjectFinancing";
-import AdminDashboard from "./pages/AdminDashboard";
 import ResourcesHub from "./pages/resources/ResourcesHub";
 import Glossary from "./pages/resources/Glossary";
 import FAQ from "./pages/resources/FAQ";
@@ -28,6 +27,15 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+
+// Admin pages
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import RequestsList from "./pages/admin/RequestsList";
+import RequestDetail from "./pages/admin/RequestDetail";
+import Documents from "./pages/admin/Documents";
+import Settings from "./pages/admin/Settings";
+import TeamManagement from "./pages/admin/TeamManagement";
 
 const queryClient = new QueryClient();
 
@@ -49,7 +57,18 @@ const App = () => (
             <Route path="/apply" element={<ApplyPage />} />
             <Route path="/project-financing" element={<ProjectFinancing />} />
             <Route path="/apply/confirmation" element={<ApplyConfirmation />} />
-            <Route path="/admin" element={<AdminDashboard />} />
+            
+            {/* Admin routes */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="requests" element={<RequestsList />} />
+              <Route path="requests/:id" element={<RequestDetail />} />
+              <Route path="documents" element={<Documents />} />
+              <Route path="team" element={<TeamManagement />} />
+              <Route path="settings" element={<Settings />} />
+            </Route>
+            
+            <Route path="/auth" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/dashboard" element={<Dashboard />} />
