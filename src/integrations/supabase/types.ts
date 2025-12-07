@@ -203,6 +203,39 @@ export type Database = {
           },
         ]
       }
+      user_documents: {
+        Row: {
+          category: string | null
+          created_at: string
+          file_name: string
+          file_path: string
+          file_size: number
+          file_type: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          file_name: string
+          file_path: string
+          file_size: number
+          file_type: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          file_type?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string

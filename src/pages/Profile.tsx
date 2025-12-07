@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { UserContracts } from '@/components/profile/UserContracts';
 import { ProfileSidebar } from '@/components/profile/ProfileSidebar';
+import { UserDocuments } from '@/components/profile/UserDocuments';
 
 interface LoanRequest {
   id: string;
@@ -390,18 +391,7 @@ export default function Profile() {
         );
 
       case 'documents':
-        return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Mes documents</h2>
-            <Card>
-              <CardContent className="pt-6">
-                <p className="text-center text-muted-foreground">
-                  Aucun document disponible pour le moment.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        );
+        return <UserDocuments />;
 
       default:
         return null;
