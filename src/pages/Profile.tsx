@@ -82,7 +82,7 @@ export default function Profile() {
         setPhone(data.phone || '');
       }
     } catch (error: any) {
-      toast.error(t('profile.loadError'));
+      toast.error(t('profile.messages.profileLoadError'));
       console.error(error);
     }
   };
@@ -98,7 +98,7 @@ export default function Profile() {
       if (error) throw error;
       setRequests(data || []);
     } catch (error: any) {
-      toast.error(t('profile.loadRequestsError'));
+      toast.error(t('profile.messages.requestsLoadError'));
       console.error(error);
     }
   };
@@ -119,9 +119,9 @@ export default function Profile() {
 
       if (error) throw error;
 
-      toast.success(t('profile.updateSuccess'));
+      toast.success(t('profile.messages.updateSuccess'));
     } catch (error: any) {
-      toast.error(t('profile.updateError'));
+      toast.error(t('profile.messages.updateError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -132,12 +132,12 @@ export default function Profile() {
     e.preventDefault();
 
     if (newPassword !== confirmPassword) {
-      toast.error(t('profile.passwordMismatch'));
+      toast.error(t('profile.messages.passwordMismatch'));
       return;
     }
 
     if (newPassword.length < 6) {
-      toast.error(t('profile.passwordTooShort'));
+      toast.error(t('profile.messages.passwordTooShort'));
       return;
     }
 
@@ -148,12 +148,12 @@ export default function Profile() {
 
       if (error) throw error;
 
-      toast.success(t('profile.passwordUpdateSuccess'));
+      toast.success(t('profile.messages.passwordSuccess'));
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
     } catch (error: any) {
-      toast.error(t('profile.passwordUpdateError'));
+      toast.error(t('profile.messages.passwordError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -181,7 +181,7 @@ export default function Profile() {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
       auto: t('dashboard.loanTypes.auto'),
-      home_improvement: t('dashboard.loanTypes.homeImprovement'),
+      home_improvement: t('dashboard.loanTypes.home_improvement'),
       business: t('dashboard.loanTypes.business'),
       consolidation: t('dashboard.loanTypes.consolidation'),
       project: t('dashboard.loanTypes.project'),
@@ -231,16 +231,16 @@ export default function Profile() {
             <TabsContent value="info" className="mt-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t('profile.personalInfo')}</CardTitle>
+                  <CardTitle>{t('profile.info.title')}</CardTitle>
                   <CardDescription>
-                    {t('profile.personalInfoDescription')}
+                    {t('profile.info.description')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleProfileUpdate} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">{t('profile.firstName')}</Label>
+                        <Label htmlFor="firstName">{t('profile.info.firstName')}</Label>
                         <Input
                           id="firstName"
                           type="text"
@@ -250,7 +250,7 @@ export default function Profile() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">{t('profile.lastName')}</Label>
+                        <Label htmlFor="lastName">{t('profile.info.lastName')}</Label>
                         <Input
                           id="lastName"
                           type="text"
@@ -262,7 +262,7 @@ export default function Profile() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email">{t('profile.email')}</Label>
+                      <Label htmlFor="email">{t('profile.info.email')}</Label>
                       <Input
                         id="email"
                         type="email"
@@ -271,12 +271,12 @@ export default function Profile() {
                         className="bg-muted"
                       />
                       <p className="text-sm text-muted-foreground">
-                        {t('profile.emailCannotBeChanged')}
+                        {t('profile.info.emailDisabled')}
                       </p>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="phone">{t('profile.phone')}</Label>
+                      <Label htmlFor="phone">{t('profile.info.phone')}</Label>
                       <Input
                         id="phone"
                         type="tel"
@@ -287,7 +287,7 @@ export default function Profile() {
                     </div>
 
                     <Button type="submit" disabled={loading}>
-                      {loading ? t('common.updating') : t('common.update')}
+                      {loading ? t('profile.info.updating') : t('profile.info.update')}
                     </Button>
                   </form>
                 </CardContent>
@@ -297,15 +297,15 @@ export default function Profile() {
             <TabsContent value="password" className="mt-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t('profile.changePassword')}</CardTitle>
+                  <CardTitle>{t('profile.password.title')}</CardTitle>
                   <CardDescription>
-                    {t('profile.changePasswordDescription')}
+                    {t('profile.password.description')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handlePasswordUpdate} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="newPassword">{t('profile.newPassword')}</Label>
+                      <Label htmlFor="newPassword">{t('profile.password.newPassword')}</Label>
                       <Input
                         id="newPassword"
                         type="password"
@@ -317,7 +317,7 @@ export default function Profile() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="confirmPassword">{t('profile.confirmPassword')}</Label>
+                      <Label htmlFor="confirmPassword">{t('profile.password.confirmPassword')}</Label>
                       <Input
                         id="confirmPassword"
                         type="password"
@@ -329,7 +329,7 @@ export default function Profile() {
                     </div>
 
                     <Button type="submit" disabled={loading}>
-                      {loading ? t('common.updating') : t('profile.changePasswordButton')}
+                      {loading ? t('profile.password.changing') : t('profile.password.change')}
                     </Button>
                   </form>
                 </CardContent>
@@ -342,7 +342,7 @@ export default function Profile() {
                   <Card>
                     <CardContent className="pt-6">
                       <p className="text-center text-muted-foreground">
-                        {t('profile.noRequests')}
+                        {t('profile.requests.noRequests')}
                       </p>
                     </CardContent>
                   </Card>
@@ -367,21 +367,21 @@ export default function Profile() {
                           <div className="flex items-center gap-2">
                             <Euro className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">{t('dashboard.amount')}</p>
+                              <p className="text-muted-foreground">{t('profile.requests.amount')}</p>
                               <p className="font-medium">{request.amount.toLocaleString()} €</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
                             <Calendar className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">{t('dashboard.duration')}</p>
+                              <p className="text-muted-foreground">{t('profile.requests.duration')}</p>
                               <p className="font-medium">{request.duration} {t('common.months')}</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
                             <Clock className="h-4 w-4 text-muted-foreground" />
                             <div>
-                              <p className="text-muted-foreground">{t('dashboard.date')}</p>
+                              <p className="text-muted-foreground">{t('profile.requests.date')}</p>
                               <p className="font-medium">
                                 {new Date(request.created_at).toLocaleDateString('fr-FR')}
                               </p>
