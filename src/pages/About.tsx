@@ -74,27 +74,27 @@ const About = () => {
           </div>
 
           <Card className="p-8 bg-gradient-subtle border-none">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Pourquoi choisir Privat Equity ?</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">{t('about.whyChoose.title')}</h2>
             <ul className="space-y-3 text-foreground">
               <li className="flex items-start">
                 <span className="text-accent font-bold mr-3">✓</span>
-                <span><strong>Processus 100% en ligne :</strong> Demande rapide et décision instantanée depuis chez vous</span>
+                <span><strong>{t('about.whyChoose.online.title')}</strong> {t('about.whyChoose.online.description')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-accent font-bold mr-3">✓</span>
-                <span><strong>Comparaison intelligente :</strong> Nous analysons des dizaines d'offres pour trouver la meilleure pour vous</span>
+                <span><strong>{t('about.whyChoose.comparison.title')}</strong> {t('about.whyChoose.comparison.description')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-accent font-bold mr-3">✓</span>
-                <span><strong>Sans engagement :</strong> Vérifiez votre éligibilité sans impact sur votre score de crédit</span>
+                <span><strong>{t('about.whyChoose.noCommitment.title')}</strong> {t('about.whyChoose.noCommitment.description')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-accent font-bold mr-3">✓</span>
-                <span><strong>Transparence totale :</strong> Pas de frais cachés, toutes les conditions clairement affichées</span>
+                <span><strong>{t('about.whyChoose.transparency.title')}</strong> {t('about.whyChoose.transparency.description')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-accent font-bold mr-3">✓</span>
-                <span><strong>Support dédié :</strong> Une équipe d'experts à votre écoute du lundi au samedi</span>
+                <span><strong>{t('about.whyChoose.support.title')}</strong> {t('about.whyChoose.support.description')}</span>
               </li>
             </ul>
           </Card>

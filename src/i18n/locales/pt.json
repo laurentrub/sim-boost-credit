@@ -133,6 +133,14 @@
     "expertise": {
       "title": "A Nossa Experiência",
       "description": "Com mais de 15 anos de experiência combinada no setor financeiro, a nossa equipa compreende os desafios que os mutuários enfrentam. Usamos esta experiência para criar uma experiência de empréstimo que é simples, rápida e adaptada às suas necessidades."
+    },
+    "whyChoose": {
+      "title": "Porquê escolher a Privat Equity?",
+      "online": { "title": "Processo 100% online:", "description": "Pedido rápido e decisão instantânea a partir do conforto de sua casa" },
+      "comparison": { "title": "Comparação inteligente:", "description": "Analisamos dezenas de ofertas para encontrar a melhor para si" },
+      "noCommitment": { "title": "Sem compromisso:", "description": "Verifique a sua elegibilidade sem impactar a sua pontuação de crédito" },
+      "transparency": { "title": "Transparência total:", "description": "Sem taxas ocultas, todas as condições claramente apresentadas" },
+      "support": { "title": "Suporte dedicado:", "description": "Uma equipa de especialistas ao seu serviço de segunda a sábado" }
     }
   },
   "contact": {

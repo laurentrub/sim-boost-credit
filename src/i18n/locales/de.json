@@ -133,6 +133,14 @@
     "expertise": {
       "title": "Unsere Expertise",
       "description": "Mit über 15 Jahren kombinierter Erfahrung im Finanzsektor versteht unser Team die Herausforderungen, mit denen Kreditnehmer konfrontiert sind. Wir nutzen diese Expertise, um ein Krediterlebnis zu schaffen, das einfach, schnell und auf Ihre Bedürfnisse zugeschnitten ist."
+    },
+    "whyChoose": {
+      "title": "Warum Privat Equity wählen?",
+      "online": { "title": "100% Online-Prozess:", "description": "Schnelle Antragstellung und sofortige Entscheidung von zu Hause aus" },
+      "comparison": { "title": "Intelligenter Vergleich:", "description": "Wir analysieren Dutzende von Angeboten, um das beste für Sie zu finden" },
+      "noCommitment": { "title": "Keine Verpflichtung:", "description": "Prüfen Sie Ihre Eignung ohne Auswirkung auf Ihre Kreditwürdigkeit" },
+      "transparency": { "title": "Volle Transparenz:", "description": "Keine versteckten Gebühren, alle Bedingungen klar angezeigt" },
+      "support": { "title": "Dedizierter Support:", "description": "Ein Expertenteam für Sie von Montag bis Samstag" }
     }
   },
   "contact": {

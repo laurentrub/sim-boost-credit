@@ -133,6 +133,14 @@
     "expertise": {
       "title": "Onze Expertise",
       "description": "Met meer dan 15 jaar gecombineerde ervaring in de financiële sector begrijpt ons team de uitdagingen waarmee leners te maken hebben. We gebruiken deze expertise om een leenervaring te creëren die eenvoudig, snel en op maat is van uw behoeften."
+    },
+    "whyChoose": {
+      "title": "Waarom kiezen voor Privat Equity?",
+      "online": { "title": "100% online proces:", "description": "Snelle aanvraag en directe beslissing vanuit het comfort van uw huis" },
+      "comparison": { "title": "Slimme vergelijking:", "description": "We analyseren tientallen aanbiedingen om de beste voor u te vinden" },
+      "noCommitment": { "title": "Geen verplichting:", "description": "Controleer uw geschiktheid zonder invloed op uw kredietscore" },
+      "transparency": { "title": "Volledige transparantie:", "description": "Geen verborgen kosten, alle voorwaarden duidelijk weergegeven" },
+      "support": { "title": "Toegewijde ondersteuning:", "description": "Een team van experts tot uw dienst van maandag tot zaterdag" }
     }
   },
   "contact": {

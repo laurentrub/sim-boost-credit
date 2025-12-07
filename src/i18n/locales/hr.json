@@ -133,6 +133,14 @@
     "expertise": {
       "title": "Naša Ekspertiza",
       "description": "S više od 15 godina kombiniranog iskustva u financijskom sektoru, naš tim razumije izazove s kojima se zajmoprimci susreću. Koristimo ovu ekspertizu za stvaranje iskustva zajma koje je jednostavno, brzo i prilagođeno vašim potrebama."
+    },
+    "whyChoose": {
+      "title": "Zašto odabrati Privat Equity?",
+      "online": { "title": "100% online proces:", "description": "Brza prijava i trenutna odluka iz udobnosti vašeg doma" },
+      "comparison": { "title": "Pametna usporedba:", "description": "Analiziramo desetke ponuda kako bismo pronašli najbolju za vas" },
+      "noCommitment": { "title": "Bez obveze:", "description": "Provjerite svoju podobnost bez utjecaja na vašu kreditnu ocjenu" },
+      "transparency": { "title": "Potpuna transparentnost:", "description": "Bez skrivenih naknada, svi uvjeti jasno prikazani" },
+      "support": { "title": "Posvećena podrška:", "description": "Tim stručnjaka na vašoj usluzi od ponedjeljka do subote" }
     }
   },
   "contact": {

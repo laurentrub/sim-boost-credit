@@ -461,6 +461,14 @@
     "expertise": {
       "title": "Notre Expertise",
       "description": "Avec plus de 15 ans d'expérience combinée dans le secteur financier, notre équipe comprend les défis auxquels font face les emprunteurs. Nous utilisons cette expertise pour créer une expérience de prêt qui est simple, rapide et adaptée à vos besoins."
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir Privat Equity ?",
+      "online": { "title": "Processus 100% en ligne :", "description": "Demande rapide et décision instantanée depuis chez vous" },
+      "comparison": { "title": "Comparaison intelligente :", "description": "Nous analysons des dizaines d'offres pour trouver la meilleure pour vous" },
+      "noCommitment": { "title": "Sans engagement :", "description": "Vérifiez votre éligibilité sans impact sur votre score de crédit" },
+      "transparency": { "title": "Transparence totale :", "description": "Pas de frais cachés, toutes les conditions clairement affichées" },
+      "support": { "title": "Support dédié :", "description": "Une équipe d'experts à votre écoute du lundi au samedi" }
     }
   },
   "contact": {
