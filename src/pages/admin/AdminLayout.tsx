@@ -23,7 +23,7 @@ export default function AdminLayout() {
         .select('role')
         .eq('user_id', user.id);
       
-      const hasAccess = data?.some((r) => r.role === 'admin' || r.role === 'manager');
+      const hasAccess = data?.some((r) => (r.role as string) === 'admin' || (r.role as string) === 'manager');
 
       setIsAuthorized(!!hasAccess);
     };
