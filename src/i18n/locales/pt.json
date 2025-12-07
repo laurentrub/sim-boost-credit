@@ -167,6 +167,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "Tem um pedido de crédito em curso",
+      "button": "Continuar o meu pedido"
+    },
     "hero": {
       "title": "Obtenha o Seu Financiamento Online",
       "subtitle": "Créditos para particulares, empresas e projetos inovadores. Soluções rápidas, transparentes e adaptadas às suas necessidades.",

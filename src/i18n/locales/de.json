@@ -281,6 +281,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "Sie haben einen laufenden Kreditantrag",
+      "button": "Antrag fortsetzen"
+    },
     "hero": {
       "title": "Erhalten Sie Ihre Finanzierung Online",
       "subtitle": "Kredite für Privatpersonen, Unternehmen und innovative Projekte. Schnelle, transparente Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind.",

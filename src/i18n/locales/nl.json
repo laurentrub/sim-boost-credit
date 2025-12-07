@@ -92,6 +92,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "U heeft een lopende kredietaanvraag",
+      "button": "Mijn aanvraag hervatten"
+    },
     "hero": {
       "title": "Krijg Uw Financiering Online",
       "subtitle": "Kredieten voor particulieren, bedrijven en innovatieve projecten. Snelle, transparante oplossingen op maat van uw behoeften.",

@@ -92,6 +92,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "Imate zahtjev za kredit u tijeku",
+      "button": "Nastavite moj zahtjev"
+    },
     "hero": {
       "title": "Dobijte Svoje Financiranje Online",
       "subtitle": "Krediti za građane, tvrtke i inovativne projekte. Brza, transparentna rješenja prilagođena vašim potrebama.",

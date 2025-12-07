@@ -26,6 +26,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "You have a credit application in progress",
+      "button": "Resume my application"
+    },
     "hero": {
       "title": "Get Your Financing Online",
       "subtitle": "Credit for individuals, businesses and innovative projects. Fast, transparent solutions tailored to your needs.",
