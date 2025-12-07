@@ -1,4 +1,145 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo o que precisa saber sobre empréstimos, pedidos e Privat Equity",
+      "categories": {
+        "general": "Perguntas Gerais",
+        "application": "Processo de Pedido",
+        "rates": "Taxas e Condições",
+        "repayment": "Reembolso e Gestão",
+        "credit": "Crédito e Elegibilidade",
+        "security": "Segurança e Privacidade",
+        "special": "Situações Especiais"
+      },
+      "general": {
+        "q1": "O que é a Privat Equity?",
+        "a1": "A Privat Equity é uma plataforma de empréstimos online que conecta mutuários com ofertas de crédito competitivas. Oferecemos empréstimos pessoais, créditos auto, créditos para obras, consolidação de crédito e empréstimos empresariais.",
+        "q2": "Como é que a Privat Equity ganha dinheiro?",
+        "a2": "Recebemos uma comissão dos nossos parceiros financeiros quando conectamos mutuários com empréstimos. Este serviço é gratuito para os mutuários - nunca cobramos taxas de processamento ou custos iniciais.",
+        "q3": "A Privat Equity é segura e legítima?",
+        "a3": "Sim, a Privat Equity é uma plataforma de empréstimos licenciada e regulamentada. Usamos encriptação de nível bancário, somos totalmente conformes com o RGPD e só trabalhamos com instituições financeiras autorizadas."
+      },
+      "application": {
+        "q1": "Quanto tempo demora o pedido?",
+        "a1": "O nosso pedido online demora cerca de 5 a 10 minutos. Receberá uma decisão preliminar instantânea, e a aprovação final geralmente demora 24 a 48 horas.",
+        "q2": "Que documentos preciso?",
+        "a2": "Precisará de um documento de identificação válido, comprovativo de rendimentos, extratos bancários dos últimos 3 meses e comprovativo de morada. Documentos adicionais podem ser solicitados.",
+        "q3": "Verificar a taxa afeta a minha pontuação de crédito?",
+        "a3": "Não! Verificar a sua taxa na Privat Equity usa uma consulta de crédito suave que não afeta a sua pontuação.",
+        "q4": "Posso pedir se sou trabalhador independente?",
+        "a4": "Sim! Trabalhadores independentes são bem-vindos. Precisará fornecer documentos adicionais como declarações fiscais e extratos bancários comerciais.",
+        "q5": "O que acontece se o meu pedido for recusado?",
+        "a5": "Se o seu pedido for recusado, explicaremos o porquê e podemos sugerir alternativas."
+      },
+      "rates": {
+        "q1": "Que taxas de juro oferecem?",
+        "a1": "As nossas taxas começam a partir de 2,9% TAEG para mutuários qualificados.",
+        "q2": "Como é determinada a minha taxa de juro?",
+        "a2": "As taxas baseiam-se na sua pontuação de crédito, rendimentos, rácio de endividamento, montante e duração do empréstimo.",
+        "q3": "As taxas são fixas ou variáveis?",
+        "a3": "Todos os nossos empréstimos têm taxas fixas, o que significa que a sua taxa e prestação nunca mudam.",
+        "q4": "Que montantes estão disponíveis?",
+        "a4": "Oferecemos empréstimos de 1.000€ a 75.000€ dependendo do tipo.",
+        "q5": "Que prazos estão disponíveis?",
+        "a5": "Os prazos vão de 12 a 84 meses dependendo do tipo e montante.",
+        "q6": "Há comissões?",
+        "a6": "Não cobramos comissões de processamento. Alguns empréstimos podem ter comissões de abertura claramente divulgadas."
+      },
+      "repayment": {
+        "q1": "Como faço os meus pagamentos?",
+        "a1": "Os pagamentos são automaticamente debitados da sua conta bancária mensalmente.",
+        "q2": "Posso mudar a data de pagamento?",
+        "a2": "Sim, contacte o nosso serviço de apoio ao cliente.",
+        "q3": "Posso pagar antecipadamente?",
+        "a3": "Sim! Todos os nossos empréstimos permitem reembolso antecipado sem penalizações.",
+        "q4": "O que acontece se falhar um pagamento?",
+        "a4": "Contacte-nos imediatamente. Podemos organizar um plano de pagamento ou adiamento temporário.",
+        "q5": "Posso aumentar o montante mais tarde?",
+        "a5": "Uma vez ativo, não pode aumentar. Mas após vários pagamentos pontuais, pode ser elegível para refinanciamento."
+      },
+      "credit": {
+        "q1": "Que pontuação de crédito preciso?",
+        "a1": "Preferimos pontuações acima de 650, mas consideramos pedidos de vários perfis de crédito.",
+        "q2": "Posso pedir com mau crédito?",
+        "a2": "Sim, trabalhamos com mutuários de todos os perfis. Mau crédito pode resultar em taxas mais altas.",
+        "q3": "Aceitam co-mutuários?",
+        "a3": "Sim, adicionar um co-mutuário com bom crédito pode melhorar as suas chances.",
+        "q4": "Qual é o rendimento mínimo?",
+        "a4": "Não há mínimo estrito, mas deve demonstrar rendimento suficiente para cobrir os pagamentos."
+      },
+      "security": {
+        "q1": "Como são protegidos os meus dados?",
+        "a1": "Usamos encriptação SSL de 256 bits e somos totalmente conformes com o RGPD.",
+        "q2": "Quem tem acesso às minhas informações?",
+        "a2": "Apenas pessoal autorizado da Privat Equity e os nossos parceiros financeiros quando aceita uma oferta.",
+        "q3": "Quanto tempo guardam as minhas informações?",
+        "a3": "Guardamos de acordo com requisitos legais. Pode solicitar eliminação a qualquer momento."
+      },
+      "special": {
+        "q1": "Posso pedir se sou reformado?",
+        "a1": "Sim! Reformados com pensão podem pedir.",
+        "q2": "Oferecem empréstimos para estudantes?",
+        "a2": "Estudantes com rendimentos podem pedir, mas os requisitos de rendimento aplicam-se.",
+        "q3": "Posso usar um empréstimo para criar uma empresa?",
+        "a3": "Para necessidades comerciais, recomendamos o nosso produto de Empréstimo Empresarial.",
+        "q4": "E se estiver em divórcio?",
+        "a4": "Pessoas em divórcio podem pedir, mas devem mostrar rendimentos e dívidas individuais."
+      }
+    },
+    "glossary": {
+      "title": "Glossário de Crédito",
+      "subtitle": "Compreenda os termos-chave do crédito para tomar decisões financeiras informadas",
+      "searchPlaceholder": "Pesquisar termos...",
+      "noResults": "Nenhum termo encontrado.",
+      "terms": {
+        "apr": { "term": "TAEG", "definition": "O custo anual de um empréstimo em percentagem, incluindo juros e comissões." },
+        "amortization": { "term": "Amortização", "definition": "O processo de pagar uma dívida ao longo do tempo através de pagamentos regulares." },
+        "collateral": { "term": "Garantia", "definition": "Um ativo empenhado para garantir um empréstimo." },
+        "creditScore": { "term": "Pontuação de Crédito", "definition": "Uma representação numérica da sua solvabilidade." },
+        "consolidation": { "term": "Consolidação de Créditos", "definition": "Combinar múltiplas dívidas num único empréstimo." },
+        "dti": { "term": "Rácio de Endividamento", "definition": "A percentagem do seu rendimento mensal bruto destinada a pagamentos de dívida." },
+        "default": { "term": "Incumprimento", "definition": "Falha em reembolsar um empréstimo segundo as condições acordadas." },
+        "deferment": { "term": "Adiamento", "definition": "Uma funcionalidade que permite adiar pagamentos por um período especificado." },
+        "fixedRate": { "term": "Taxa de Juro Fixa", "definition": "Uma taxa que permanece constante durante toda a vida do empréstimo." },
+        "gracePeriod": { "term": "Período de Carência", "definition": "Um período após a data de vencimento durante o qual pode pagar sem penalizações." },
+        "guarantor": { "term": "Fiador", "definition": "Uma pessoa que concorda em pagar um empréstimo se o mutuário principal não o fizer." },
+        "hardInquiry": { "term": "Consulta Forte", "definition": "Uma verificação de crédito quando solicita um crédito." },
+        "interestRate": { "term": "Taxa de Juro", "definition": "A percentagem cobrada sobre o montante principal de um empréstimo." },
+        "loanTerm": { "term": "Prazo do Empréstimo", "definition": "A duração durante a qual deve reembolsar um empréstimo." },
+        "originationFee": { "term": "Comissão de Abertura", "definition": "Uma taxa cobrada pelos mutuantes para processar um novo pedido." },
+        "preApproval": { "term": "Pré-aprovação", "definition": "Uma avaliação preliminar indicando quanto pode ser elegível para pedir emprestado." },
+        "principal": { "term": "Capital", "definition": "O montante de dinheiro originalmente emprestado." },
+        "refinancing": { "term": "Refinanciamento", "definition": "Substituir um empréstimo existente por um novo com melhores condições." },
+        "securedLoan": { "term": "Empréstimo Garantido", "definition": "Um empréstimo apoiado por garantia." },
+        "softInquiry": { "term": "Consulta Suave", "definition": "Uma verificação de crédito que não afeta a sua pontuação." },
+        "unsecuredLoan": { "term": "Empréstimo Não Garantido", "definition": "Um empréstimo não apoiado por garantia." },
+        "variableRate": { "term": "Taxa de Juro Variável", "definition": "Uma taxa que pode mudar ao longo do tempo." },
+        "borrowingCapacity": { "term": "Capacidade de Endividamento", "definition": "O montante máximo que pode razoavelmente pedir emprestado." },
+        "coBorrower": { "term": "Co-mutuário", "definition": "Uma pessoa que pede um empréstimo consigo e partilha igual responsabilidade." },
+        "borrowerInsurance": { "term": "Seguro de Mutuário", "definition": "Um seguro que cobre pagamentos do empréstimo em caso de morte, invalidez ou perda de emprego." },
+        "prepaymentPenalty": { "term": "Penalização por Reembolso Antecipado", "definition": "Uma taxa cobrada se pagar o empréstimo antes do prazo. Na Privat Equity não temos penalizações." },
+        "revolvingCredit": { "term": "Crédito Rotativo", "definition": "Um tipo de crédito onde pode pedir, pagar e voltar a pedir até um limite aprovado." },
+        "amortizationSchedule": { "term": "Plano de Amortização", "definition": "Um calendário detalhado mostrando cada pagamento do empréstimo." },
+        "nominalRate": { "term": "Taxa Nominal", "definition": "A taxa de juro base sem incluir comissões adicionais." },
+        "interestOnly": { "term": "Período de Carência", "definition": "O período inicial de um empréstimo durante o qual só paga juros." },
+        "debtRestructuring": { "term": "Reestruturação de Dívida", "definition": "Modificação das condições de um empréstimo existente." },
+        "affectedCredit": { "term": "Crédito Afetado", "definition": "Um empréstimo ligado à compra de um bem ou serviço específico." },
+        "unaffectedCredit": { "term": "Crédito Não Afetado", "definition": "Um empréstimo que não está ligado a uma compra específica." }
+      }
+    },
+    "creditGuide": {
+      "title": "Guia de Crédito",
+      "subtitle": "Recursos educativos para ajudá-lo a tomar decisões de empréstimo informadas",
+      "articles": {
+        "choosingLoan": { "title": "Como escolher o empréstimo certo para as suas necessidades", "content": "Escolher o empréstimo certo requer uma consideração cuidadosa da sua situação financeira, objetivos e capacidade de reembolso. Comece por identificar a sua necessidade específica. Compare as taxas de juro de vários mutuantes, mas lembre-se que a TAEG é mais importante que a taxa de juro base. Avalie cuidadosamente as condições de reembolso e verifique as comissões." },
+        "debtRatio": { "title": "Compreender e calcular o seu rácio de endividamento", "content": "O seu rácio de endividamento é um dos fatores mais importantes que os mutuantes consideram. Mede qual percentagem do seu rendimento mensal bruto é destinada a pagamentos de dívida. A maioria dos mutuantes prefere um rácio inferior a 36%." },
+        "comparingOffers": { "title": "Como comparar ofertas de empréstimo eficazmente", "content": "Comparar ofertas de empréstimo requer olhar além da taxa de juro anunciada. Concentre-se na TAEG, compare os custos totais do empréstimo, examine todas as comissões cuidadosamente e verifique a flexibilidade de reembolso." },
+        "earlyRepayment": { "title": "A verdade sobre o reembolso antecipado", "content": "Pagar um empréstimo antecipadamente pode poupar significativamente em juros, mas nem sempre é a melhor decisão financeira. Verifique primeiro as penalizações por reembolso antecipado e considere o custo de oportunidade." },
+        "buildingCredit": { "title": "Construir e manter um bom crédito", "content": "A sua pontuação de crédito impacta todos os aspetos financeiros da sua vida. O histórico de pagamentos representa 35% da sua pontuação. Nunca falhe pagamentos e mantenha os saldos dos cartões de crédito baixos." }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Particulares",
     "professionnels": "Profissionais",

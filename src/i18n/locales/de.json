@@ -1,4 +1,259 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über Kredite, Anträge und Privat Equity wissen müssen",
+      "categories": {
+        "general": "Allgemeine Fragen",
+        "application": "Antragsprozess",
+        "rates": "Zinsen und Konditionen",
+        "repayment": "Rückzahlung und Verwaltung",
+        "credit": "Kredit und Berechtigung",
+        "security": "Sicherheit und Datenschutz",
+        "special": "Besondere Situationen"
+      },
+      "general": {
+        "q1": "Was ist Privat Equity?",
+        "a1": "Privat Equity ist eine Online-Kreditplattform, die Kreditnehmer mit wettbewerbsfähigen Kreditangeboten verbindet. Wir bieten Privatkredite, Autokredite, Renovierungskredite, Umschuldungen und Geschäftskredite an.",
+        "q2": "Wie verdient Privat Equity Geld?",
+        "a2": "Wir erhalten eine Provision von unseren Finanzpartnern, wenn wir Kreditnehmer mit Krediten zusammenbringen. Dieser Service ist für Kreditnehmer kostenlos - wir berechnen niemals Bearbeitungsgebühren oder Vorabkosten.",
+        "q3": "Ist Privat Equity sicher und seriös?",
+        "a3": "Ja, Privat Equity ist eine lizenzierte und regulierte Kreditplattform. Wir verwenden bankübliche Verschlüsselung, sind vollständig DSGVO-konform und arbeiten nur mit zugelassenen Finanzinstituten zusammen."
+      },
+      "application": {
+        "q1": "Wie lange dauert der Antrag?",
+        "a1": "Unser Online-Antrag dauert etwa 5 bis 10 Minuten. Sie erhalten sofort eine vorläufige Entscheidung, und die endgültige Genehmigung dauert in der Regel 24 bis 48 Stunden.",
+        "q2": "Welche Dokumente benötige ich?",
+        "a2": "Sie benötigen einen gültigen Ausweis, einen Einkommensnachweis (Gehaltsabrechnungen oder Steuererklärungen), Kontoauszüge der letzten 3 Monate und einen Wohnsitznachweis. Je nach Antrag können zusätzliche Dokumente angefordert werden.",
+        "q3": "Beeinflusst die Zinsabfrage meinen Kreditscore?",
+        "a3": "Nein! Die Überprüfung Ihres Zinssatzes bei Privat Equity verwendet eine weiche Kreditanfrage, die Ihren Score nicht beeinflusst. Eine harte Anfrage erfolgt erst, wenn Sie ein Kreditangebot formell annehmen.",
+        "q4": "Kann ich als Selbstständiger einen Antrag stellen?",
+        "a4": "Ja! Selbstständige sind willkommen. Sie müssen zusätzliche Dokumente wie Steuererklärungen, Geschäftskontoauszüge und einen Nachweis der Gewerbeanmeldung vorlegen.",
+        "q5": "Was passiert, wenn mein Antrag abgelehnt wird?",
+        "a5": "Bei Ablehnung erklären wir Ihnen die Gründe und können Alternativen vorschlagen. Häufige Gründe sind unzureichendes Einkommen, hohe Verschuldung oder Kreditprobleme. Sie können nach Behebung dieser Probleme erneut einen Antrag stellen."
+      },
+      "rates": {
+        "q1": "Welche Zinssätze bieten Sie an?",
+        "a1": "Unsere Zinsen beginnen ab 2,9% effektiver Jahreszins für qualifizierte Kreditnehmer. Ihr spezifischer Zinssatz hängt von Ihrem Kreditprofil, dem Kreditbetrag, der Laufzeit und der Kreditart ab.",
+        "q2": "Wie wird mein Zinssatz bestimmt?",
+        "a2": "Die Zinssätze basieren auf Ihrem Kreditscore, Ihrem Einkommen, Ihrer Verschuldungsquote, dem Kreditbetrag und der Laufzeit. Bessere Kredit- und Finanzprofile erhalten in der Regel niedrigere Zinsen.",
+        "q3": "Sind die Zinsen fest oder variabel?",
+        "a3": "Alle unsere Privatkredite, Autokredite und Renovierungskredite haben feste Zinsen, d.h. Ihr Zinssatz und Ihre monatliche Rate ändern sich nie. Dies bietet Planungssicherheit während der gesamten Laufzeit.",
+        "q4": "Welche Kreditbeträge sind verfügbar?",
+        "a4": "Wir bieten Kredite von 1.000 € bis 75.000 € je nach Kreditart an. Privatkredite reichen bis zu 75.000 €, während spezifische Limits je nach Produkt variieren können.",
+        "q5": "Welche Laufzeiten sind verfügbar?",
+        "a5": "Die Laufzeiten reichen von 12 bis 84 Monaten, je nach Kreditart und -betrag. Längere Laufzeiten haben niedrigere Monatsraten, aber höhere Gesamtkosten.",
+        "q6": "Gibt es Gebühren?",
+        "a6": "Wir berechnen keine Bearbeitungsgebühren. Einige Kredite können Vermittlungsgebühren haben (in der Regel 1-5% des Kreditbetrags), die vor Annahme eines Angebots klar offengelegt werden."
+      },
+      "repayment": {
+        "q1": "Wie leiste ich meine Zahlungen?",
+        "a1": "Die Zahlungen werden automatisch jeden Monat zum geplanten Zahlungstermin von Ihrem Bankkonto abgebucht. Sie können auch manuelle Zahlungen über Ihr Online-Konto vornehmen.",
+        "q2": "Kann ich mein Zahlungsdatum ändern?",
+        "a2": "Ja, kontaktieren Sie unseren Kundenservice, um eine Änderung des Zahlungsdatums zu beantragen. Wir helfen Ihnen, die Zahlungen an Ihren Einkommenszyklus anzupassen.",
+        "q3": "Kann ich meinen Kredit vorzeitig zurückzahlen?",
+        "a3": "Ja! Alle unsere Kredite erlauben vorzeitige Rückzahlung ohne Strafgebühren. Sie sparen Zinsen, wenn Sie Ihren Kredit vor Fälligkeit zurückzahlen.",
+        "q4": "Was passiert, wenn ich eine Zahlung verpasse?",
+        "a4": "Kontaktieren Sie uns sofort, wenn Sie eine Zahlung nicht leisten können. Wir können möglicherweise einen Zahlungsplan oder eine vorübergehende Stundung vereinbaren. Versäumte Zahlungen können zu Verzugsgebühren führen und Ihren Kreditscore beeinträchtigen.",
+        "q5": "Kann ich meinen Kreditbetrag später erhöhen?",
+        "a5": "Sobald Ihr Kredit aktiv ist, können Sie den Betrag nicht erhöhen. Nach mehreren pünktlichen Zahlungen könnten Sie jedoch für eine Umfinanzierung mit höherem Betrag in Frage kommen."
+      },
+      "credit": {
+        "q1": "Welchen Kreditscore benötige ich?",
+        "a1": "Obwohl wir Scores über 650 bevorzugen, berücksichtigen wir Anträge mit verschiedenen Kreditprofilen. Ein niedrigerer Score disqualifiziert Sie nicht automatisch - wir bewerten Ihre gesamte finanzielle Situation.",
+        "q2": "Kann ich mit schlechtem Kredit einen Antrag stellen?",
+        "a2": "Ja, wir arbeiten mit Kreditnehmern aller Kreditprofile. Schlechter Kredit kann zu höheren Zinsen führen oder einen Mitantragsteller erfordern, aber viele Optionen bleiben verfügbar.",
+        "q3": "Akzeptieren Sie Anträge mit Mitantragsteller?",
+        "a3": "Ja, die Hinzufügung eines Mitantragstellers mit gutem Kredit kann Ihre Genehmigungschancen verbessern und möglicherweise Ihren Zinssatz senken.",
+        "q4": "Gibt es eine Mindesteinkommensanforderung?",
+        "a4": "Es gibt kein striktes Minimum, aber Sie müssen ausreichendes Einkommen nachweisen, um die Kreditzahlungen zu decken. Wir streben in der Regel eine Verschuldungsquote unter 40% an."
+      },
+      "security": {
+        "q1": "Wie werden meine persönlichen Daten geschützt?",
+        "a1": "Wir verwenden 256-Bit-SSL-Verschlüsselung, dieselbe Sicherheit wie Banken. Ihre Daten werden nie ohne Ihre ausdrückliche Zustimmung verkauft oder weitergegeben, und wir sind vollständig DSGVO-konform.",
+        "q2": "Wer hat Zugang zu meinen Daten?",
+        "a2": "Nur autorisiertes Personal von Privat Equity und unsere Finanzpartner (wenn Sie ein Angebot annehmen) haben Zugang zu Ihren Daten. Wir verkaufen Ihre Daten nie an Dritte.",
+        "q3": "Wie lange bewahren Sie meine Daten auf?",
+        "a3": "Wir bewahren Ihre Daten gemäß den gesetzlichen Anforderungen und unserer Datenschutzrichtlinie auf. Sie können jederzeit die Löschung Ihrer Daten beantragen, vorbehaltlich regulatorischer Verpflichtungen."
+      },
+      "special": {
+        "q1": "Kann ich als Rentner einen Antrag stellen?",
+        "a1": "Ja! Rentner mit Rente oder Altersversorgung können einen Antrag stellen. Sie müssen einen Nachweis Ihres Renteneinkommens erbringen.",
+        "q2": "Bieten Sie Kredite für Studenten an?",
+        "a2": "Studenten mit Teilzeitjobs oder anderen Einkommensquellen können einen Antrag stellen. Die Einkommensanforderungen gelten jedoch weiterhin, und ein Mitantragsteller kann vorteilhaft sein.",
+        "q3": "Kann ich einen Kredit zur Unternehmensgründung nutzen?",
+        "a3": "Für geschäftliche Zwecke empfehlen wir unser spezielles Geschäftskredit-Produkt, das speziell für Unternehmer und Geschäftsinhaber konzipiert ist.",
+        "q4": "Was mache ich während einer Scheidung?",
+        "a4": "Personen in Scheidung können einen Antrag stellen, müssen aber ihr individuelles Einkommen und ihre Schulden nachweisen. Gemeinsame Schulden werden bei der Berechnung der Verschuldungsquote berücksichtigt."
+      }
+    },
+    "glossary": {
+      "title": "Kredit-Glossar",
+      "subtitle": "Verstehen Sie die wichtigsten Begriffe aus dem Kredit- und Darlehensbereich für fundierte Finanzentscheidungen",
+      "searchPlaceholder": "Begriffe suchen...",
+      "noResults": "Keine Begriffe gefunden, die Ihrer Suche entsprechen.",
+      "terms": {
+        "apr": {
+          "term": "Effektiver Jahreszins (EJZ)",
+          "definition": "Die jährlichen Kosten eines Kredits in Prozent, einschließlich Zinsen und Gebühren. Der EJZ gibt ein vollständiges Bild dessen, was ein Kredit Sie pro Jahr kostet."
+        },
+        "amortization": {
+          "term": "Tilgung",
+          "definition": "Der Prozess der Schuldentilgung im Laufe der Zeit durch regelmäßige Zahlungen. Jede Zahlung deckt sowohl Kapital als auch Zinsen ab, wobei sich das Verhältnis während der Laufzeit ändert."
+        },
+        "collateral": {
+          "term": "Sicherheit",
+          "definition": "Ein Vermögenswert (wie ein Haus oder Auto), der von einem Kreditnehmer als Sicherheit für einen Kredit verpfändet wird. Bei Zahlungsausfall kann der Kreditgeber die Sicherheit beschlagnahmen."
+        },
+        "creditScore": {
+          "term": "Kreditscore",
+          "definition": "Eine numerische Darstellung Ihrer Kreditwürdigkeit, typischerweise zwischen 300 und 850. Höhere Scores bedeuten geringeres Risiko für Kreditgeber und können zu besseren Kreditkonditionen führen."
+        },
+        "consolidation": {
+          "term": "Schuldenkonsolidierung",
+          "definition": "Die Zusammenfassung mehrerer Schulden in einem einzigen Kredit, oft mit niedrigerem Zinssatz oder günstigeren Konditionen. Dies vereinfacht die Rückzahlung und kann die monatlichen Zahlungen reduzieren."
+        },
+        "dti": {
+          "term": "Verschuldungsquote",
+          "definition": "Der Prozentsatz Ihres monatlichen Bruttoeinkommens, der für Schuldenzahlungen verwendet wird. Kreditgeber nutzen dies, um Ihre Fähigkeit zur Verwaltung monatlicher Zahlungen zu bewerten."
+        },
+        "default": {
+          "term": "Zahlungsausfall",
+          "definition": "Das Versäumnis, einen Kredit gemäß den vereinbarten Bedingungen zurückzuzahlen. Ein Ausfall kann Ihren Kreditscore erheblich schädigen und zu rechtlichen Schritten führen."
+        },
+        "deferment": {
+          "term": "Zahlungsaufschub",
+          "definition": "Eine Kreditfunktion, die es Kreditnehmern ermöglicht, Zahlungen für einen bestimmten Zeitraum aufzuschieben. Zinsen können während des Aufschubs weiter anfallen."
+        },
+        "fixedRate": {
+          "term": "Fester Zinssatz",
+          "definition": "Ein Zinssatz, der während der gesamten Kreditlaufzeit konstant bleibt und vorhersehbare monatliche Zahlungen bietet."
+        },
+        "gracePeriod": {
+          "term": "Karenzzeit",
+          "definition": "Ein Zeitraum nach dem Fälligkeitsdatum einer Zahlung, in dem Sie ohne Verzugsgebühren oder Strafen zahlen können."
+        },
+        "guarantor": {
+          "term": "Bürge",
+          "definition": "Eine Person, die sich bereit erklärt, einen Kredit zurückzuzahlen, wenn der Hauptkreditnehmer dies nicht tut. Ein Bürge kann die Genehmigungschancen für Personen mit begrenztem Kredit verbessern."
+        },
+        "hardInquiry": {
+          "term": "Harte Kreditanfrage",
+          "definition": "Eine Kreditprüfung, die durchgeführt wird, wenn Sie einen Kredit beantragen. Harte Anfragen können Ihren Kreditscore vorübergehend senken und bleiben zwei Jahre in Ihrem Bericht."
+        },
+        "interestRate": {
+          "term": "Zinssatz",
+          "definition": "Der Prozentsatz, der auf den Kapitalbetrag eines Kredits berechnet wird. Es sind die Kosten für das Ausleihen von Geld, üblicherweise als Jahreszins ausgedrückt."
+        },
+        "loanTerm": {
+          "term": "Kreditlaufzeit",
+          "definition": "Die Zeitspanne, in der Sie einen Kredit zurückzahlen müssen, üblicherweise in Monaten oder Jahren angegeben. Längere Laufzeiten bedeuten niedrigere monatliche Raten, aber insgesamt höhere Zinskosten."
+        },
+        "originationFee": {
+          "term": "Bearbeitungsgebühr",
+          "definition": "Eine Gebühr, die Kreditgeber für die Bearbeitung eines neuen Kreditantrags erheben. Sie beträgt typischerweise einen Prozentsatz des Kreditbetrags."
+        },
+        "preApproval": {
+          "term": "Vorabgenehmigung",
+          "definition": "Eine vorläufige Bewertung durch einen Kreditgeber, die angibt, wie viel Sie möglicherweise leihen können. Dies ist keine Garantie für die endgültige Genehmigung, hilft aber bei der Planung."
+        },
+        "principal": {
+          "term": "Kapital",
+          "definition": "Der ursprünglich geliehene Geldbetrag, ohne Zinsen oder Gebühren. Mit jeder Zahlung verringert sich das Kapital."
+        },
+        "refinancing": {
+          "term": "Refinanzierung",
+          "definition": "Das Ersetzen eines bestehenden Kredits durch einen neuen, in der Regel um bessere Konditionen wie einen niedrigeren Zinssatz oder eine andere Rückzahlungsdauer zu erhalten."
+        },
+        "securedLoan": {
+          "term": "Gesicherter Kredit",
+          "definition": "Ein durch Sicherheiten gedeckter Kredit. Bei Zahlungsausfall kann der Kreditgeber die Sicherheit in Besitz nehmen. Beispiele sind Hypotheken und Autokredite."
+        },
+        "softInquiry": {
+          "term": "Weiche Kreditanfrage",
+          "definition": "Eine Kreditprüfung, die Ihren Kreditscore nicht beeinflusst. Diese erfolgen, wenn Sie Ihren eigenen Kredit prüfen oder wenn Kreditgeber Sie für Angebote vorab genehmigen."
+        },
+        "unsecuredLoan": {
+          "term": "Ungesicherter Kredit",
+          "definition": "Ein Kredit ohne Sicherheiten. Privatkredite sind typischerweise ungesichert und können aufgrund des höheren Risikos für den Kreditgeber höhere Zinsen haben."
+        },
+        "variableRate": {
+          "term": "Variabler Zinssatz",
+          "definition": "Ein Zinssatz, der sich im Laufe der Zeit je nach Marktbedingungen ändern kann. Monatliche Zahlungen können mit Zinsänderungen schwanken."
+        },
+        "borrowingCapacity": {
+          "term": "Kreditkapazität",
+          "definition": "Der maximale Betrag, den ein Kreditnehmer vernünftigerweise basierend auf seinem Einkommen, seinen Ausgaben und bestehenden finanziellen Verpflichtungen leihen kann."
+        },
+        "coBorrower": {
+          "term": "Mitantragsteller",
+          "definition": "Eine Person, die gemeinsam mit Ihnen einen Kredit beantragt und die gleiche Rückzahlungsverantwortung teilt. Beide Kreditscores und Einkommen werden berücksichtigt."
+        },
+        "borrowerInsurance": {
+          "term": "Kreditversicherung",
+          "definition": "Eine Versicherung, die Kreditzahlungen bei Tod, Invalidität oder Arbeitsplatzverlust abdeckt. Oft optional, kann aber Sicherheit bieten."
+        },
+        "prepaymentPenalty": {
+          "term": "Vorfälligkeitsentschädigung",
+          "definition": "Eine Gebühr, die einige Kreditgeber erheben, wenn Sie Ihren Kredit vor Ende der geplanten Laufzeit zurückzahlen. Bei Privat Equity haben wir keine Vorfälligkeitsentschädigungen."
+        },
+        "revolvingCredit": {
+          "term": "Revolving-Kredit",
+          "definition": "Eine Art von Kredit, bei dem Sie bis zu einem genehmigten Limit leihen, zurückzahlen und erneut leihen können. Kreditkarten sind Beispiele für revolvierende Kredite."
+        },
+        "amortizationSchedule": {
+          "term": "Tilgungsplan",
+          "definition": "Ein detaillierter Zeitplan, der jede Kreditzahlung zeigt, aufgeteilt in Kapital und Zinsen, über die gesamte Kreditlaufzeit."
+        },
+        "nominalRate": {
+          "term": "Nominalzins",
+          "definition": "Der Basiszinssatz ohne zusätzliche Gebühren, im Gegensatz zum effektiven Jahreszins, der alle Kosten enthält."
+        },
+        "interestOnly": {
+          "term": "Tilgungsfreie Zeit",
+          "definition": "Die anfängliche Periode eines Kredits, in der Sie nur Zinsen zahlen, ohne das Kapital zurückzuzahlen."
+        },
+        "debtRestructuring": {
+          "term": "Schuldenrestrukturierung",
+          "definition": "Änderung der Bedingungen eines bestehenden Kredits, um die Zahlungen handhabbarer zu machen, z.B. durch Verlängerung der Laufzeit oder Senkung des Zinssatzes."
+        },
+        "affectedCredit": {
+          "term": "Zweckgebundener Kredit",
+          "definition": "Ein Kredit, der an den Kauf eines bestimmten Gutes oder einer Dienstleistung gebunden ist, wie ein Autokredit oder Möbelkredit."
+        },
+        "unaffectedCredit": {
+          "term": "Nicht zweckgebundener Kredit",
+          "definition": "Ein Kredit, der nicht an einen bestimmten Kauf gebunden ist und nach Ihrem Ermessen verwendet werden kann, wie ein Privatkredit."
+        }
+      }
+    },
+    "creditGuide": {
+      "title": "Kredit-Ratgeber",
+      "subtitle": "Bildungsressourcen, die Ihnen helfen, fundierte Kreditentscheidungen zu treffen",
+      "articles": {
+        "choosingLoan": {
+          "title": "So wählen Sie den richtigen Kredit für Ihre Bedürfnisse",
+          "content": "Die Wahl des richtigen Kredits erfordert eine sorgfältige Betrachtung Ihrer finanziellen Situation, Ihrer Ziele und Ihrer Rückzahlungsfähigkeit. Beginnen Sie damit, Ihren spezifischen Bedarf zu identifizieren – handelt es sich um eine Umschuldung, einen größeren Kauf, Renovierungen oder eine Geschäftsinvestition? Jedes Ziel kann für verschiedene Kreditarten besser geeignet sein.\n\nÜberlegen Sie, wie viel Sie wirklich brauchen. Zu wenig zu leihen bedeutet, dass Sie später möglicherweise zusätzliche Finanzierung benötigen; zu viel zu leihen erhöht die Kosten unnötig. Erstellen Sie ein detailliertes Budget, das genau zeigt, wie Sie die Mittel verwenden werden.\n\nVergleichen Sie die Zinssätze mehrerer Kreditgeber, aber denken Sie daran, dass der effektive Jahreszins wichtiger ist als der Basiszinssatz, da er Gebühren enthält. Feste Zinsen bieten Zahlungsstabilität, während variable Zinsen niedriger beginnen können, aber ein Erhöhungsrisiko bergen.\n\nBewerten Sie die Rückzahlungsbedingungen sorgfältig. Kürzere Laufzeiten bedeuten höhere monatliche Zahlungen, aber geringere Gesamtzinskosten. Längere Laufzeiten reduzieren die monatlichen Zahlungen, erhöhen aber den Gesamtbetrag erheblich. Wählen Sie eine Laufzeit, die Erschwinglichkeit mit Zinsminimierung in Einklang bringt.\n\nPrüfen Sie die Gebühren, einschließlich Bearbeitungsgebühren, Vorfälligkeitsentschädigungen, Verzugsgebühren und Jahresgebühren. Einige Kredite bewerben niedrige Zinsen, haben aber hohe Gebühren, die die tatsächlichen Kosten erhöhen.\n\nBewerten Sie Ihren Kreditscore realistisch. Wenn Ihr Score unter 650 liegt, könnten Sie mit höheren Zinsen konfrontiert sein oder einen Mitantragsteller benötigen. Die Verbesserung Ihres Kredits vor der Antragstellung kann Ihnen Tausende Euro an Zinsen sparen.\n\nLesen Sie schließlich das Kleingedruckte. Verstehen Sie alle Bedingungen und Ihre Verpflichtungen, bevor Sie unterschreiben. Fühlen Sie sich nie unter Druck gesetzt, ein Angebot anzunehmen – seriöse Kreditgeber geben Ihnen Zeit zum Prüfen und Entscheiden."
+        },
+        "debtRatio": {
+          "title": "Verstehen und Berechnen Ihrer Verschuldungsquote",
+          "content": "Ihre Verschuldungsquote ist einer der wichtigsten Faktoren, die Kreditgeber bei der Bewertung Ihres Kreditantrags berücksichtigen. Sie misst, welcher Prozentsatz Ihres monatlichen Bruttoeinkommens für Schuldenzahlungen verwendet wird, und zeigt Ihre Fähigkeit, monatliche Zahlungen zu verwalten.\n\nUm Ihre Verschuldungsquote zu berechnen, ermitteln Sie zunächst Ihre gesamten monatlichen Schuldenzahlungen. Berücksichtigen Sie Kreditkartenmindestzahlungen, Raten für Privatkredite, Autokredite, Studienkredite, Miete oder Hypothek und alle anderen wiederkehrenden Schuldenverpflichtungen. Schließen Sie keine Nebenkosten, Lebensmittel oder Versicherungen ein, es sei denn, sie sind Teil eines Zahlungsplans.\n\nBerechnen Sie dann Ihr monatliches Bruttoeinkommen (vor Steuern). Berücksichtigen Sie Gehalt, Boni, Provisionen, Mieteinnahmen, Unterhalt, Kindergeld und alle anderen regelmäßigen Einkommensquellen.\n\nTeilen Sie die gesamten monatlichen Schuldenzahlungen durch das monatliche Bruttoeinkommen und multiplizieren Sie mit 100, um Ihren Prozentsatz zu erhalten. Beispiel: 1.200 € Schuldenzahlungen ÷ 4.000 € Bruttoeinkommen = 0,30 oder 30% Verschuldungsquote.\n\nDie meisten Kreditgeber bevorzugen eine Verschuldungsquote unter 36%, wobei nicht mehr als 28% für Wohnkosten aufgewendet werden sollten. Sie können immer noch mit einer Quote von bis zu 43-45% genehmigt werden, werden aber wahrscheinlich mit höheren Zinsen konfrontiert. Über 45% wird die Genehmigung sehr schwierig.\n\nUm Ihre Verschuldungsquote zu verbessern, können Sie Ihr Einkommen durch Gehaltserhöhungen, Nebenjobs oder Boni steigern oder Schulden reduzieren, indem Sie Salden abbezahlen, hochverzinsliche Schulden konsolidieren oder neue Schulden vermeiden. Manchmal führt das Aufschieben eines Kreditantrags während Sie Ihre Quote verbessern zu viel besseren Konditionen.\n\nBei der Beantragung eines neuen Kredits berechnen Kreditgeber die Quote einschließlich der vorgeschlagenen neuen Zahlung. Stellen Sie sicher, dass Sie sich diese kombinierte Zahlung bequem leisten können und gleichzeitig Notfallersparnisse und Lebensqualität aufrechterhalten."
+        },
+        "comparingOffers": {
+          "title": "Wie man Kreditangebote effektiv vergleicht",
+          "content": "Der Vergleich von Kreditangeboten erfordert einen Blick über den beworbenen Zinssatz hinaus. Nutzen Sie diese Strategien für eine fundierte Entscheidung:\n\nKonzentrieren Sie sich zunächst auf den effektiven Jahreszins (EJZ) und nicht nur auf den Zinssatz. Der EJZ umfasst Bearbeitungsgebühren, Bearbeitungskosten und andere Kosten und gibt Ihnen die tatsächlichen jährlichen Kreditkosten. Ein Kredit mit 5% Zinsen aber 5% Bearbeitungsgebühr könnte einen EJZ von 7% haben und wäre damit teurer als ein Kredit mit 6% ohne Gebühren.\n\nVergleichen Sie die Gesamtkosten des Kredits, indem Sie Ihre monatliche Zahlung mit der Anzahl der Zahlungen multiplizieren. Ein Kredit von 10.000 € mit 5% EJZ über 36 Monate kostet 299 €/Monat (10.764 € insgesamt), während derselbe Kredit mit 7% EJZ 308 €/Monat (11.088 € insgesamt) kostet – ein Unterschied von 324 €.\n\nPrüfen Sie alle Gebühren sorgfältig. Übliche Gebühren umfassen Bearbeitungsgebühren (typischerweise 1-6% des Kreditbetrags), Antragsgebühren, Vorfälligkeitsentschädigungen, Verzugsgebühren und Scheckbearbeitungsgebühren. Einige Kreditgeber erheben keine Gebühren, haben aber höhere Zinsen, während andere das Gegenteil tun.\n\nPrüfen Sie die Rückzahlungsflexibilität. Können Sie ohne Strafe zusätzliche Zahlungen leisten? Können Sie Ihr Zahlungsdatum ändern? Gibt es eine Karenzzeit für verspätete Zahlungen? Diese Funktionen sind wichtig, wenn sich die Lebensumstände ändern.\n\nLesen Sie Bewertungen und recherchieren Sie den Ruf des Kreditgebers. Prüfen Sie Verbraucherschutzseiten, Finanzwebsites und soziale Medien. Seien Sie vorsichtig bei Kreditgebern mit Beschwerden über versteckte Gebühren, schlechten Kundenservice oder aggressive Inkassopraktiken.\n\nÜberprüfen Sie die Referenzen des Kreditgebers. Stellen Sie sicher, dass sie ordnungsgemäß lizenziert sind und die Verbraucherschutzgesetze einhalten. Seriöse Kreditgeber legen alle Bedingungen klar offen und drängen Sie nie zu einer sofortigen Unterschrift.\n\nLassen Sie sich schließlich alles schriftlich geben. Vergleichen Sie schriftliche Kreditangebote nebeneinander, einschließlich EJZ, monatlicher Zahlung, Gesamtkosten, Gebühren und Bedingungen. Nehmen Sie sich Zeit zur Überprüfung – unterschreiben Sie nie unter Druck."
+        },
+        "earlyRepayment": {
+          "title": "Die Wahrheit über die vorzeitige Kreditrückzahlung",
+          "content": "Die vorzeitige Rückzahlung eines Kredits kann erhebliche Zinsersparnisse bringen, aber es ist nicht immer die beste finanzielle Entscheidung. Das Verständnis der Auswirkungen hilft Ihnen, die richtige Wahl zu treffen.\n\nDie meisten Privatkredite verwenden einfache Zinsen, die täglich auf den Restbetrag berechnet werden. Frühes Zahlen oder zusätzliche Zahlungen reduzieren das Kapital schneller, was die anfallenden Zinsen verringert. Beispielsweise kann das Hinzufügen von 100 €/Monat zu einem 10.000-€-Kredit mit 6% EJZ mehr als 500 € an Zinsen sparen und die Rückzahlung um mehrere Monate verkürzen.\n\nPrüfen Sie jedoch zuerst Vorfälligkeitsentschädigungen. Obwohl bei Privatkrediten immer seltener, berechnen einige Kreditgeber Gebühren (typischerweise 2-5% des Restbetrags), wenn Sie den Kredit in den ersten 1-3 Jahren zurückzahlen. Diese Gebühren könnten Ihre Zinsersparnisse zunichte machen und die vorzeitige Rückzahlung unrentabel machen.\n\nBerücksichtigen Sie die Opportunitätskosten, bevor Sie zusätzliche Zahlungen leisten. Wenn Ihr Kreditzins 5% beträgt, Sie aber 8% durch Investitionen verdienen könnten, sind Sie möglicherweise besser dran, Mindestzahlungen zu leisten und die Differenz zu investieren. Dies gilt besonders, wenn Ihr Arbeitgeber Rentenbeiträge bezuschusst – das ist kostenloses Geld, das Sie nicht verpassen sollten.\n\nPriorisieren Sie die Kreditrückzahlung nicht auf Kosten von Notfallersparnissen. Finanzexperten empfehlen 3-6 Monate Ausgaben in leicht zugänglichen Ersparnissen, bevor Sie niedrigverzinsliche Schulden aggressiv abbezahlen. Ohne Notfallfonds müssten Sie in einer Krise möglicherweise hochverzinsliche Schulden aufnehmen.\n\nKonzentrieren Sie zusätzliche Zahlungen zuerst auf hochverzinsliche Schulden. Wenn Sie einen Privatkredit mit 6% und Kreditkarten mit 20% haben, zahlen Sie die Mindestzahlungen beim Kredit und attackieren Sie die Kreditkarten. Diese 'Lawinen-Methode' spart am meisten Geld.\n\nDie vorzeitige Kreditrückzahlung verbessert Ihren Kreditscore durch Reduzierung Ihrer Kreditauslastung und Verschuldungsquote, was hilft, wenn Sie bald eine Hypothek oder einen anderen großen Kredit beantragen möchten.\n\nBerechnen Sie Ihre genauen Ersparnisse mit einem Vorfälligkeitsrechner, bevor Sie entscheiden. Manchmal sind die Ersparnisse minimal, manchmal sind sie erheblich."
+        },
+        "buildingCredit": {
+          "title": "Guten Kredit aufbauen und erhalten",
+          "content": "Ihr Kreditscore beeinflusst alle finanziellen Aspekte Ihres Lebens – Kreditgenehmigungen, Zinssätze, Wohnungsanträge und sogar Beschäftigung. Das Verständnis, wie man guten Kredit aufbaut und erhält, ist für den finanziellen Erfolg unerlässlich.\n\nKreditscores reichen von 300 bis 850. Scores über 750 sind ausgezeichnet, 700-749 ist gut, 650-699 ist ordentlich, 600-649 ist schwach und unter 600 ist sehr schwach. Die genaue Score-Formel ist proprietär, aber wir kennen die Schlüsselfaktoren.\n\nDie Zahlungshistorie macht 35% Ihres Scores aus. Verpassen Sie nie eine Zahlung – selbst eine einzige 30 Tage verspätete Zahlung kann Ihren Score um mehr als 100 Punkte senken. Richten Sie automatische Zahlungen oder Kalendererinnerungen für alle Schulden ein. Wenn Sie eine Zahlung verpassen, zahlen Sie sofort und kontaktieren Sie den Gläubiger – sie stimmen manchmal zu, es nicht zu melden, wenn Sie eine gute Historie haben.\n\nDie Kreditauslastung (geschuldete Beträge) macht 30% Ihres Scores aus. Halten Sie Kreditkartensalden unter 30% der Limits, idealerweise unter 10%. Zahlen Sie Salden ab, anstatt Schulden zu verschieben. Hohe Auslastung signalisiert finanziellen Stress, auch wenn Sie pünktlich zahlen.\n\nDie Länge der Kredithistorie trägt 15% bei. Halten Sie alte Konten offen, auch wenn Sie sie nicht nutzen, da sie die Tiefe Ihrer Kredithistorie etablieren. Das Durchschnittsalter Ihrer Konten zählt erheblich.\n\nDer Kreditmix macht 10% aus. Verschiedene Kreditarten zu haben (Kreditkarten, Ratenkredite, Hypothek) zeigt, dass Sie verschiedene Verpflichtungen verwalten können, obwohl Sie nicht nur für den Mix Schulden aufnehmen sollten.\n\nNeue Kreditanfragen machen 10% aus. Jede harte Anfrage (wenn Sie Kredit beantragen) kann Ihren Score vorübergehend um 5 bis 10 Punkte senken. Das Suchen nach den besten Konditionen für Hypotheken oder Autokredite innerhalb von 14-45 Tagen zählt als eine einzige Anfrage, also konsolidieren Sie Suchzeiträume.\n\nUm Kredit von Grund auf aufzubauen, beginnen Sie mit einer gesicherten Kreditkarte, werden Sie autorisierter Benutzer auf dem Konto einer verantwortungsvollen Person oder holen Sie sich einen Kreditaufbau-Kredit. Tätigen Sie kleine Einkäufe und zahlen Sie jeden Monat vollständig.\n\nÜberwachen Sie Ihren Kredit regelmäßig über kostenlose Jahresberichte. Beanstanden Sie sofort alle Fehler, da Fehler häufig sind und Ihren Score erheblich schädigen können.\n\nVermeiden Sie Kredit-Reparatur-Betrug. Niemand kann rechtlich korrekte negative Informationen entfernen, und das Anfechten korrekter Einträge verschwendet Zeit und Geld."
+        }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Privatpersonen",
     "professionnels": "Professionelle",

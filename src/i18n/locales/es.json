@@ -1,4 +1,259 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre préstamos, solicitudes y Privat Equity",
+      "categories": {
+        "general": "Preguntas Generales",
+        "application": "Proceso de Solicitud",
+        "rates": "Tasas y Condiciones",
+        "repayment": "Reembolso y Gestión",
+        "credit": "Crédito y Elegibilidad",
+        "security": "Seguridad y Privacidad",
+        "special": "Situaciones Especiales"
+      },
+      "general": {
+        "q1": "¿Qué es Privat Equity?",
+        "a1": "Privat Equity es una plataforma de préstamos en línea que conecta a los prestatarios con ofertas de crédito competitivas. Ofrecemos préstamos personales, créditos para automóviles, créditos para reformas, consolidación de deudas y préstamos empresariales.",
+        "q2": "¿Cómo gana dinero Privat Equity?",
+        "a2": "Recibimos una comisión de nuestros socios financieros cuando conectamos a los prestatarios con préstamos. Este servicio es gratuito para los prestatarios: nunca cobramos comisiones de tramitación ni costes iniciales.",
+        "q3": "¿Es Privat Equity seguro y legítimo?",
+        "a3": "Sí, Privat Equity es una plataforma de préstamos autorizada y regulada. Utilizamos cifrado de nivel bancario, somos totalmente conformes con el RGPD y solo trabajamos con instituciones financieras autorizadas."
+      },
+      "application": {
+        "q1": "¿Cuánto tiempo lleva la solicitud?",
+        "a1": "Nuestra solicitud en línea tarda unos 5 a 10 minutos en completarse. Recibirá una decisión preliminar instantánea, y la aprobación final generalmente tarda de 24 a 48 horas.",
+        "q2": "¿Qué documentos necesito?",
+        "a2": "Necesitará un documento de identidad válido, prueba de ingresos (nóminas o declaraciones de impuestos), extractos bancarios de los últimos 3 meses y un justificante de domicilio. Se pueden solicitar documentos adicionales según su solicitud.",
+        "q3": "¿La verificación de mi tasa afectará mi puntuación de crédito?",
+        "a3": "¡No! Verificar su tasa en Privat Equity utiliza una consulta de crédito suave que no afecta su puntuación. Solo se realizará una consulta dura cuando acepte formalmente una oferta de préstamo.",
+        "q4": "¿Puedo solicitar si soy autónomo?",
+        "a4": "¡Sí! Los trabajadores autónomos son bienvenidos. Deberá proporcionar documentos adicionales como declaraciones de impuestos, extractos bancarios comerciales y prueba de registro de la empresa.",
+        "q5": "¿Qué pasa si mi solicitud es rechazada?",
+        "a5": "Si su solicitud es rechazada, le explicaremos el motivo y podremos sugerir alternativas. Las razones comunes incluyen ingresos insuficientes, alta relación deuda-ingresos o problemas de crédito. Puede volver a solicitar después de resolver estos problemas."
+      },
+      "rates": {
+        "q1": "¿Qué tasas de interés ofrecen?",
+        "a1": "Nuestras tasas comienzan desde 2,9% TAE para prestatarios calificados. Su tasa específica depende de su perfil crediticio, el monto del préstamo, la duración y el tipo de préstamo.",
+        "q2": "¿Cómo se determina mi tasa de interés?",
+        "a2": "Las tasas de interés se basan en su puntuación de crédito, ingresos, relación deuda-ingresos, monto del préstamo y duración. Mejores perfiles crediticios y financieros generalmente reciben tasas más bajas.",
+        "q3": "¿Las tasas son fijas o variables?",
+        "a3": "Todos nuestros préstamos personales, créditos para automóviles y créditos para reformas tienen tasas fijas, lo que significa que su tasa y cuota mensual nunca cambian. Esto proporciona previsibilidad durante todo su préstamo.",
+        "q4": "¿Qué montos de préstamo están disponibles?",
+        "a4": "Ofrecemos préstamos desde 1.000 € hasta 75.000 € según el tipo de préstamo. Los préstamos personales llegan hasta 75.000 €, mientras que los límites específicos pueden variar según el producto.",
+        "q5": "¿Qué plazos de reembolso están disponibles?",
+        "a5": "Los plazos de reembolso van de 12 a 84 meses según el tipo y monto del préstamo. Plazos más largos tienen cuotas mensuales más bajas pero más intereses en total.",
+        "q6": "¿Hay comisiones?",
+        "a6": "No cobramos comisiones de tramitación. Algunos préstamos pueden tener comisiones de apertura (generalmente 1-5% del monto del préstamo), que se divulgan claramente antes de aceptar una oferta."
+      },
+      "repayment": {
+        "q1": "¿Cómo realizo mis pagos?",
+        "a1": "Los pagos se deducen automáticamente de su cuenta bancaria en la fecha de pago programada cada mes. También puede realizar pagos manuales a través de su cuenta en línea.",
+        "q2": "¿Puedo cambiar mi fecha de pago?",
+        "a2": "Sí, contacte con nuestro servicio de atención al cliente para solicitar un cambio de fecha de pago. Trabajaremos con usted para alinear los pagos con su ciclo de ingresos.",
+        "q3": "¿Puedo pagar mi préstamo anticipadamente?",
+        "a3": "¡Sí! Todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes del vencimiento.",
+        "q4": "¿Qué pasa si no puedo hacer un pago?",
+        "a4": "Contáctenos inmediatamente si no puede realizar un pago. Podemos organizar un plan de pago o un aplazamiento temporal. Los pagos atrasados pueden resultar en cargos por demora y dañar su puntuación de crédito.",
+        "q5": "¿Puedo aumentar el monto de mi préstamo más tarde?",
+        "a5": "Una vez que su préstamo está activo, no puede aumentar el monto. Sin embargo, después de varios pagos puntuales, podría ser elegible para refinanciar un monto mayor."
+      },
+      "credit": {
+        "q1": "¿Qué puntuación de crédito necesito?",
+        "a1": "Aunque preferimos puntuaciones superiores a 650, consideramos solicitudes de diversos perfiles crediticios. Una puntuación más baja no lo descalifica automáticamente; evaluamos su situación financiera completa.",
+        "q2": "¿Puedo solicitar con mal crédito?",
+        "a2": "Sí, trabajamos con prestatarios de todos los perfiles crediticios. El mal crédito puede resultar en tasas más altas o requerir un co-solicitante, pero muchas opciones siguen disponibles.",
+        "q3": "¿Aceptan solicitudes con co-solicitante?",
+        "a3": "Sí, añadir un co-solicitante con buen crédito puede mejorar sus posibilidades de aprobación y potencialmente reducir su tasa de interés.",
+        "q4": "¿Cuál es el requisito mínimo de ingresos?",
+        "a4": "No hay un mínimo estricto, pero debe demostrar ingresos suficientes para cubrir los pagos del préstamo. Generalmente buscamos una relación deuda-ingresos inferior al 40%."
+      },
+      "security": {
+        "q1": "¿Cómo se protegen mis datos personales?",
+        "a1": "Utilizamos cifrado SSL de 256 bits, la misma seguridad que usan los bancos. Sus datos nunca se venden ni comparten sin su consentimiento explícito, y somos totalmente conformes con el RGPD.",
+        "q2": "¿Quién tiene acceso a mi información?",
+        "a2": "Solo el personal autorizado de Privat Equity y nuestros socios financieros (cuando acepta una oferta) tienen acceso a su información. Nunca vendemos sus datos a terceros.",
+        "q3": "¿Cuánto tiempo conservan mis datos?",
+        "a3": "Conservamos su información de acuerdo con los requisitos legales y nuestra política de privacidad. Puede solicitar la eliminación de sus datos en cualquier momento, sujeto a obligaciones regulatorias."
+      },
+      "special": {
+        "q1": "¿Puedo solicitar si estoy jubilado?",
+        "a1": "¡Sí! Las personas jubiladas con pensión o ingresos de jubilación pueden solicitar. Deberá proporcionar prueba de sus ingresos de jubilación.",
+        "q2": "¿Ofrecen préstamos para estudiantes?",
+        "a2": "Los estudiantes con trabajos a tiempo parcial u otras fuentes de ingresos pueden solicitar. Sin embargo, los requisitos de ingresos siguen aplicando, y un co-solicitante puede ser beneficioso.",
+        "q3": "¿Puedo usar un préstamo para crear una empresa?",
+        "a3": "Para necesidades comerciales, recomendamos nuestro producto de Préstamo Empresarial dedicado, diseñado específicamente para emprendedores y propietarios de negocios.",
+        "q4": "¿Qué hago si estoy en proceso de divorcio?",
+        "a4": "Las personas en proceso de divorcio pueden solicitar, pero deberán mostrar sus ingresos y deudas individuales. Las deudas conjuntas se consideran en el cálculo de la relación deuda-ingresos."
+      }
+    },
+    "glossary": {
+      "title": "Glosario de Crédito",
+      "subtitle": "Comprenda los términos clave del crédito y los préstamos para tomar decisiones financieras informadas",
+      "searchPlaceholder": "Buscar términos...",
+      "noResults": "No se encontraron términos que coincidan con su búsqueda.",
+      "terms": {
+        "apr": {
+          "term": "TAE (Tasa Anual Equivalente)",
+          "definition": "El coste anual de un préstamo expresado en porcentaje, incluyendo intereses y comisiones. La TAE proporciona una imagen completa de lo que le costará un préstamo durante un año."
+        },
+        "amortization": {
+          "term": "Amortización",
+          "definition": "El proceso de pagar una deuda a lo largo del tiempo mediante pagos regulares. Cada pago cubre tanto el capital como los intereses, con una proporción que cambia durante la vida del préstamo."
+        },
+        "collateral": {
+          "term": "Garantía",
+          "definition": "Un activo (como una casa o un coche) comprometido por un prestatario para asegurar un préstamo. Si el prestatario incumple, el prestamista puede embargar la garantía."
+        },
+        "creditScore": {
+          "term": "Puntuación de Crédito",
+          "definition": "Una representación numérica de su solvencia, típicamente entre 300 y 850. Puntuaciones más altas indican menor riesgo para los prestamistas y pueden resultar en mejores condiciones de préstamo."
+        },
+        "consolidation": {
+          "term": "Consolidación de Deudas",
+          "definition": "Combinar múltiples deudas en un solo préstamo, a menudo con una tasa de interés más baja o condiciones más favorables. Esto simplifica el reembolso y puede reducir los pagos mensuales."
+        },
+        "dti": {
+          "term": "Relación Deuda-Ingresos",
+          "definition": "El porcentaje de sus ingresos mensuales brutos que se destina a pagos de deuda. Los prestamistas usan esto para evaluar su capacidad de gestionar pagos mensuales."
+        },
+        "default": {
+          "term": "Impago",
+          "definition": "El incumplimiento de las condiciones acordadas para el reembolso de un préstamo. El impago puede dañar gravemente su puntuación de crédito y puede resultar en acciones legales."
+        },
+        "deferment": {
+          "term": "Aplazamiento",
+          "definition": "Una característica del préstamo que permite a los prestatarios posponer los pagos durante un período especificado. Los intereses pueden seguir acumulándose durante el aplazamiento."
+        },
+        "fixedRate": {
+          "term": "Tasa de Interés Fija",
+          "definition": "Una tasa de interés que permanece constante durante toda la vida del préstamo, proporcionando pagos mensuales predecibles."
+        },
+        "gracePeriod": {
+          "term": "Período de Gracia",
+          "definition": "Un período después de la fecha de vencimiento de un pago durante el cual puede realizar un pago sin incurrir en cargos por demora o penalizaciones."
+        },
+        "guarantor": {
+          "term": "Avalista",
+          "definition": "Una persona que acepta pagar un préstamo si el prestatario principal no lo hace. Tener un avalista puede mejorar las posibilidades de aprobación para quienes tienen crédito limitado."
+        },
+        "hardInquiry": {
+          "term": "Consulta Dura",
+          "definition": "Una verificación de crédito realizada cuando solicita un crédito. Las consultas duras pueden reducir temporalmente su puntuación de crédito y permanecen en su informe durante dos años."
+        },
+        "interestRate": {
+          "term": "Tasa de Interés",
+          "definition": "El porcentaje cobrado sobre el monto principal de un préstamo. Es el coste de pedir dinero prestado, generalmente expresado como una tasa anual."
+        },
+        "loanTerm": {
+          "term": "Plazo del Préstamo",
+          "definition": "La duración durante la cual debe pagar un préstamo, generalmente expresada en meses o años. Plazos más largos significan pagos mensuales más bajos pero más intereses totales pagados."
+        },
+        "originationFee": {
+          "term": "Comisión de Apertura",
+          "definition": "Una tarifa cobrada por los prestamistas para procesar una nueva solicitud de préstamo. Típicamente es un porcentaje del monto del préstamo."
+        },
+        "preApproval": {
+          "term": "Pre-aprobación",
+          "definition": "Una evaluación preliminar por un prestamista que indica cuánto podría ser elegible para pedir prestado. No es una garantía de aprobación final pero ayuda en la planificación."
+        },
+        "principal": {
+          "term": "Capital",
+          "definition": "La cantidad de dinero prestada originalmente, sin incluir intereses o comisiones. A medida que realiza pagos, el capital disminuye."
+        },
+        "refinancing": {
+          "term": "Refinanciación",
+          "definition": "Reemplazar un préstamo existente por uno nuevo, generalmente para obtener mejores condiciones como una tasa de interés más baja o un período de reembolso diferente."
+        },
+        "securedLoan": {
+          "term": "Préstamo Garantizado",
+          "definition": "Un préstamo respaldado por una garantía. Si incumple, el prestamista puede tomar posesión de la garantía. Los ejemplos incluyen hipotecas y créditos para automóviles."
+        },
+        "softInquiry": {
+          "term": "Consulta Suave",
+          "definition": "Una verificación de crédito que no afecta su puntuación de crédito. Estas ocurren cuando verifica su propio crédito o cuando los prestamistas le pre-aprueban para ofertas."
+        },
+        "unsecuredLoan": {
+          "term": "Préstamo No Garantizado",
+          "definition": "Un préstamo no respaldado por garantía. Los préstamos personales generalmente no están garantizados y pueden tener tasas de interés más altas debido al mayor riesgo para el prestamista."
+        },
+        "variableRate": {
+          "term": "Tasa de Interés Variable",
+          "definition": "Una tasa de interés que puede cambiar con el tiempo según las condiciones del mercado. Los pagos mensuales pueden fluctuar con los cambios de tasa."
+        },
+        "borrowingCapacity": {
+          "term": "Capacidad de Endeudamiento",
+          "definition": "El monto máximo que un prestatario puede razonablemente permitirse pedir prestado basado en sus ingresos, gastos y obligaciones financieras existentes."
+        },
+        "coBorrower": {
+          "term": "Co-prestatario",
+          "definition": "Una persona que solicita un préstamo con usted y comparte igual responsabilidad de reembolso. Ambas puntuaciones de crédito e ingresos se consideran."
+        },
+        "borrowerInsurance": {
+          "term": "Seguro de Prestatario",
+          "definition": "Un seguro que cubre los pagos del préstamo en caso de muerte, discapacidad o pérdida de empleo. A menudo opcional pero puede proporcionar tranquilidad."
+        },
+        "prepaymentPenalty": {
+          "term": "Penalización por Pago Anticipado",
+          "definition": "Una tarifa cobrada por algunos prestamistas si paga su préstamo antes del final del plazo previsto. En Privat Equity, no tenemos penalizaciones por pago anticipado."
+        },
+        "revolvingCredit": {
+          "term": "Crédito Revolving",
+          "definition": "Un tipo de crédito donde puede pedir prestado, pagar y volver a pedir prestado hasta un límite aprobado. Las tarjetas de crédito son ejemplos de crédito revolving."
+        },
+        "amortizationSchedule": {
+          "term": "Tabla de Amortización",
+          "definition": "Un calendario detallado que muestra cada pago del préstamo, desglosado entre capital e intereses, durante toda la vida del préstamo."
+        },
+        "nominalRate": {
+          "term": "Tasa Nominal",
+          "definition": "La tasa de interés base sin incluir comisiones adicionales, a diferencia de la TAE que incluye todos los costes."
+        },
+        "interestOnly": {
+          "term": "Período de Carencia",
+          "definition": "El período inicial de un préstamo durante el cual solo paga intereses, sin pagar el capital."
+        },
+        "debtRestructuring": {
+          "term": "Reestructuración de Deuda",
+          "definition": "Modificación de las condiciones de un préstamo existente para hacer los pagos más manejables, como extender el plazo o reducir la tasa de interés."
+        },
+        "affectedCredit": {
+          "term": "Crédito Afectado",
+          "definition": "Un préstamo vinculado a la compra de un bien o servicio específico, como un crédito para automóvil o un crédito para muebles."
+        },
+        "unaffectedCredit": {
+          "term": "Crédito No Afectado",
+          "definition": "Un préstamo que no está vinculado a una compra específica y puede usarse a su discreción, como un préstamo personal."
+        }
+      }
+    },
+    "creditGuide": {
+      "title": "Guía de Crédito",
+      "subtitle": "Recursos educativos para ayudarle a tomar decisiones de préstamo informadas",
+      "articles": {
+        "choosingLoan": {
+          "title": "Cómo elegir el préstamo adecuado para sus necesidades",
+          "content": "Elegir el préstamo adecuado requiere una consideración cuidadosa de su situación financiera, sus objetivos y su capacidad de reembolso. Comience identificando su necesidad específica: ¿es una consolidación de deudas, una compra importante, reformas o una inversión empresarial? Cada objetivo puede adaptarse mejor a diferentes tipos de préstamos.\n\nPiense en cuánto realmente necesita. Pedir prestado muy poco significa que podría necesitar financiación adicional más tarde; pedir prestado demasiado aumenta los costes innecesariamente. Cree un presupuesto detallado que muestre exactamente cómo usará los fondos.\n\nCompare las tasas de interés de varios prestamistas, pero recuerde que la TAE es más importante que la tasa de interés base porque incluye las comisiones. Las tasas fijas ofrecen estabilidad de pago, mientras que las tasas variables pueden comenzar más bajas pero conllevan riesgo de aumento.\n\nEvalúe cuidadosamente las condiciones de reembolso. Plazos más cortos significan pagos mensuales más altos pero costes de interés totales más bajos. Plazos más largos reducen los pagos mensuales pero aumentan significativamente el monto total pagado. Elija un plazo que equilibre la asequibilidad con la minimización de intereses.\n\nVerifique las comisiones, incluyendo comisiones de apertura, penalizaciones por pago anticipado, cargos por demora y tarifas anuales. Algunos préstamos anuncian tasas bajas pero tienen comisiones altas que aumentan el coste real.\n\nEvalúe su puntuación de crédito de manera realista. Si su puntuación está por debajo de 650, podría enfrentar tasas más altas o necesitar un co-solicitante. Mejorar su crédito antes de solicitar puede ahorrarle miles de euros en intereses.\n\nFinalmente, lea la letra pequeña. Entienda todos los términos, condiciones y sus obligaciones antes de firmar. Nunca se sienta presionado para aceptar una oferta: los prestamistas legítimos le dan tiempo para revisar y decidir."
+        },
+        "debtRatio": {
+          "title": "Entender y calcular su relación deuda-ingresos",
+          "content": "Su relación deuda-ingresos es uno de los factores más importantes que los prestamistas consideran al evaluar su solicitud de préstamo. Mide qué porcentaje de sus ingresos mensuales brutos se destina a pagos de deuda, indicando su capacidad para gestionar pagos mensuales.\n\nPara calcular su relación deuda-ingresos, primero determine sus pagos mensuales totales de deuda. Incluya pagos mínimos de tarjetas de crédito, cuotas de préstamos personales, créditos para automóviles, préstamos estudiantiles, alquiler o hipoteca, y cualquier otra obligación de deuda recurrente. No incluya servicios públicos, comida o seguros a menos que sean parte de un plan de pago.\n\nLuego, calcule sus ingresos mensuales brutos (antes de impuestos). Incluya salario, bonificaciones, comisiones, ingresos por alquiler, pensión alimenticia, manutención de hijos y cualquier otra fuente de ingresos regular.\n\nDivida los pagos mensuales totales de deuda entre los ingresos mensuales brutos, luego multiplique por 100 para obtener su porcentaje. Ejemplo: 1.200 € de pagos de deuda ÷ 4.000 € de ingresos brutos = 0,30 o 30% de relación deuda-ingresos.\n\nLa mayoría de los prestamistas prefieren una relación deuda-ingresos inferior al 36%, con no más del 28% destinado a gastos de vivienda. Todavía puede calificar con una relación de hasta 43-45%, pero probablemente enfrentará tasas de interés más altas. Por encima del 45%, la aprobación se vuelve muy difícil.\n\nPara mejorar su relación deuda-ingresos, puede aumentar sus ingresos mediante aumentos de sueldo, trabajos adicionales o bonificaciones, o reducir deudas pagando saldos, consolidando deudas de alto interés o evitando nuevas deudas. A veces, posponer una solicitud de préstamo mientras mejora su relación resulta en condiciones mucho mejores.\n\nAl solicitar un nuevo préstamo, los prestamistas calculan la relación incluyendo el nuevo pago propuesto. Asegúrese de poder permitirse cómodamente ese pago combinado mientras mantiene ahorros de emergencia y calidad de vida."
+        },
+        "comparingOffers": {
+          "title": "Cómo comparar ofertas de préstamo efectivamente",
+          "content": "Comparar ofertas de préstamo requiere mirar más allá de la tasa de interés anunciada. Use estas estrategias para tomar una decisión informada:\n\nPrimero, concéntrese en la TAE (Tasa Anual Equivalente) en lugar de solo la tasa de interés. La TAE incluye comisiones de apertura, costes de procesamiento y otros gastos, dándole el verdadero coste anual del préstamo. Un préstamo con 5% de interés pero 5% de comisión de apertura podría tener una TAE del 7%, haciéndolo más caro que un préstamo al 6% sin comisiones.\n\nCompare los costes totales del préstamo multiplicando su pago mensual por el número de pagos. Un préstamo de 10.000 € al 5% TAE a 36 meses cuesta 299 €/mes (10.764 € en total), mientras que el mismo préstamo al 7% TAE cuesta 308 €/mes (11.088 € en total) - una diferencia de 324 €.\n\nExamine todas las comisiones cuidadosamente. Las comisiones comunes incluyen comisiones de apertura (típicamente 1-6% del monto del préstamo), tarifas de solicitud, penalizaciones por pago anticipado, cargos por demora y tarifas de procesamiento de cheques. Algunos prestamistas no cobran comisiones pero tienen tasas más altas, mientras que otros hacen lo contrario.\n\nVerifique la flexibilidad de reembolso. ¿Puede hacer pagos adicionales sin penalización? ¿Puede cambiar su fecha de pago? ¿Hay un período de gracia para pagos atrasados? Estas características importan cuando las circunstancias de la vida cambian.\n\nLea reseñas e investigue la reputación del prestamista. Consulte organizaciones de consumidores, sitios web de finanzas personales y redes sociales. Tenga cuidado con los prestamistas con quejas sobre comisiones ocultas, mal servicio al cliente o prácticas de cobro agresivas.\n\nVerifique las credenciales del prestamista. Asegúrese de que estén debidamente autorizados y cumplan con las leyes de protección al consumidor. Los prestamistas legítimos divulgan claramente todos los términos y nunca le presionan para firmar inmediatamente.\n\nFinalmente, obtenga todo por escrito. Compare las ofertas de préstamo escritas una al lado de la otra, incluyendo TAE, pago mensual, coste total, comisiones y condiciones. Tómese tiempo para revisar: nunca firme bajo presión."
+        },
+        "earlyRepayment": {
+          "title": "La verdad sobre el pago anticipado de préstamos",
+          "content": "Pagar un préstamo anticipadamente puede ahorrar significativamente en intereses, pero no siempre es la mejor decisión financiera. Entender las implicaciones le ayuda a tomar la decisión correcta.\n\nLa mayoría de los préstamos personales usan interés simple calculado diariamente sobre el saldo restante. Pagar temprano o hacer pagos adicionales reduce el capital más rápido, lo que reduce los intereses acumulados. Por ejemplo, añadir 100 €/mes a un préstamo de 10.000 € al 6% TAE puede ahorrar más de 500 € en intereses y reducir varios meses de su reembolso.\n\nSin embargo, primero verifique las penalizaciones por pago anticipado. Aunque son cada vez más raras en los préstamos personales, algunos prestamistas cobran tarifas (típicamente 2-5% del saldo restante) si paga el préstamo en los primeros 1-3 años. Estas tarifas podrían eliminar sus ahorros en intereses, haciendo que el pago anticipado no valga la pena.\n\nConsidere el coste de oportunidad antes de hacer pagos adicionales. Si la tasa de su préstamo es del 5% pero podría ganar un 8% invirtiendo ese dinero, podría estar mejor haciendo pagos mínimos e invirtiendo la diferencia. Esto es especialmente cierto si su empleador iguala las contribuciones de jubilación: eso es dinero gratis que no debería perderse.\n\nNo priorice el pago del préstamo sobre los ahorros de emergencia. Los expertos financieros recomiendan tener 3-6 meses de gastos en ahorros fácilmente accesibles antes de pagar agresivamente deudas de bajo interés. Sin un fondo de emergencia, podría necesitar contraer deuda de alto interés durante una crisis.\n\nConcentre los pagos adicionales primero en las deudas de alto interés. Si tiene un préstamo personal al 6% y tarjetas de crédito al 20%, pague los mínimos del préstamo y ataque las tarjetas de crédito. Este 'método avalancha' ahorra más dinero.\n\nPagar préstamos anticipadamente mejora su puntuación de crédito al reducir su utilización de crédito y relación deuda-ingresos, lo que ayuda si planea solicitar una hipoteca u otro préstamo importante pronto.\n\nCalcule sus ahorros exactos usando una calculadora de pago anticipado antes de decidir. A veces los ahorros son mínimos, mientras que otras veces son sustanciales."
+        },
+        "buildingCredit": {
+          "title": "Construir y mantener un buen crédito",
+          "content": "Su puntuación de crédito impacta todos los aspectos financieros de su vida: aprobaciones de préstamos, tasas de interés, solicitudes de vivienda e incluso empleo. Entender cómo construir y mantener un buen crédito es esencial para el éxito financiero.\n\nLas puntuaciones de crédito van de 300 a 850. Puntuaciones superiores a 750 son excelentes, 700-749 es bueno, 650-699 es aceptable, 600-649 es pobre y por debajo de 600 es muy pobre. La fórmula exacta de puntuación es propietaria, pero conocemos los factores clave.\n\nEl historial de pagos representa el 35% de su puntuación. Nunca deje de pagar: incluso un solo pago atrasado de 30 días puede reducir su puntuación en más de 100 puntos. Configure pagos automáticos o recordatorios de calendario para todas las deudas. Si pierde un pago, páguelo inmediatamente y contacte al acreedor: a veces aceptan no reportarlo si tiene un buen historial.\n\nLa utilización del crédito (montos adeudados) representa el 30% de su puntuación. Mantenga los saldos de las tarjetas de crédito por debajo del 30% de los límites, idealmente por debajo del 10%. Pague los saldos en lugar de mover la deuda. Una utilización alta señala estrés financiero incluso si paga a tiempo.\n\nLa duración del historial crediticio contribuye con el 15%. Mantenga las cuentas antiguas abiertas aunque no las use, ya que establecen la profundidad de su historial crediticio. La edad promedio de sus cuentas cuenta significativamente.\n\nLa mezcla de crédito representa el 10%. Tener diferentes tipos de crédito (tarjetas de crédito, préstamos a plazos, hipoteca) muestra que puede gestionar varias obligaciones, aunque no debería endeudarse solo por la mezcla.\n\nLas nuevas consultas de crédito representan el 10%. Cada consulta dura (cuando solicita crédito) puede reducir su puntuación de 5 a 10 puntos temporalmente. Buscar las mejores tasas para hipotecas o créditos para automóviles dentro de 14-45 días cuenta como una sola consulta, así que consolide los períodos de búsqueda.\n\nPara construir crédito desde cero, comience con una tarjeta de crédito asegurada, conviértase en usuario autorizado en la cuenta de una persona responsable, u obtenga un préstamo para construcción de crédito. Haga pequeñas compras y pague el total cada mes.\n\nMonitoree su crédito regularmente a través de informes anuales gratuitos. Dispute inmediatamente cualquier error, ya que los errores son comunes y pueden dañar significativamente su puntuación.\n\nEvite las estafas de reparación de crédito. Nadie puede eliminar legalmente información negativa precisa, y disputar elementos precisos desperdicia tiempo y dinero."
+        }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Particulares",
     "professionnels": "Profesionales",

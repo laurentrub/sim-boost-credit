@@ -1,4 +1,70 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "subtitle": "Alles wat u moet weten over leningen, aanvragen en Privat Equity",
+      "categories": { "general": "Algemene Vragen", "application": "Aanvraagproces", "rates": "Tarieven en Voorwaarden", "repayment": "Terugbetaling en Beheer", "credit": "Krediet en Geschiktheid", "security": "Veiligheid en Privacy", "special": "Bijzondere Situaties" },
+      "general": { "q1": "Wat is Privat Equity?", "a1": "Privat Equity is een online leenplatform dat leners verbindt met concurrerende kredietaanbiedingen.", "q2": "Hoe verdient Privat Equity geld?", "a2": "We ontvangen een commissie van onze financiële partners. Deze dienst is gratis voor leners.", "q3": "Is Privat Equity veilig?", "a3": "Ja, we zijn volledig AVG-conform en gebruiken bankversleuteling." },
+      "application": { "q1": "Hoe lang duurt de aanvraag?", "a1": "Ongeveer 5 tot 10 minuten online.", "q2": "Welke documenten heb ik nodig?", "a2": "Geldig ID, inkomstenbewijs, bankafschriften en adresbewijs.", "q3": "Beïnvloedt de tariefscontrole mijn kredietscore?", "a3": "Nee, we gebruiken een zachte kredietcontrole.", "q4": "Kan ik aanvragen als zelfstandige?", "a4": "Ja! Zelfstandigen zijn welkom.", "q5": "Wat als mijn aanvraag wordt afgewezen?", "a5": "We leggen uit waarom en kunnen alternatieven voorstellen." },
+      "rates": { "q1": "Welke rentetarieven bieden jullie?", "a1": "Vanaf 2,9% JKP voor gekwalificeerde leners.", "q2": "Hoe wordt mijn rente bepaald?", "a2": "Op basis van kredietscore, inkomen en leningbedrag.", "q3": "Zijn de tarieven vast of variabel?", "a3": "Al onze leningen hebben vaste tarieven.", "q4": "Welke bedragen zijn beschikbaar?", "a4": "Van €1.000 tot €75.000.", "q5": "Welke looptijden zijn beschikbaar?", "a5": "Van 12 tot 84 maanden.", "q6": "Zijn er kosten?", "a6": "We rekenen geen verwerkingskosten." },
+      "repayment": { "q1": "Hoe doe ik betalingen?", "a1": "Automatische afschrijving van uw bankrekening.", "q2": "Kan ik mijn betaaldatum wijzigen?", "a2": "Ja, neem contact op met onze klantenservice.", "q3": "Kan ik vervroegd aflossen?", "a3": "Ja, zonder boetes.", "q4": "Wat als ik een betaling mis?", "a4": "Neem onmiddellijk contact met ons op.", "q5": "Kan ik het bedrag later verhogen?", "a5": "Niet eenmaal actief, maar herfinanciering is mogelijk." },
+      "credit": { "q1": "Welke kredietscore heb ik nodig?", "a1": "We verkiezen scores boven 650.", "q2": "Kan ik aanvragen met een slechte kredietscore?", "a2": "Ja, we werken met alle kredietprofielen.", "q3": "Accepteren jullie co-leners?", "a3": "Ja, dit kan uw kansen verbeteren.", "q4": "Wat is het minimuminkomen?", "a4": "U moet voldoende inkomen aantonen." },
+      "security": { "q1": "Hoe worden mijn gegevens beschermd?", "a1": "256-bit SSL-versleuteling en AVG-conform.", "q2": "Wie heeft toegang tot mijn informatie?", "a2": "Alleen geautoriseerd personeel.", "q3": "Hoe lang bewaren jullie mijn gegevens?", "a3": "Volgens wettelijke vereisten." },
+      "special": { "q1": "Kan ik aanvragen als gepensioneerde?", "a1": "Ja!", "q2": "Bieden jullie leningen voor studenten?", "a2": "Studenten met inkomen kunnen aanvragen.", "q3": "Kan ik een lening gebruiken voor een bedrijf?", "a3": "We raden ons Zakelijke Lening product aan.", "q4": "Wat als ik in scheiding lig?", "a4": "U kunt aanvragen met individuele inkomsten." }
+    },
+    "glossary": {
+      "title": "Krediet Woordenlijst",
+      "subtitle": "Begrijp de belangrijkste kredietvoorwaarden",
+      "searchPlaceholder": "Zoek termen...",
+      "noResults": "Geen termen gevonden.",
+      "terms": {
+        "apr": { "term": "JKP", "definition": "De jaarlijkse kosten van een lening in percentage." },
+        "amortization": { "term": "Aflossing", "definition": "Het proces van schuld afbetalen via regelmatige betalingen." },
+        "collateral": { "term": "Onderpand", "definition": "Een bezit verpand als zekerheid." },
+        "creditScore": { "term": "Kredietscore", "definition": "Een numerieke weergave van uw kredietwaardigheid." },
+        "consolidation": { "term": "Schuldconsolidatie", "definition": "Meerdere schulden combineren in één lening." },
+        "dti": { "term": "Schuld-inkomen ratio", "definition": "Percentage van inkomen voor schuldbetalingen." },
+        "default": { "term": "Wanbetaling", "definition": "Falen om een lening terug te betalen." },
+        "deferment": { "term": "Uitstel", "definition": "Mogelijkheid om betalingen uit te stellen." },
+        "fixedRate": { "term": "Vaste rente", "definition": "Rente die constant blijft." },
+        "gracePeriod": { "term": "Respijtperiode", "definition": "Periode na vervaldatum zonder boete." },
+        "guarantor": { "term": "Borg", "definition": "Iemand die garandeert te betalen als u niet kunt." },
+        "hardInquiry": { "term": "Harde kredietopvraging", "definition": "Kredietcontrole bij aanvraag." },
+        "interestRate": { "term": "Rentetarief", "definition": "Percentage dat wordt berekend over de hoofdsom." },
+        "loanTerm": { "term": "Looptijd", "definition": "Periode voor terugbetaling." },
+        "originationFee": { "term": "Opstartkosten", "definition": "Vergoeding voor verwerking aanvraag." },
+        "preApproval": { "term": "Voorlopige goedkeuring", "definition": "Voorlopige beoordeling van leenbedrag." },
+        "principal": { "term": "Hoofdsom", "definition": "Het oorspronkelijk geleende bedrag." },
+        "refinancing": { "term": "Herfinanciering", "definition": "Een bestaande lening vervangen door een nieuwe." },
+        "securedLoan": { "term": "Gedekte lening", "definition": "Lening met onderpand." },
+        "softInquiry": { "term": "Zachte kredietopvraging", "definition": "Controle zonder invloed op score." },
+        "unsecuredLoan": { "term": "Ongedekte lening", "definition": "Lening zonder onderpand." },
+        "variableRate": { "term": "Variabele rente", "definition": "Rente die kan veranderen." },
+        "borrowingCapacity": { "term": "Leencapaciteit", "definition": "Maximaal leenbedrag." },
+        "coBorrower": { "term": "Mede-lener", "definition": "Iemand die mee leent." },
+        "borrowerInsurance": { "term": "Leningverzekering", "definition": "Verzekering voor betalingen." },
+        "prepaymentPenalty": { "term": "Boete vervroegde aflossing", "definition": "Kosten bij vroege terugbetaling. Wij hebben geen boetes." },
+        "revolvingCredit": { "term": "Doorlopend krediet", "definition": "Krediet dat u kunt hergebruiken." },
+        "amortizationSchedule": { "term": "Aflossingsschema", "definition": "Gedetailleerd betalingsoverzicht." },
+        "nominalRate": { "term": "Nominale rente", "definition": "Basisrente zonder kosten." },
+        "interestOnly": { "term": "Aflossingsvrije periode", "definition": "Periode waarin alleen rente wordt betaald." },
+        "debtRestructuring": { "term": "Schuldherstructurering", "definition": "Wijziging van leningvoorwaarden." },
+        "affectedCredit": { "term": "Doelgebonden krediet", "definition": "Lening gekoppeld aan een specifieke aankoop." },
+        "unaffectedCredit": { "term": "Niet-doelgebonden krediet", "definition": "Lening voor vrij gebruik." }
+      }
+    },
+    "creditGuide": {
+      "title": "Kredietgids",
+      "subtitle": "Educatieve bronnen voor geïnformeerde leningbeslissingen",
+      "articles": {
+        "choosingLoan": { "title": "De juiste lening kiezen", "content": "Kies de juiste lening door uw financiële situatie en doelen te overwegen. Vergelijk JKP-tarieven en controleer alle kosten." },
+        "debtRatio": { "title": "Uw schuld-inkomen ratio begrijpen", "content": "Uw schuld-inkomen ratio is cruciaal voor kredietverstrekkers. Houd deze onder 36% voor betere voorwaarden." },
+        "comparingOffers": { "title": "Leningaanbiedingen vergelijken", "content": "Focus op JKP, totale kosten en flexibiliteit bij het vergelijken van aanbiedingen." },
+        "earlyRepayment": { "title": "Vervroegd aflossen", "content": "Vervroegd aflossen bespaart rente, maar controleer eerst op boetes." },
+        "buildingCredit": { "title": "Goede krediet opbouwen", "content": "Betaalgeschiedenis is 35% van uw score. Mis nooit een betaling." }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Particulieren",
     "professionnels": "Professionals",
