@@ -78,23 +78,23 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Verify the user has admin role using the service role client
+    // Verify the user has admin or manager role using the service role client
     const { data: roleData, error: roleError } = await supabaseAdmin
       .from("user_roles")
       .select("role")
       .eq("user_id", user.id)
-      .eq("role", "admin")
+      .in("role", ["admin", "manager"])
       .maybeSingle();
 
     if (roleError || !roleData) {
-      console.error("User is not an admin:", user.id);
+      console.error("User is not an admin or manager:", user.id);
       return new Response(
-        JSON.stringify({ error: "Forbidden: Admin access required" }),
+        JSON.stringify({ error: "Forbidden: Admin or manager access required" }),
         { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    console.log("Admin user verified:", user.id);
+    console.log("Admin/manager user verified:", user.id);
 
     const { loanRequestId, newStatus }: NotificationRequest = await req.json();
 
