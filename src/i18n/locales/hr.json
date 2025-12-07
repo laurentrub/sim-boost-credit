@@ -1,4 +1,70 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o zajmovima, zahtjevima i Privat Equity",
+      "categories": { "general": "Opća Pitanja", "application": "Proces Zahtjeva", "rates": "Stope i Uvjeti", "repayment": "Otplata i Upravljanje", "credit": "Kredit i Podobnost", "security": "Sigurnost i Privatnost", "special": "Posebne Situacije" },
+      "general": { "q1": "Što je Privat Equity?", "a1": "Privat Equity je online platforma za zajmove koja povezuje zajmoprimce s konkurentnim ponudama kredita.", "q2": "Kako Privat Equity zarađuje?", "a2": "Primamo proviziju od financijskih partnera. Usluga je besplatna za zajmoprimce.", "q3": "Je li Privat Equity siguran?", "a3": "Da, koristimo bankovnu enkripciju i u potpunosti smo usklađeni s GDPR-om." },
+      "application": { "q1": "Koliko dugo traje zahtjev?", "a1": "Oko 5 do 10 minuta online.", "q2": "Koji dokumenti su potrebni?", "a2": "Valjana osobna iskaznica, dokaz o prihodima, bankovni izvodi i dokaz o adresi.", "q3": "Utječe li provjera stope na moju kreditnu ocjenu?", "a3": "Ne, koristimo meku kreditnu provjeru.", "q4": "Mogu li podnijeti zahtjev kao samostalni radnik?", "a4": "Da! Samostalni radnici su dobrodošli.", "q5": "Što ako je moj zahtjev odbijen?", "a5": "Objasnit ćemo zašto i predložiti alternative." },
+      "rates": { "q1": "Koje kamatne stope nudite?", "a1": "Od 2,9% EKS za kvalificirane zajmoprimce.", "q2": "Kako se određuje moja kamatna stopa?", "a2": "Na temelju kreditne ocjene, prihoda i iznosa zajma.", "q3": "Jesu li stope fiksne ili varijabilne?", "a3": "Svi naši zajmovi imaju fiksne stope.", "q4": "Koji iznosi su dostupni?", "a4": "Od 1.000€ do 75.000€.", "q5": "Koja trajanja su dostupna?", "a5": "Od 12 do 84 mjeseca.", "q6": "Ima li naknada?", "a6": "Ne naplaćujemo naknade za obradu." },
+      "repayment": { "q1": "Kako vršim plaćanja?", "a1": "Automatska naplata s vašeg bankovnog računa.", "q2": "Mogu li promijeniti datum plaćanja?", "a2": "Da, kontaktirajte korisničku službu.", "q3": "Mogu li prijevremeno otplatiti?", "a3": "Da, bez kazni.", "q4": "Što ako propustim plaćanje?", "a4": "Odmah nas kontaktirajte.", "q5": "Mogu li kasnije povećati iznos?", "a5": "Ne jednom kada je aktivan, ali refinanciranje je moguće." },
+      "credit": { "q1": "Koja kreditna ocjena je potrebna?", "a1": "Preferiramo ocjene iznad 650.", "q2": "Mogu li podnijeti zahtjev s lošim kreditom?", "a2": "Da, radimo sa svim kreditnim profilima.", "q3": "Prihvaćate li suvozače?", "a3": "Da, to može poboljšati vaše šanse.", "q4": "Koji je minimalni prihod?", "a4": "Morate dokazati dovoljan prihod." },
+      "security": { "q1": "Kako su moji podaci zaštićeni?", "a1": "256-bitna SSL enkripcija i GDPR usklađenost.", "q2": "Tko ima pristup mojim podacima?", "a2": "Samo ovlašteno osoblje.", "q3": "Koliko dugo čuvate moje podatke?", "a3": "Prema zakonskim zahtjevima." },
+      "special": { "q1": "Mogu li podnijeti zahtjev kao umirovljenik?", "a1": "Da!", "q2": "Nudite li zajmove za studente?", "a2": "Studenti s prihodima mogu podnijeti zahtjev.", "q3": "Mogu li koristiti zajam za osnivanje tvrtke?", "a3": "Preporučujemo naš Poslovni zajam.", "q4": "Što ako sam u razvodu?", "a4": "Možete podnijeti zahtjev s individualnim prihodima." }
+    },
+    "glossary": {
+      "title": "Pojmovnik Kredita",
+      "subtitle": "Razumijte ključne pojmove kredita",
+      "searchPlaceholder": "Traži pojmove...",
+      "noResults": "Nema pronađenih pojmova.",
+      "terms": {
+        "apr": { "term": "EKS", "definition": "Godišnji trošak zajma u postotku." },
+        "amortization": { "term": "Amortizacija", "definition": "Proces otplate duga redovitim plaćanjima." },
+        "collateral": { "term": "Kolateral", "definition": "Imovina založena kao osiguranje." },
+        "creditScore": { "term": "Kreditna ocjena", "definition": "Numerička ocjena vaše kreditne sposobnosti." },
+        "consolidation": { "term": "Konsolidacija", "definition": "Spajanje više dugova u jedan zajam." },
+        "dti": { "term": "Omjer duga i prihoda", "definition": "Postotak prihoda za plaćanja duga." },
+        "default": { "term": "Neplaćanje", "definition": "Propust vraćanja zajma." },
+        "deferment": { "term": "Odgoda", "definition": "Mogućnost odgode plaćanja." },
+        "fixedRate": { "term": "Fiksna stopa", "definition": "Stopa koja ostaje konstantna." },
+        "gracePeriod": { "term": "Počekni rok", "definition": "Period nakon dospijeća bez kazne." },
+        "guarantor": { "term": "Jamac", "definition": "Osoba koja jamči plaćanje." },
+        "hardInquiry": { "term": "Tvrdi upit", "definition": "Kreditna provjera pri zahtjevu." },
+        "interestRate": { "term": "Kamatna stopa", "definition": "Postotak na glavnicu." },
+        "loanTerm": { "term": "Rok zajma", "definition": "Trajanje za otplatu." },
+        "originationFee": { "term": "Naknada za obradu", "definition": "Naknada za obradu zahtjeva." },
+        "preApproval": { "term": "Predodobrenje", "definition": "Preliminarna procjena iznosa." },
+        "principal": { "term": "Glavnica", "definition": "Izvorno posuđeni iznos." },
+        "refinancing": { "term": "Refinanciranje", "definition": "Zamjena postojećeg zajma novim." },
+        "securedLoan": { "term": "Osigurani zajam", "definition": "Zajam s kolateralom." },
+        "softInquiry": { "term": "Meki upit", "definition": "Provjera bez utjecaja na ocjenu." },
+        "unsecuredLoan": { "term": "Neosigurani zajam", "definition": "Zajam bez kolaterala." },
+        "variableRate": { "term": "Varijabilna stopa", "definition": "Stopa koja se može mijenjati." },
+        "borrowingCapacity": { "term": "Kapacitet zaduživanja", "definition": "Maksimalni iznos za posudbu." },
+        "coBorrower": { "term": "Suzajmoprimac", "definition": "Osoba koja zajedno traži zajam." },
+        "borrowerInsurance": { "term": "Osiguranje zajmoprimca", "definition": "Osiguranje za plaćanja." },
+        "prepaymentPenalty": { "term": "Kazna za prijevremenu otplatu", "definition": "Naknada za ranu otplatu. Mi nemamo kazni." },
+        "revolvingCredit": { "term": "Revolving kredit", "definition": "Kredit koji možete ponovno koristiti." },
+        "amortizationSchedule": { "term": "Plan amortizacije", "definition": "Detaljan pregled plaćanja." },
+        "nominalRate": { "term": "Nominalna stopa", "definition": "Osnovna stopa bez naknada." },
+        "interestOnly": { "term": "Razdoblje kamata", "definition": "Period plaćanja samo kamata." },
+        "debtRestructuring": { "term": "Restrukturiranje duga", "definition": "Izmjena uvjeta zajma." },
+        "affectedCredit": { "term": "Namjenski kredit", "definition": "Zajam vezan uz specifičnu kupnju." },
+        "unaffectedCredit": { "term": "Nenamjenski kredit", "definition": "Zajam za slobodnu upotrebu." }
+      }
+    },
+    "creditGuide": {
+      "title": "Vodič za Kredit",
+      "subtitle": "Obrazovni resursi za informirane odluke o zajmu",
+      "articles": {
+        "choosingLoan": { "title": "Odabir pravog zajma", "content": "Odaberite pravi zajam razmatrajući svoju financijsku situaciju i ciljeve. Usporedite EKS stope i provjerite sve naknade." },
+        "debtRatio": { "title": "Razumijevanje omjera duga", "content": "Vaš omjer duga i prihoda ključan je za kreditore. Držite ga ispod 36% za bolje uvjete." },
+        "comparingOffers": { "title": "Usporedba ponuda zajmova", "content": "Fokusirajte se na EKS, ukupne troškove i fleksibilnost pri usporedbi ponuda." },
+        "earlyRepayment": { "title": "Prijevremena otplata", "content": "Prijevremena otplata štedi kamate, ali prvo provjerite kazne." },
+        "buildingCredit": { "title": "Izgradnja dobrog kredita", "content": "Povijest plaćanja čini 35% vaše ocjene. Nikad ne propustite plaćanje." }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Pojedinci",
     "professionnels": "Profesionalci",
