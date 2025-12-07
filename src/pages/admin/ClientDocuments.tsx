@@ -264,7 +264,31 @@ export default function ClientDocuments() {
 
       if (error) throw error;
 
-      toast.success(isValidate ? 'Document validé avec succès' : 'Document refusé');
+      // Send email notification
+      try {
+        const { data: sessionData } = await supabase.auth.getSession();
+        const { error: emailError } = await supabase.functions.invoke('send-document-validation', {
+          body: {
+            documentRequestId: selectedRequest.id,
+            status: isValidate ? 'validated' : 'rejected',
+            rejectionReason: reason,
+          },
+          headers: {
+            Authorization: `Bearer ${sessionData.session?.access_token}`,
+          },
+        });
+
+        if (emailError) {
+          console.error('Email notification error:', emailError);
+          toast.warning('Document mis à jour, mais erreur lors de l\'envoi de la notification');
+        } else {
+          toast.success(isValidate ? 'Document validé et notification envoyée' : 'Document refusé et notification envoyée');
+        }
+      } catch (emailError) {
+        console.error('Email notification error:', emailError);
+        toast.warning('Document mis à jour, mais erreur lors de l\'envoi de la notification');
+      }
+
       fetchDocumentRequests();
     } catch (error) {
       console.error('Validation error:', error);
