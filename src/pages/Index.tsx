@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,7 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Shield, Clock, TrendingUp, Users, Award } from "lucide-react";
+import { CheckCircle, Shield, Clock, TrendingUp, Users, Award, ArrowRight, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-finance.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
@@ -19,7 +20,30 @@ import carLoanSuccess from "@/assets/car-loan-success.jpg";
 
 const Index = () => {
   const { t } = useTranslation();
+  const [hasPendingApplication, setHasPendingApplication] = useState(false);
+  const [showResumeBar, setShowResumeBar] = useState(true);
   
+  useEffect(() => {
+    const savedData = localStorage.getItem('pendingLoanApplication');
+    if (savedData) {
+      try {
+        JSON.parse(savedData);
+        setHasPendingApplication(true);
+      } catch {
+        setHasPendingApplication(false);
+      }
+    }
+  }, []);
+  
+  const handleDismissResumeBar = () => {
+    setShowResumeBar(false);
+  };
+  
+  const handleClearApplication = () => {
+    localStorage.removeItem('pendingLoanApplication');
+    setHasPendingApplication(false);
+    setShowResumeBar(false);
+  };
   const features = [
     {
       icon: Clock,
@@ -83,6 +107,35 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
+      {/* Resume Application Banner */}
+      {hasPendingApplication && showResumeBar && (
+        <div className="bg-accent text-accent-foreground py-3 px-4">
+          <div className="container mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="h-2 w-2 bg-accent-foreground rounded-full animate-pulse" />
+              <span className="text-sm md:text-base font-medium">
+                {t('home.resumeApplication.message')}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Link to="/apply">
+                <Button variant="secondary" size="sm" className="gap-2">
+                  {t('home.resumeApplication.button')}
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={handleDismissResumeBar}
+                className="text-accent-foreground hover:bg-accent-foreground/10 px-2"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Hero Section with Simulator */}
       <section className="relative bg-gradient-hero text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10">

@@ -281,6 +281,10 @@
     "hr": "Hrvatski"
   },
   "home": {
+    "resumeApplication": {
+      "message": "Vous avez une demande de crédit en cours",
+      "button": "Reprendre ma demande"
+    },
     "hero": {
       "title": "Obtenez votre financement en ligne",
       "subtitle": "Crédits pour particuliers, entreprises et projets innovants. Des solutions rapides, transparentes et adaptées à vos besoins.",
