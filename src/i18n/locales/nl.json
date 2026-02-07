@@ -460,6 +460,39 @@
       "errorDesc": "Er is een fout opgetreden bij het verzenden van uw aanvraag"
     }
   },
+  "confirmation": {
+    "title": "Aanvraag Succesvol Verzonden!",
+    "thankYou": "Bedankt {{name}}, uw kredietaanvraag is ontvangen.",
+    "summary": "Samenvatting van uw aanvraag",
+    "loanType": "Type krediet",
+    "amount": "Aangevraagd bedrag",
+    "duration": "Looptijd",
+    "submittedAt": "Datum van indiening",
+    "reference": "Referentienummer",
+    "nextSteps": {
+      "title": "Volgende Stappen",
+      "step1": {
+        "title": "Verificatie van uw aanvraag",
+        "description": "Ons team zal uw aanvraag binnen 24 uur beoordelen."
+      },
+      "step2": {
+        "title": "Bevestiging per e-mail",
+        "description": "U ontvangt een bevestigingsmail op {{email}} met de details van uw aanvraag en de benodigde documenten."
+      },
+      "step3": {
+        "title": "Contact van ons team",
+        "description": "Een adviseur zal contact met u opnemen om uw dossier af te ronden en uw vragen te beantwoorden."
+      },
+      "step4": {
+        "title": "Definitieve beslissing",
+        "description": "Na volledige bestudering van uw dossier ontvangt u een definitief antwoord binnen 2-5 werkdagen."
+      }
+    },
+    "help": {
+      "title": "Hulp nodig?"
+    },
+    "backHome": "Terug naar home"
+  },
   "auth": {
     "welcome": "Welkom",
     "description": "Meld u aan of maak een account om uw kredietaanvragen te beheren",
@@ -541,7 +574,8 @@
     "tabs": {
       "info": "Informatie",
       "password": "Wachtwoord",
-      "requests": "Mijn aanvragen"
+      "requests": "Mijn aanvragen",
+      "contracts": "Mijn contracten"
     },
     "info": {
       "title": "Persoonlijke informatie",
@@ -568,6 +602,30 @@
       "amount": "Bedrag",
       "duration": "Looptijd",
       "date": "Datum"
+    },
+    "contracts": {
+      "noContracts": "U heeft geen openstaande contracten",
+      "contract": "Leningscontract",
+      "amount": "Bedrag",
+      "duration": "Looptijd",
+      "receivedOn": "Ontvangen op",
+      "signedOn": "Ondertekend op",
+      "verifiedOn": "Geverifieerd op",
+      "rejectionReason": "Reden van afwijzing",
+      "uploadSigned": "Ondertekend contract uploaden",
+      "uploadHint": "Alleen PDF-formaat, maximaal 10 MB",
+      "downloadSigned": "Ondertekend contract downloaden",
+      "pdfOnly": "Selecteer een PDF-bestand",
+      "fileTooLarge": "Het bestand mag niet groter zijn dan 10 MB",
+      "uploadSuccess": "Ondertekend contract succesvol geüpload",
+      "uploadError": "Fout bij uploaden van contract",
+      "downloadError": "Fout bij downloaden",
+      "status": {
+        "pendingSignature": "Wacht op ondertekening",
+        "signed": "Ondertekend",
+        "verified": "Geverifieerd",
+        "rejected": "Afgewezen"
+      }
     },
     "messages": {
       "profileLoadError": "Fout bij laden van profiel",
@@ -596,7 +654,11 @@
     "required": "Vereist",
     "learnMore": "Meer informatie",
     "apply": "Nu aanvragen",
-    "perMonth": "/maand"
+    "perMonth": "/maand",
+    "validationError": "Validatiefout",
+    "select": "Selecteren",
+    "yes": "Ja",
+    "no": "Nee"
   },
   "products": {
     "personalLoan": {

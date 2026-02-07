@@ -535,6 +535,39 @@
       "errorDesc": "Ocorreu um erro ao enviar o seu pedido"
     }
   },
+  "confirmation": {
+    "title": "Pedido Enviado com Sucesso!",
+    "thankYou": "Obrigado {{name}}, o seu pedido de crédito foi recebido.",
+    "summary": "Resumo do seu pedido",
+    "loanType": "Tipo de crédito",
+    "amount": "Montante solicitado",
+    "duration": "Duração",
+    "submittedAt": "Data de submissão",
+    "reference": "Número de referência",
+    "nextSteps": {
+      "title": "Próximos Passos",
+      "step1": {
+        "title": "Verificação do seu pedido",
+        "description": "A nossa equipa irá analisar o seu pedido nas próximas 24 horas."
+      },
+      "step2": {
+        "title": "Confirmação por e-mail",
+        "description": "Receberá um e-mail de confirmação em {{email}} com os detalhes do seu pedido e os documentos a fornecer."
+      },
+      "step3": {
+        "title": "Contacto da nossa equipa",
+        "description": "Um consultor irá contactá-lo para finalizar o seu processo e responder às suas questões."
+      },
+      "step4": {
+        "title": "Decisão final",
+        "description": "Após estudo completo do seu processo, receberá uma resposta definitiva em 2-5 dias úteis."
+      }
+    },
+    "help": {
+      "title": "Precisa de ajuda?"
+    },
+    "backHome": "Voltar ao início"
+  },
   "auth": {
     "welcome": "Bem-vindo",
     "description": "Inicie sessão ou crie uma conta para gerir os seus pedidos de crédito",
@@ -616,7 +649,8 @@
     "tabs": {
       "info": "Informações",
       "password": "Palavra-passe",
-      "requests": "Os meus pedidos"
+      "requests": "Os meus pedidos",
+      "contracts": "Os meus contratos"
     },
     "info": {
       "title": "Informações pessoais",
@@ -643,6 +677,30 @@
       "amount": "Montante",
       "duration": "Duração",
       "date": "Data"
+    },
+    "contracts": {
+      "noContracts": "Não tem contratos pendentes",
+      "contract": "Contrato de empréstimo",
+      "amount": "Montante",
+      "duration": "Duração",
+      "receivedOn": "Recebido em",
+      "signedOn": "Assinado em",
+      "verifiedOn": "Verificado em",
+      "rejectionReason": "Motivo da recusa",
+      "uploadSigned": "Carregar contrato assinado",
+      "uploadHint": "Apenas formato PDF, máximo 10 MB",
+      "downloadSigned": "Descarregar contrato assinado",
+      "pdfOnly": "Por favor selecione um ficheiro PDF",
+      "fileTooLarge": "O ficheiro não pode exceder 10 MB",
+      "uploadSuccess": "Contrato assinado carregado com sucesso",
+      "uploadError": "Erro ao carregar o contrato",
+      "downloadError": "Erro ao descarregar",
+      "status": {
+        "pendingSignature": "Aguarda assinatura",
+        "signed": "Assinado",
+        "verified": "Verificado",
+        "rejected": "Recusado"
+      }
     },
     "messages": {
       "profileLoadError": "Erro ao carregar o perfil",
@@ -671,7 +729,11 @@
     "required": "Obrigatório",
     "learnMore": "Saiba mais",
     "apply": "Solicitar agora",
-    "perMonth": "/mês"
+    "perMonth": "/mês",
+    "validationError": "Erro de validação",
+    "select": "Selecionar",
+    "yes": "Sim",
+    "no": "Não"
   },
   "products": {
     "personalLoan": {
