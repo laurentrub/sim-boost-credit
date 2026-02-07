@@ -16,16 +16,27 @@ interface CreditSimulatorProps {
   interestRate?: number;
 }
 
-const CreditSimulator = ({
-  minAmount = 1000,
-  maxAmount = 75000,
-  minDuration = 12,
-  maxDuration = 84,
-  defaultAmount = 10000,
-  defaultDuration = 48,
-  interestRate = 4.9,
-}: CreditSimulatorProps) => {
+const CreditSimulator = (props: CreditSimulatorProps) => {
   const { t } = useTranslation();
+
+  // Read admin loan settings from localStorage, fallback to props then defaults
+  const adminSettings = (() => {
+    try {
+      const saved = localStorage.getItem('admin_loan_settings');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  })();
+
+  const minAmount = props.minAmount ?? adminSettings.minAmount ?? 1000;
+  const maxAmount = props.maxAmount ?? adminSettings.maxAmount ?? 75000;
+  const minDuration = props.minDuration ?? adminSettings.minDuration ?? 12;
+  const maxDuration = props.maxDuration ?? adminSettings.maxDuration ?? 84;
+  const defaultAmount = props.defaultAmount ?? Math.min(10000, maxAmount);
+  const defaultDuration = props.defaultDuration ?? Math.min(48, maxDuration);
+  const rate = props.interestRate ?? adminSettings.defaultRate ?? 4.9;
+
   const [amount, setAmount] = useState(defaultAmount);
   const [duration, setDuration] = useState(defaultDuration);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
@@ -33,10 +44,10 @@ const CreditSimulator = ({
 
   useEffect(() => {
     calculateLoan();
-  }, [amount, duration]);
+  }, [amount, duration, rate]);
 
   const calculateLoan = () => {
-    const monthlyRate = interestRate / 100 / 12;
+    const monthlyRate = rate / 100 / 12;
     const payment =
       (amount * monthlyRate * Math.pow(1 + monthlyRate, duration)) /
       (Math.pow(1 + monthlyRate, duration) - 1);
@@ -113,7 +124,7 @@ const CreditSimulator = ({
           </div>
           <div className="flex justify-between items-center">
             <span className="text-sm font-medium text-muted-foreground">{t('simulator.interestRate')}</span>
-            <span className="text-lg font-semibold text-foreground">{interestRate}%</span>
+            <span className="text-lg font-semibold text-foreground">{rate}%</span>
           </div>
         </div>
 
