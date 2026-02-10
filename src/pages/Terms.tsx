@@ -9,9 +9,9 @@ const Terms = () => {
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Conditions d'Utilisation</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Conditions Générales d'Utilisation (CGU)</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Termes et conditions régissant l'utilisation de nos services
+            Fundia Invest
           </p>
         </div>
       </section>
@@ -19,154 +19,136 @@ const Terms = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="p-8 mb-6">
-            <p className="text-sm text-muted-foreground mb-6">
-              Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </p>
-
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-2xl font-bold text-foreground mb-4">1. Acceptation des conditions</h2>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">1. Objet</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                En accédant et en utilisant le site web de Fundia Invest (le "Site") et nos services, vous acceptez 
-                d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas 
-                utiliser notre Site ou nos services.
+                Les présentes Conditions Générales d'Utilisation (ci-après les « CGU ») ont pour objet de définir les modalités d'accès et d'utilisation de la plateforme <strong>Fundia Invest</strong> (ci-après la « Plateforme »).
+              </p>
+              <p className="text-foreground leading-relaxed mb-6">
+                Fundia Invest est une plateforme de <strong>mise en relation entre particuliers</strong>, destinée à faciliter la conclusion de prêts d'argent à titre strictement civil et non professionnel.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4">2. Description du service</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Fundia Invest est une plateforme de mise en relation qui connecte les emprunteurs potentiels avec 
-                des partenaires financiers agréés. Nous ne sommes pas nous-mêmes un prêteur et ne prenons pas de 
-                décisions de crédit. Notre rôle est de faciliter la mise en relation et de présenter des offres 
-                adaptées à votre profil.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">3. Conditions d'éligibilité</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">2. Nature et rôle de Fundia Invest</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Pour utiliser nos services, vous devez :
+                Fundia Invest agit exclusivement en qualité de :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
-                <li>Être âgé d'au moins 18 ans</li>
-                <li>Résider en France métropolitaine ou dans les DOM-TOM</li>
-                <li>Avoir la capacité juridique de contracter</li>
-                <li>Fournir des informations exactes et complètes</li>
-                <li>Ne pas utiliser le service à des fins frauduleuses ou illégales</li>
+                <li>tiers technique de mise en relation,</li>
+                <li>fournisseur d'outils de structuration contractuelle,</li>
+                <li>facilitateur documentaire.</li>
               </ul>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">4. Processus de demande</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Lorsque vous soumettez une demande via notre plateforme :
+                Fundia Invest <strong>n'est pas</strong> :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
-                <li>Nous analysons votre profil et le transmettons à nos partenaires financiers</li>
-                <li>Les partenaires évaluent votre demande selon leurs propres critères</li>
-                <li>Vous recevez des offres personnalisées si vous êtes éligible</li>
-                <li>Vous êtes libre d'accepter ou de refuser toute offre proposée</li>
-                <li>L'acceptation d'une offre crée un contrat direct entre vous et le prêteur</li>
+                <li>un établissement de crédit,</li>
+                <li>un intermédiaire financier,</li>
+                <li>un prestataire de services d'investissement,</li>
+                <li>un prêteur, un emprunteur, un garant ou un assureur.</li>
               </ul>
               <p className="text-foreground leading-relaxed mb-6">
-                Une demande via notre plateforme ne garantit pas l'obtention d'un crédit. Les décisions finales 
-                appartiennent aux établissements prêteurs.
+                Fundia Invest n'est <strong>en aucun cas partie</strong> aux contrats conclus entre les utilisateurs de la Plateforme.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4">5. Informations fournies</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Vous vous engagez à fournir des informations exactes, complètes et à jour. La fourniture d'informations 
-                fausses ou trompeuses peut entraîner le rejet de votre demande, la résiliation de nos services et 
-                d'éventuelles poursuites légales. Vous êtes responsable de maintenir la confidentialité de vos 
-                identifiants de connexion.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">6. Frais et commissions</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                L'utilisation de notre plateforme de mise en relation est <strong>gratuite pour les emprunteurs</strong>. 
-                Nous ne facturons aucun frais de dossier, d'inscription ou de traitement. Nous recevons une commission 
-                de nos partenaires financiers en cas de mise en relation réussie. Les frais éventuels liés au crédit 
-                lui-même (frais de dossier, intérêts, etc.) sont définis par le prêteur et clairement indiqués dans 
-                l'offre de crédit.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">7. Propriété intellectuelle</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Tous les contenus du Site (textes, images, logos, design, code source) sont la propriété de Fundia 
-                Invest ou de ses concédants de licence et sont protégés par les lois sur la propriété intellectuelle.
-                Vous ne pouvez pas reproduire, distribuer, modifier ou utiliser ces contenus sans notre autorisation 
-                écrite préalable.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">8. Limitations de responsabilité</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">3. Accès à la Plateforme et qualité des utilisateurs</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Fundia Invest ne peut être tenu responsable de :
+                La Plateforme est accessible à toute personne physique majeure, juridiquement capable, agissant à titre personnel.
+              </p>
+              <p className="text-foreground leading-relaxed mb-3">
+                Chaque utilisateur déclare et garantit :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
-                <li>Les décisions de crédit prises par les établissements prêteurs</li>
-                <li>Les termes et conditions des offres de crédit proposées</li>
-                <li>Les retards ou interruptions de service indépendants de notre volonté</li>
-                <li>Les dommages indirects ou consécutifs résultant de l'utilisation de nos services</li>
-                <li>Les pertes financières liées aux décisions d'emprunt</li>
+                <li>agir pour son propre compte,</li>
+                <li>ne pas exercer une activité professionnelle de crédit,</li>
+                <li>comprendre que les opérations réalisées relèvent du <strong>droit civil</strong>.</li>
               </ul>
-              <p className="text-foreground leading-relaxed mb-6">
-                Nous nous efforçons de maintenir l'exactitude des informations sur le Site, mais ne garantissons pas 
-                qu'elles soient toujours complètes, exactes ou à jour.
-              </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4">9. Comportement interdit</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">4. Fonctionnement des opérations de prêt</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Vous vous engagez à ne pas :
+                Les opérations réalisées via la Plateforme constituent des <strong>prêts civils ponctuels</strong>, conclus directement entre utilisateurs, sous leur seule responsabilité.
+              </p>
+              <p className="text-foreground leading-relaxed mb-3">
+                Chaque prêt :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
-                <li>Utiliser le Site à des fins frauduleuses ou illégales</li>
-                <li>Tenter d'accéder à des zones non autorisées du Site</li>
-                <li>Interférer avec le fonctionnement normal du Site</li>
-                <li>Transmettre des virus, malwares ou autres codes nuisibles</li>
-                <li>Collecter des informations sur d'autres utilisateurs</li>
-                <li>Usurper l'identité d'une autre personne</li>
-                <li>Soumettre de multiples demandes frauduleuses</li>
+                <li>est initié librement par les parties,</li>
+                <li>fait l'objet d'un contrat distinct,</li>
+                <li>est exécuté sans intervention financière de Fundia Invest.</li>
               </ul>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">10. Résiliation</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Nous nous réservons le droit de suspendre ou de résilier votre accès à nos services à tout moment, 
-                sans préavis, en cas de violation de ces conditions ou de comportement inapproprié. Vous pouvez 
-                également demander la fermeture de votre compte à tout moment en nous contactant.
+                Les fonds prêtés ne transitent <strong>en aucun cas</strong> par la Plateforme.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4">11. Protection des données</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                L'utilisation de vos données personnelles est régie par notre Politique de Confidentialité. En 
-                utilisant nos services, vous consentez à la collecte et au traitement de vos données conformément 
-                à cette politique et au RGPD.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">12. Modifications des conditions</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Nous nous réservons le droit de modifier ces conditions d'utilisation à tout moment. Les modifications 
-                entrent en vigueur dès leur publication sur le Site. Votre utilisation continue des services après 
-                la publication des modifications constitue votre acceptation des nouvelles conditions.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">13. Loi applicable et juridiction</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Ces conditions sont régies par le droit français. Tout litige relatif à l'interprétation ou 
-                l'exécution de ces conditions sera de la compétence exclusive des tribunaux français. Avant toute 
-                action en justice, nous vous encourageons à nous contacter pour tenter de résoudre le différend 
-                à l'amiable.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">14. Divisibilité</h2>
-              <p className="text-foreground leading-relaxed mb-6">
-                Si une disposition de ces conditions est jugée invalide ou inapplicable, les autres dispositions 
-                resteront en vigueur. La disposition invalide sera remplacée par une disposition valide qui se 
-                rapproche le plus de l'intention de la disposition originale.
-              </p>
-
-              <h2 className="text-2xl font-bold text-foreground mb-4">15. Contact</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">5. Génération des documents contractuels</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Pour toute question concernant ces conditions d'utilisation :
+                Fundia Invest met à disposition des utilisateurs des <strong>modèles de documents contractuels civils</strong>, générés automatiquement en fonction des informations renseignées par les parties.
               </p>
-              <ul className="list-none space-y-2 text-foreground">
-                <li><strong>Email :</strong> legal@fundia-invest.com</li>
-                <li><strong>Adresse :</strong> Fundia Invest, 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</li>
-                <li><strong>Téléphone :</strong> 01 23 45 67 89</li>
+              <p className="text-foreground leading-relaxed mb-3">
+                Ces documents peuvent notamment inclure :
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
+                <li>un contrat de prêt civil,</li>
+                <li>une reconnaissance de dette,</li>
+                <li>un acte de caution ou de garantie,</li>
+                <li>des annexes techniques.</li>
               </ul>
+              <p className="text-foreground leading-relaxed mb-3">
+                Les utilisateurs reconnaissent que :
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
+                <li>ces documents sont fournis à titre d'assistance,</li>
+                <li>ils demeurent seuls responsables de leur contenu et de leur utilisation,</li>
+                <li>ils peuvent les modifier ou solliciter l'avis d'un professionnel du droit.</li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">6. Garanties</h2>
+              <p className="text-foreground leading-relaxed mb-3">
+                Les garanties éventuelles sont :
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
+                <li>librement exigées par les prêteurs,</li>
+                <li>librement acceptées par les emprunteurs,</li>
+                <li>formalisées dans des actes distincts ou annexés aux contrats de prêt.</li>
+              </ul>
+              <p className="text-foreground leading-relaxed mb-6">
+                Fundia Invest n'accorde <strong>aucune garantie</strong> et n'intervient pas dans leur mise en œuvre ou leur exécution.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">7. Responsabilité</h2>
+              <p className="text-foreground leading-relaxed mb-3">
+                Fundia Invest ne saurait être tenue responsable, notamment :
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
+                <li>de la solvabilité des utilisateurs,</li>
+                <li>de l'exécution ou de l'inexécution des contrats de prêt,</li>
+                <li>des impayés ou retards de paiement,</li>
+                <li>des litiges, différends ou procédures entre utilisateurs.</li>
+              </ul>
+              <p className="text-foreground leading-relaxed mb-6">
+                Chaque utilisateur agit sous sa seule et entière responsabilité.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">8. Obligations fiscales et légales</h2>
+              <p className="text-foreground leading-relaxed mb-3">
+                Les utilisateurs sont seuls responsables :
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
+                <li>des déclarations fiscales liées aux prêts conclus,</li>
+                <li>du respect des obligations légales et réglementaires applicables,</li>
+                <li>de la conformité de leurs opérations avec la législation en vigueur.</li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">9. Droit applicable</h2>
+              <p className="text-foreground leading-relaxed mb-6">
+                Les présentes CGU sont soumises au <strong>droit français</strong>.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">10. Acceptation des CGU</h2>
+              <p className="text-foreground leading-relaxed">
+                L'accès et l'utilisation de la Plateforme impliquent l'acceptation pleine et entière des présentes Conditions Générales d'Utilisation par l'utilisateur.
+              </p>
+
             </div>
           </Card>
         </div>
