@@ -886,7 +886,10 @@
     "status": {
       "pending": "En attente",
       "approved": "Approuvé",
-      "rejected": "Rejeté"
+      "rejected": "Rejeté",
+      "in_progress": "En cours",
+      "refused": "Refusé",
+      "document_requested": "Documents demandés"
     },
     "loanTypes": {
       "personal": "Prêt personnel",
