@@ -1025,7 +1025,8 @@
       "in_progress": "En cours",
       "approved": "Approuvé",
       "refused": "Refusé",
-      "rejected": "Rejeté"
+      "rejected": "Rejeté",
+      "document_requested": "Documents demandés"
     },
     "stats": {
       "total": "Total",
