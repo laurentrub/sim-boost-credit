@@ -150,14 +150,29 @@ export default function ClientDocuments() {
     try {
       const { data, error } = await supabase
         .from('user_documents')
-        .select(`
-          *,
-          profile:profiles(first_name, last_name, email)
-        `)
+        .select('*')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setDocuments((data as any[]) || []);
+
+      // Fetch profiles for each unique user_id
+      const userIds = [...new Set((data || []).map(d => d.user_id))];
+      let profilesMap: Record<string, { first_name: string | null; last_name: string | null; email: string }> = {};
+      if (userIds.length > 0) {
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('id, first_name, last_name, email')
+          .in('id', userIds);
+        if (profiles) {
+          profilesMap = Object.fromEntries(profiles.map(p => [p.id, p]));
+        }
+      }
+
+      const docsWithProfiles = (data || []).map(doc => ({
+        ...doc,
+        profile: profilesMap[doc.user_id] || undefined,
+      }));
+      setDocuments(docsWithProfiles);
     } catch (error) {
       console.error('Error fetching documents:', error);
       toast.error('Erreur lors du chargement des documents');
@@ -170,13 +185,30 @@ export default function ClientDocuments() {
         .from('document_requests')
         .select(`
           *,
-          profile:profiles!document_requests_user_id_fkey(first_name, last_name, email),
           loan_request:loan_requests(loan_type, amount)
         `)
         .order('requested_at', { ascending: false });
 
       if (error) throw error;
-      setDocumentRequests((data as any[]) || []);
+
+      // Fetch profiles for each unique user_id
+      const userIds = [...new Set((data || []).map(d => d.user_id))];
+      let profilesMap: Record<string, { first_name: string | null; last_name: string | null; email: string }> = {};
+      if (userIds.length > 0) {
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('id, first_name, last_name, email')
+          .in('id', userIds);
+        if (profiles) {
+          profilesMap = Object.fromEntries(profiles.map(p => [p.id, p]));
+        }
+      }
+
+      const requestsWithProfiles = (data || []).map(req => ({
+        ...req,
+        profile: profilesMap[req.user_id] || undefined,
+      }));
+      setDocumentRequests(requestsWithProfiles);
     } catch (error) {
       console.error('Error fetching document requests:', error);
       toast.error('Erreur lors du chargement des demandes de documents');
