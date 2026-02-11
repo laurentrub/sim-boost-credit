@@ -73,6 +73,11 @@ const Footer = () => {
                   {t('footer.faq')}
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.contact')}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -95,8 +100,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  {t('footer.contact')}
+                <Link to="/mentions-legales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.legal')}
                 </Link>
               </li>
             </ul>
