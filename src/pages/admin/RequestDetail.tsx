@@ -9,6 +9,7 @@ import { QuickActions } from '@/components/admin/QuickActions';
 import { StatusChangeModal } from '@/components/admin/StatusChangeModal';
 import { DocumentRequestModal } from '@/components/admin/DocumentRequestModal';
 import { ContractPreviewModal } from '@/components/admin/ContractPreviewModal';
+import { SendEmailModal } from '@/components/admin/SendEmailModal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -88,6 +89,7 @@ export default function RequestDetail() {
   const [statusModalOpen, setStatusModalOpen] = useState(false);
   const [documentModalOpen, setDocumentModalOpen] = useState(false);
   const [contractModalOpen, setContractModalOpen] = useState(false);
+  const [emailModalOpen, setEmailModalOpen] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -538,9 +540,7 @@ export default function RequestDetail() {
           <QuickActions
             status={request.status}
             onChangeStatus={() => setStatusModalOpen(true)}
-            onSendEmail={() => {
-              toast.info(t('admin.messages.emailFeature'));
-            }}
+            onSendEmail={() => setEmailModalOpen(true)}
             onRequestDocuments={() => setDocumentModalOpen(true)}
             onGenerateContract={() => setContractModalOpen(true)}
           />
@@ -569,6 +569,13 @@ export default function RequestDetail() {
         onOpenChange={setContractModalOpen}
         request={request}
         onSendContract={handleSendContract}
+      />
+
+      {/* Send email modal */}
+      <SendEmailModal
+        open={emailModalOpen}
+        onOpenChange={setEmailModalOpen}
+        request={request}
       />
     </div>
   );
