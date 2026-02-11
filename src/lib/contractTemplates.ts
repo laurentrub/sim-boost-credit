@@ -188,6 +188,54 @@ function writeSignatures(doc: jsPDF, data: ContractData, yPos: number, leftLabel
   return yPos + 50;
 }
 
+function writeAmortizationTable(doc: jsPDF, data: ContractData, yPos: number): number {
+  doc.addPage();
+  yPos = 20;
+
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(30, 58, 95);
+  doc.text("ANNEXE – TABLEAU D'AMORTISSEMENT", MARGIN, yPos);
+  yPos += 10;
+
+  const r = RATE / 12;
+  const mp = monthlyPayment(data.amount, data.duration);
+  let remaining = data.amount;
+
+  const rows: string[][] = [];
+  for (let i = 1; i <= data.duration; i++) {
+    const interestPart = remaining * r;
+    const capitalPart = mp - interestPart;
+    remaining = Math.max(remaining - capitalPart, 0);
+    rows.push([
+      String(i),
+      formatEur(mp),
+      formatEur(capitalPart),
+      formatEur(interestPart),
+      formatEur(remaining),
+    ]);
+  }
+
+  autoTable(doc, {
+    startY: yPos,
+    head: [['Mois', 'Mensualité', 'Capital', 'Intérêts', 'Capital restant dû']],
+    body: rows,
+    theme: 'striped',
+    headStyles: { fillColor: [30, 58, 95], fontSize: 8 },
+    margin: { left: MARGIN, right: MARGIN },
+    styles: { fontSize: 7, cellPadding: 2 },
+    columnStyles: {
+      0: { halign: 'center', cellWidth: 15 },
+      1: { halign: 'right' },
+      2: { halign: 'right' },
+      3: { halign: 'right' },
+      4: { halign: 'right' },
+    },
+  });
+
+  return (doc as any).lastAutoTable.finalY + 10;
+}
+
 function writeFooter(doc: jsPDF) {
   const pw = doc.internal.pageSize.getWidth();
   const pages = doc.getNumberOfPages();
@@ -264,6 +312,7 @@ function generateCivilContract(doc: jsPDF, data: ContractData, loanTypeLabel: st
   }
 
   y = writeSignatures(doc, data, y, 'Le Prêteur', "L'Emprunteur");
+  writeAmortizationTable(doc, data, y);
 }
 
 // ── Contract Type: Professional ────────────────────────
@@ -317,6 +366,7 @@ function generateProContract(doc: jsPDF, data: ContractData, loanTypeLabel: stri
   }
 
   y = writeSignatures(doc, data, y, "L'Investisseur", 'Le Bénéficiaire');
+  writeAmortizationTable(doc, data, y);
 }
 
 // ── Contract Type: Rachat de crédit ────────────────────
@@ -349,6 +399,7 @@ function generateRachatContract(doc: jsPDF, data: ContractData, loanTypeLabel: s
     "Le présent contrat est soumis au droit français. Tout litige sera porté devant les tribunaux compétents.", y);
 
   y = writeSignatures(doc, data, y, 'Le Prêteur', 'Le Bénéficiaire');
+  writeAmortizationTable(doc, data, y);
 }
 
 // ── Conditional Engine ─────────────────────────────────
