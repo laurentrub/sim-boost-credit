@@ -1,19 +1,19 @@
 project_id = "biyqutgdhqmsdyllgjkp"
 
 [functions.send-status-notification]
-verify_jwt = true
+verify_jwt = false
 
 [functions.send-reset-password-email]
 verify_jwt = false
 
 [functions.send-document-request]
-verify_jwt = true
+verify_jwt = false
 
 [functions.send-contract]
-verify_jwt = true
+verify_jwt = false
 
 [functions.send-contract-notification]
-verify_jwt = true
+verify_jwt = false
 
 [functions.send-welcome-email]
 verify_jwt = false
@@ -22,4 +22,4 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.send-document-validation]
-verify_jwt = true
+verify_jwt = false
