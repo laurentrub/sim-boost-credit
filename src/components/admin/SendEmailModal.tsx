@@ -35,6 +35,7 @@ interface SendEmailModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   request: LoanRequest;
+  onEmailSent?: () => void;
 }
 
 const statusLabels: Record<string, string> = {
@@ -44,7 +45,7 @@ const statusLabels: Record<string, string> = {
   rejected: 'Refusée',
 };
 
-export function SendEmailModal({ open, onOpenChange, request }: SendEmailModalProps) {
+export function SendEmailModal({ open, onOpenChange, request, onEmailSent }: SendEmailModalProps) {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('notification');
   const [isSending, setIsSending] = useState(false);
@@ -68,7 +69,18 @@ export function SendEmailModal({ open, onOpenChange, request }: SendEmailModalPr
       });
 
       if (error) throw error;
+
+      // Log email in history
+      await supabase.from('email_history').insert({
+        loan_request_id: request.id,
+        sent_by: (await supabase.auth.getUser()).data.user?.id ?? '',
+        recipient_email: request.email,
+        email_type: 'status_notification',
+        subject: `Mise à jour de votre demande - ${statusLabels[request.status] || request.status}`,
+      });
+
       toast.success('Notification de statut envoyée avec succès');
+      onEmailSent?.();
       onOpenChange(false);
     } catch (error: any) {
       console.error('Error sending notification:', error);
@@ -101,9 +113,21 @@ export function SendEmailModal({ open, onOpenChange, request }: SendEmailModalPr
       });
 
       if (error) throw error;
+
+      // Log email in history
+      await supabase.from('email_history').insert({
+        loan_request_id: request.id,
+        sent_by: (await supabase.auth.getUser()).data.user?.id ?? '',
+        recipient_email: request.email,
+        email_type: 'custom',
+        subject: subject.trim(),
+        body: body.trim(),
+      });
+
       toast.success('Email envoyé avec succès');
       setSubject('');
       setBody('');
+      onEmailSent?.();
       onOpenChange(false);
     } catch (error: any) {
       console.error('Error sending custom email:', error);
