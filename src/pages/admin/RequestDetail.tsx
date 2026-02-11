@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { StatusHistory } from '@/components/admin/StatusHistory';
+import { EmailHistory } from '@/components/admin/EmailHistory';
 import { RequestNotes } from '@/components/admin/RequestNotes';
 import { QuickActions } from '@/components/admin/QuickActions';
 import { StatusChangeModal } from '@/components/admin/StatusChangeModal';
@@ -62,6 +63,16 @@ interface Note {
   author_name?: string;
 }
 
+interface EmailHistoryItem {
+  id: string;
+  email_type: string;
+  recipient_email: string;
+  subject: string | null;
+  body: string | null;
+  sent_at: string;
+  sent_by_name?: string;
+}
+
 const statusIcons: Record<string, typeof Clock> = {
   pending: Clock,
   in_progress: Loader2,
@@ -85,6 +96,7 @@ export default function RequestDetail() {
   const [request, setRequest] = useState<LoanRequest | null>(null);
   const [history, setHistory] = useState<StatusHistoryItem[]>([]);
   const [notes, setNotes] = useState<Note[]>([]);
+  const [emails, setEmails] = useState<EmailHistoryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [statusModalOpen, setStatusModalOpen] = useState(false);
   const [documentModalOpen, setDocumentModalOpen] = useState(false);
@@ -96,6 +108,7 @@ export default function RequestDetail() {
       fetchRequest();
       fetchHistory();
       fetchNotes();
+      fetchEmails();
     }
   }, [id]);
 
@@ -179,6 +192,36 @@ export default function RequestDetail() {
       );
 
       setNotes(notesWithNames);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchEmails = async () => {
+    try {
+      const { data, error } = await (supabase
+        .from('email_history' as any)
+        .select('*')
+        .eq('loan_request_id', id)
+        .order('sent_at', { ascending: false }) as any);
+
+      if (error) throw error;
+
+      const emailsWithNames = await Promise.all(
+        ((data || []) as any[]).map(async (email: any) => {
+          const { data: profile } = await supabase
+            .from('profiles')
+            .select('first_name, last_name')
+            .eq('id', email.sent_by)
+            .maybeSingle();
+          return {
+            ...email,
+            sent_by_name: profile ? `${profile.first_name} ${profile.last_name}` : undefined,
+          };
+        })
+      );
+
+      setEmails(emailsWithNames);
     } catch (error) {
       console.error(error);
     }
@@ -516,12 +559,16 @@ export default function RequestDetail() {
               <CardHeader className="pb-0">
                 <TabsList>
                   <TabsTrigger value="history">{t('admin.request.historyTab')}</TabsTrigger>
+                  <TabsTrigger value="emails">Emails</TabsTrigger>
                   <TabsTrigger value="notes">{t('admin.request.notesTab')}</TabsTrigger>
                 </TabsList>
               </CardHeader>
               <CardContent className="pt-4">
                 <TabsContent value="history" className="mt-0">
                   <StatusHistory history={history} />
+                </TabsContent>
+                <TabsContent value="emails" className="mt-0">
+                  <EmailHistory emails={emails} />
                 </TabsContent>
                 <TabsContent value="notes" className="mt-0">
                   <RequestNotes
@@ -576,6 +623,7 @@ export default function RequestDetail() {
         open={emailModalOpen}
         onOpenChange={setEmailModalOpen}
         request={request}
+        onEmailSent={fetchEmails}
       />
     </div>
   );

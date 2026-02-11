@@ -121,6 +121,50 @@ export type Database = {
           },
         ]
       }
+      email_history: {
+        Row: {
+          body: string | null
+          email_type: string
+          id: string
+          loan_request_id: string
+          recipient_email: string
+          sent_at: string
+          sent_by: string
+          status: string
+          subject: string | null
+        }
+        Insert: {
+          body?: string | null
+          email_type: string
+          id?: string
+          loan_request_id: string
+          recipient_email: string
+          sent_at?: string
+          sent_by: string
+          status?: string
+          subject?: string | null
+        }
+        Update: {
+          body?: string | null
+          email_type?: string
+          id?: string
+          loan_request_id?: string
+          recipient_email?: string
+          sent_at?: string
+          sent_by?: string
+          status?: string
+          subject?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "email_history_loan_request_id_fkey"
+            columns: ["loan_request_id"]
+            isOneToOne: false
+            referencedRelation: "loan_requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       loan_requests: {
         Row: {
           amount: number
