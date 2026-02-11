@@ -6,7 +6,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface NotificationRequest {
@@ -80,33 +80,35 @@ const handler = async (req: Request): Promise<Response> => {
       { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
-    // Get the authenticated user
-    const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
-    if (authError || !user) {
-      console.error("Failed to authenticate user:", authError);
+    // Verify the JWT claims
+    const { data: claimsData, error: claimsError } = await supabaseUser.auth.getClaims(token);
+    if (claimsError || !claimsData?.claims) {
+      console.error("Failed to verify JWT claims:", claimsError);
       return new Response(
         JSON.stringify({ error: "Unauthorized: Invalid authentication token" }),
         { status: 401, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
+    const userId = claimsData.claims.sub as string;
+
     // Verify the user has admin or manager role using the service role client
     const { data: roleData, error: roleError } = await supabaseAdmin
       .from("user_roles")
       .select("role")
-      .eq("user_id", user.id)
+      .eq("user_id", userId)
       .in("role", ["admin", "manager"])
       .maybeSingle();
 
     if (roleError || !roleData) {
-      console.error("User is not an admin or manager:", user.id);
+      console.error("User is not an admin or manager:", userId);
       return new Response(
         JSON.stringify({ error: "Forbidden: Admin or manager access required" }),
         { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    console.log("Admin/manager user verified:", user.id);
+    console.log("Admin/manager user verified:", userId);
 
     const { loanRequestId, newStatus }: NotificationRequest = await req.json();
 
