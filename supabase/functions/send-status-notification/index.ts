@@ -130,7 +130,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Envoyer l'email
     const emailResponse = await resend.emails.send({
-      from: "Fundia Invest <contact@fundia-invest.com>",
+      from: "Fundia Invest <onboarding@resend.dev>",
       to: [loanRequest.email],
       subject: statusInfo.subject,
       html: `
