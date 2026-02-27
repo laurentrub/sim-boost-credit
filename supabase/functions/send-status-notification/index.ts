@@ -173,7 +173,7 @@ const handler = async (req: Request): Promise<Response> => {
                   </a>
                 </center>
 
-                <p>Cordialement,<br>L'équipe FinanceExpert</p>
+                <p>Cordialement,<br>L'équipe Fundia Invest</p>
               </div>
               <div class="footer">
                 <p>Cet email a été envoyé automatiquement, merci de ne pas y répondre.</p>

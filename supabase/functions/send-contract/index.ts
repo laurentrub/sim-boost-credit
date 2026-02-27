@@ -92,7 +92,7 @@ const handler = async (req: Request): Promise<Response> => {
     const pdfBuffer = decode(pdfBase64);
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: "Fundia Invest <onboarding@resend.dev>",
       to: [clientEmail],
       subject: "Votre contrat de prêt - Privat Equity",
       html: `
@@ -150,7 +150,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     await supabaseAdmin.from("request_status_history").insert({
       loan_request_id: requestId,
-      changed_by: user.id,
+      changed_by: userId,
       old_status: null,
       new_status: "contract_sent",
       comment: "Contrat envoyé au client pour signature",

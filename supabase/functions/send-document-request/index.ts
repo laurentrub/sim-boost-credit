@@ -115,7 +115,7 @@ const handler = async (req: Request): Promise<Response> => {
       user_id: loanRequest.user_id,
       document_type: doc,
       status: "pending",
-      requested_by: user.id,
+      requested_by: userId,
       custom_message: customMessage || null,
     }));
 
@@ -138,7 +138,7 @@ const handler = async (req: Request): Promise<Response> => {
       : "";
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: "Fundia Invest <onboarding@resend.dev>",
       to: [clientEmail],
       subject: "Demande de justificatifs - Privat Equity",
       html: `
@@ -190,7 +190,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Log this action in status history
     await supabaseAdmin.from("request_status_history").insert({
       loan_request_id: requestId,
-      changed_by: user.id,
+      changed_by: userId,
       old_status: null,
       new_status: "document_requested",
       comment: `Demande de justificatifs envoyée: ${documents.join(", ")}`,
