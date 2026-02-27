@@ -75,7 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailResponse = await resend.emails.send({
-      from: "Fundia Invest <onboarding@resend.dev>",
+      from: "Fundia Invest <noreply@notifications.fundia-invest.com>",
       to: [loanRequest.email],
       subject: "Votre demande de crédit a bien été reçue ✓",
       html: `
@@ -182,7 +182,7 @@ const handler = async (req: Request): Promise<Response> => {
                 </div>
 
                 <center>
-                  <a href="https://privat-equity.com/profile" class="button">
+                  <a href="https://fundia-invest.com/profile" class="button">
                     Suivre ma demande
                   </a>
                 </center>
@@ -194,10 +194,10 @@ const handler = async (req: Request): Promise<Response> => {
                   Notre équipe est disponible pour répondre à vos questions. N'hésitez pas à nous contacter.
                 </p>
                 
-                <p>Cordialement,<br><strong>L'équipe Privat Equity</strong></p>
+                <p>Cordialement,<br><strong>L'équipe Fundia Invest</strong></p>
               </div>
               <div class="footer">
-                <p>© 2024 Privat Equity - Tous droits réservés</p>
+                <p>© 2024 Fundia Invest - Tous droits réservés</p>
                 <p>5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
                 <p style="margin-top: 15px; color: #999;">Cet email a été envoyé automatiquement suite à votre demande de crédit.</p>
               </div>
