@@ -7,7 +7,7 @@ const hookSecret = Deno.env.get("SEND_EMAIL_HOOK_SECRET");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface RecoveryEmailData {
@@ -76,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">
-                🔐 FinanceExpert
+                🔐 Fundia Invest
               </h1>
             </td>
           </tr>
@@ -146,7 +146,7 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td style="background-color: #f7fafc; padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
               <p style="color: #718096; font-size: 14px; margin: 0 0 10px 0;">
-                Cet email a été envoyé par <strong>FinanceExpert</strong>
+                Cet email a été envoyé par <strong>Fundia Invest</strong>
               </p>
               <p style="color: #a0aec0; font-size: 12px; margin: 0;">
                 Si vous avez des questions, n'hésitez pas à nous contacter.
@@ -161,7 +161,7 @@ const handler = async (req: Request): Promise<Response> => {
             <td style="text-align: center; padding: 0 30px;">
               <p style="color: #a0aec0; font-size: 12px; line-height: 1.5; margin: 0;">
                 Pour votre sécurité, ne partagez jamais ce lien avec qui que ce soit.<br>
-                FinanceExpert ne vous demandera jamais votre mot de passe par email.
+                Fundia Invest ne vous demandera jamais votre mot de passe par email.
               </p>
             </td>
           </tr>
@@ -174,9 +174,9 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "FinanceExpert <noreply@privât-equity.com>",
+      from: "Fundia Invest <onboarding@resend.dev>",
       to: [user.email],
-      subject: "Réinitialisation de votre mot de passe - FinanceExpert",
+      subject: "Réinitialisation de votre mot de passe - Fundia Invest",
       html: html,
     });
 

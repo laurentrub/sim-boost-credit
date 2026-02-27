@@ -211,7 +211,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: "Fundia Invest <onboarding@resend.dev>",
       to: [clientEmail],
       subject,
       html: contentHtml,
