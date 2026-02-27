@@ -174,7 +174,7 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "Fundia Invest <onboarding@resend.dev>",
+      from: "Fundia Invest <noreply@notifications.fundia-invest.com>",
       to: [user.email],
       subject: "Réinitialisation de votre mot de passe - Fundia Invest",
       html: html,

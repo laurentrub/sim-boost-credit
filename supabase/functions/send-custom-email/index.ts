@@ -95,7 +95,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safeSubject = escapeHtml(subject);
 
     const emailResponse = await resend.emails.send({
-      from: "Fundia Invest <onboarding@resend.dev>",
+      from: "Fundia Invest <noreply@notifications.fundia-invest.com>",
       to: [recipientEmail],
       subject: subject,
       html: `

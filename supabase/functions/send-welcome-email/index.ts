@@ -42,9 +42,9 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Fundia Invest <onboarding@resend.dev>",
+      from: "Fundia Invest <noreply@notifications.fundia-invest.com>",
       to: [email],
-      subject: "Bienvenue chez Privat Equity ! 🎉",
+      subject: "Bienvenue chez Fundia Invest ! 🎉",
       html: `
         <!DOCTYPE html>
         <html>
@@ -72,13 +72,13 @@ const handler = async (req: Request): Promise<Response> => {
           <body>
             <div class="container">
               <div class="header">
-                <h1>Bienvenue chez Privat Equity</h1>
+                <h1>Bienvenue chez Fundia Invest</h1>
                 <p>Votre partenaire de confiance pour vos projets de financement</p>
               </div>
               <div class="content">
                 <p>Bonjour <strong>${escapeHtml(firstName)} ${escapeHtml(lastName)}</strong>,</p>
                 
-                <p>Nous sommes ravis de vous accueillir sur Privat Equity ! Votre compte a été créé avec succès.</p>
+                <p>Nous sommes ravis de vous accueillir sur Fundia Invest ! Votre compte a été créé avec succès.</p>
                 
                 <div class="welcome-box">
                   <h3 style="margin: 0 0 15px; color: #1e3a5f;">Ce que vous pouvez faire maintenant :</h3>
@@ -117,7 +117,7 @@ const handler = async (req: Request): Promise<Response> => {
                 </div>
 
                 <center>
-                  <a href="https://privat-equity.com" class="button">
+                  <a href="https://fundia-invest.com" class="button">
                     Accéder à mon espace
                   </a>
                 </center>
@@ -126,10 +126,10 @@ const handler = async (req: Request): Promise<Response> => {
 
                 <p>Si vous avez des questions, notre équipe est à votre disposition pour vous accompagner dans vos projets.</p>
                 
-                <p>À très bientôt,<br><strong>L'équipe Privat Equity</strong></p>
+                <p>À très bientôt,<br><strong>L'équipe Fundia Invest</strong></p>
               </div>
               <div class="footer">
-                <p>© 2024 Privat Equity - Tous droits réservés</p>
+                <p>© 2024 Fundia Invest - Tous droits réservés</p>
                 <p>5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
                 <p style="margin-top: 15px; color: #999;">Cet email a été envoyé automatiquement suite à la création de votre compte.</p>
               </div>
