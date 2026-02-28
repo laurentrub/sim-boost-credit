@@ -148,18 +148,18 @@ const handler = async (req: Request): Promise<Response> => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+          <div style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 24px;">Fundia Invest</h1>
           </div>
           
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #1e3a5f; margin-top: 0;">Demande de justificatifs</h2>
+            <h2 style="color: #d97706; margin-top: 0;">Demande de justificatifs</h2>
             
             <p>Bonjour ${escapeHtml(clientName)},</p>
             
             <p>Dans le cadre de l'étude de votre demande de financement (référence: ${requestId.slice(0, 8)}), nous avons besoin des documents suivants :</p>
             
-            <ul style="background: #f8f9fa; padding: 20px 20px 20px 40px; border-radius: 8px; border-left: 4px solid #1e3a5f;">
+            <ul style="background: #fffbeb; padding: 20px 20px 20px 40px; border-radius: 8px; border-left: 4px solid #d97706;">
               ${documentListHtml}
             </ul>
             
@@ -167,11 +167,15 @@ const handler = async (req: Request): Promise<Response> => {
             
             <p>Merci de nous transmettre ces documents dans les meilleurs délais afin que nous puissions poursuivre l'étude de votre dossier.</p>
             
-            <p>Vous pouvez répondre directement à cet email ou vous connecter à votre espace client pour télécharger vos documents.</p>
+            <p>Pour nous envoyer vos documents, veuillez vous connecter à votre espace membre.</p>
+            
+            <div style="text-align: center; margin: 25px 0;">
+              <a href="https://sim-boost-credit.lovable.app/profile" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">Envoyer mes documents</a>
+            </div>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
               <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Fundia Invest</p>
+              <p style="margin: 5px 0 0 0; font-weight: bold; color: #d97706;">L'équipe Fundia Invest</p>
             </div>
           </div>
           
