@@ -170,7 +170,7 @@ const handler = async (req: Request): Promise<Response> => {
             <p>Pour nous envoyer vos documents, veuillez vous connecter à votre espace membre.</p>
             
             <div style="text-align: center; margin: 25px 0;">
-              <a href="https://sim-boost-credit.lovable.app/profile" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">Envoyer mes documents</a>
+              <a href="https://www.fundia-invest.com/profile" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">Envoyer mes documents</a>
             </div>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
