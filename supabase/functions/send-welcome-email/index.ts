@@ -117,7 +117,7 @@ const handler = async (req: Request): Promise<Response> => {
                 </div>
 
                 <center>
-                  <a href="https://fundia-invest.com" class="button">
+                  <a href="https://www.fundia-invest.com" class="button">
                     Accéder à mon espace
                   </a>
                 </center>

@@ -201,7 +201,7 @@ const handler = async (req: Request): Promise<Response> => {
                 ` : ''}
                 
                 <div style="text-align: center; margin-top: 32px;">
-                  <a href="https://fundia-invest.com/profile" 
+                  <a href="https://www.fundia-invest.com/profile" 
                      style="display: inline-block; background-color: #0d3b66; color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
                     Accéder à mon espace
                   </a>
